@@ -83,9 +83,9 @@ window.BAKLAVA_DATA = {
         {
           file: "preview/type-faces.html",
           name: "Type specimen",
-          tagline: "Acherus Grotesque, weights 200–900, plus the SF Mono code font.",
+          tagline: "Inter, weights 200–900, plus the SF Mono code font.",
           meta: {
-            usage: "Acherus Grotesque is the system sans across every weight. Reach for the mono stack only inside code blocks, tokens, JSON snippets, and timestamps. Italic is reserved for placeholders (Light Italic 300) and the rare in-line citation — never used for emphasis."
+            usage: "Inter is the system sans across every weight. Reach for the mono stack only inside code blocks, tokens, JSON snippets, and timestamps. Italic is reserved for placeholders (Light Italic 300) and the rare in-line citation — never used for emphasis."
           }
         },
         {
@@ -139,7 +139,7 @@ window.BAKLAVA_DATA = {
         {
           file: "preview/colors-gradient-brand.html",
           name: "Brand gradient",
-          tagline: "linear-gradient(90deg, #008380 29%, #0841B4 100%) — horizontal teal → blue.",
+          tagline: "linear-gradient(90deg, #FF2D8F 29%, #2563FF 100%) — horizontal teal → blue.",
           meta: {
             usage: "Reserved for hero/marketing surfaces, launcher backgrounds, and brand moments — never for normal UI. Distinct from `--color-background-primary-hover`, which uses a slightly different teal at a 112.63° diagonal for primary-button hover only."
           }
@@ -149,7 +149,7 @@ window.BAKLAVA_DATA = {
           name: "Semantic text",
           tagline: "Body, subtle, link, status, information, discovery, accents.",
           meta: {
-            usage: "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Indigo-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Indigo-700; Discovery uses Purple-700. AI uses the dedicated SL AI ramp — never substitute purple for AI."
+            usage: "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Indigo-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Indigo-700; Discovery uses Purple-700. AI uses the dedicated AI ramp — never substitute purple for AI."
           }
         },
         {

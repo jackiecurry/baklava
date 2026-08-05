@@ -21,7 +21,7 @@ The rules every component inherits — design tokens, spacing, motion, elevation
 - [Tokens](https://jackiecurry.github.io/baklava/preview/foundations-tokens.html): All CSS custom properties — color ramps, semantic tokens, typography, spacing, radius, shadows, field, and AI.
 - [Surfaces](https://jackiecurry.github.io/baklava/preview/colors-surfaces.html): Navbar · Canvas · Sunken · Raised · Overlay — five elevation planes.
 - [Type scale](https://jackiecurry.github.io/baklava/preview/type-scale.html): Display through Micro — eight steps with set line heights and weight conventions.
-- [Type specimen](https://jackiecurry.github.io/baklava/preview/type-faces.html): Acherus Grotesque, weights 200–900, plus the SF Mono code font.
+- [Type specimen](https://jackiecurry.github.io/baklava/preview/type-faces.html): Inter, weights 200–900, plus the SF Mono code font.
 - [Motion](https://jackiecurry.github.io/baklava/preview/foundations-motion.html): Durations and easings for transitions and animations.
 - [Z-index](https://jackiecurry.github.io/baklava/preview/foundations-zindex.html): 8-step stacking scale — base through toast.
 - [Breakpoints](https://jackiecurry.github.io/baklava/preview/foundations-breakpoints.html): Viewport widths — sm 640, md 768, lg 1024, xl 1280.
@@ -32,7 +32,7 @@ The rules every component inherits — design tokens, spacing, motion, elevation
 The complete color system — the brand gradient, ten ramps, and the semantic tokens built on them.
 
 - [Color ramps](https://jackiecurry.github.io/baklava/preview/colors-all-ramps.html): Ten named ramps × eleven steps each. Step 600 is the canonical default for each hue.
-- [Brand gradient](https://jackiecurry.github.io/baklava/preview/colors-gradient-brand.html): linear-gradient(90deg, #008380 29%, #0841B4 100%) — horizontal teal → blue.
+- [Brand gradient](https://jackiecurry.github.io/baklava/preview/colors-gradient-brand.html): linear-gradient(90deg, #FF2D8F 29%, #2563FF 100%) — horizontal teal → blue.
 - [Semantic text](https://jackiecurry.github.io/baklava/preview/colors-semantic-text.html): Body, subtle, link, status, information, discovery, accents.
 - [Palette · Categorical](https://jackiecurry.github.io/baklava/preview/dataviz-categorical.html): Five-color chart palette for unordered categories — designed for light and dark backgrounds.
 - [Palette · Diverging](https://jackiecurry.github.io/baklava/preview/dataviz-diverging.html): Two-hue chart ramps for values around a meaningful midpoint.

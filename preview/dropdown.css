@@ -12,7 +12,7 @@
 
 /* Standard dark-navy popover chrome — same across all header dropdowns */
 .dropdown {
-  background: var(--bk-blue-900);                     /* SL Blue 900 — shared chrome */
+  background: var(--bk-blue-900);                     /* Blue 900 — shared chrome */
   color: var(--bk-white);
   border-radius: 10px;
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);

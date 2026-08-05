@@ -23,7 +23,7 @@ This is a **static, no-framework design system gallery** for the Baklava design 
 
 - **`index.html`** — Single-page gallery app. Reads `_data/items.js` and `_data/tokens.js` at runtime to build the left-hand nav and tile grid. Renders detail views inline (no iframes) with Anatomy / Options / Usage / Behaviors / Tokens sections.
 - **`colors_and_type.css`** — The entire token system as CSS custom properties: 10 color ramps × 11 steps (`--bk-{hue}-{step}`), semantic tokens (`--color-text-*`, `--color-background-*`, `--color-border-*`, `--field-*`), spacing scale (`--space-{n}`), radii, shadows, typography scale, and AI state tokens. **This is the source of truth for all design tokens.**
-- **`fonts.css`** — `@font-face` declarations for Acherus Grotesque (weights 200–900 WOFF2). Imported automatically by `colors_and_type.css`.
+- **`fonts.css`** — `@font-face` declarations for Inter (weights 200–900 WOFF2). Imported automatically by `colors_and_type.css`.
 - **`_data/items.js`** — Catalog definition. Exports `window.BAKLAVA_DATA` with the full section/item tree, per-item taglines, and documentation content (anatomy, options, usage, behaviors). Adding a new preview card requires a new entry here.
 - **`_data/tokens.js`** — Per-asset token lists. Exports `window.BAKLAVA_TOKENS` keyed by preview file path. Only assets listed here show a Tokens section in the detail view.
 
@@ -48,7 +48,7 @@ The `index.html` gallery renders preview files by injecting their `<body>` conte
 - Raw ramp tokens (`--bk-blue-600`) are for building new semantic tokens or one-off brand moments only.
 - The **4-pt spacing grid** (`--space-1` = 4px through `--space-20` = 80px) governs **layout spacing** — the margin, padding, and gap *between* components and around them on a page. Use `--space-*` tokens here; never hardcode these values.
   - **Component-internal metrics are exempt.** A control's own padding is *derived* from a height-anchored sizing scale, not free layout space. Buttons anchor to fixed heights (lg 40 / md 36 / sm 28, all ×4); once height, line-height, and borders are fixed, the leftover vertical padding legitimately lands off-grid (e.g. md `6px 18px`, tertiary md `6px 10px`). **Do not round these to the grid** — it breaks the target height and Figma parity. Keep the inline height-math comment (`/* 36px */`) as the justification, or promote the values to component tokens (`--button-pad-y-md`). The grid is a layout contract, not a component-internals contract.
-- **Primary brand color:** `--bk-blue-600` (#0841B4). Primary hover is the teal→blue gradient in `--color-background-primary-hover` — not a darker blue.
+- **Primary brand color:** `--bk-blue-600` (#2563FF). Primary hover is the teal→blue gradient in `--color-background-primary-hover` — not a darker blue.
 - **Focus rings:** always `box-shadow: var(--ring-focus)` with `border-color: var(--bk-teal-600)`. Reference the token — never hardcode the rgba value, or it drifts.
 
 ## Content and visual rules

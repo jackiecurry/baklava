@@ -21,7 +21,7 @@ The live gallery is at <https://jackiecurry.github.io/baklava/>.
 - **Left nav skeleton** (Composed components) — a loading placeholder for the dark navigation rail. Uses white-alpha bands tuned to the navy surface rather than the light-grey Skeleton loader, which reads too bright on `--bk-blue-1000`. Expanded (icon + label bars) and minimized (icon circles) states, matching the real nav's geometry.
 
 ### Foundations
-- **Skeleton tokens reworked and unified.** `--color-skeleton` is now **Grey-400** (`#C4CAD6`, light surfaces) and there's a new **`--color-skeleton-on-dark`** (`rgba(255,255,255,0.10)`, dark surfaces like the nav rail). The vestigial `--color-skeleton-pulse` (a gradient-sweep stop no component used) was removed. Every skeleton — the component, the chart loader, the nav skeleton, and the foundations demo — now shares one **2s opacity pulse** (`1 → 0.5 → 1`), disabled under `prefers-reduced-motion`.
+- **Skeleton tokens reworked and unified.** `--color-skeleton` is now **Grey-400** (`#94A3B8`, light surfaces) and there's a new **`--color-skeleton-on-dark`** (`rgba(255,255,255,0.10)`, dark surfaces like the nav rail). The vestigial `--color-skeleton-pulse` (a gradient-sweep stop no component used) was removed. Every skeleton — the component, the chart loader, the nav skeleton, and the foundations demo — now shares one **2s opacity pulse** (`1 → 0.5 → 1`), disabled under `prefers-reduced-motion`.
 
 ### Components
 - **Skeleton loader** gains an **on-dark variant** (`.sk.on-dark`) and an "On dark surface" example. Its metadata was corrected — it described a "Grey-200 · gradient sweep at 1500ms" that never matched the actual flat-pulse implementation.

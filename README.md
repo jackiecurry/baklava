@@ -57,7 +57,7 @@ python3 -m http.server 8000
 
 The gallery lists 106 design assets — foundations, color ramps, brand, primitives, components, advanced editors, patterns, the Designer template, and data-visualization charts. A left-hand accordion lists every asset under its category; a top-of-sidebar search filters both the nav and the grid. Click any tile to open its detail page — the preview renders inline (no iframes), alongside the Adobe Spectrum-style Anatomy / Options / Usage guidelines / Behaviors / Tokens sections.
 
-If you want to publish this on GitHub Pages, push to a repo and enable Pages from `main` → `/ (root)`. No build step required — it's all static HTML/CSS + Acherus Grotesque webfonts.
+If you want to publish this on GitHub Pages, push to a repo and enable Pages from `main` → `/ (root)`. No build step required — it's all static HTML/CSS + Inter webfonts.
 
 ## Use the tokens in your project
 
@@ -84,9 +84,9 @@ This gives you every Baklava token as a CSS custom property — color ramps, sem
 
 ### Quick rules
 
-- **Primary brand:** `--bk-blue-600` (`#0841B4`). Primary hover is the **teal→blue gradient** in `--color-background-primary-hover` — distinctive, not a darker blue. Pressed = `--bk-teal-400`.
+- **Primary brand:** `--bk-blue-600` (`#2563FF`). Primary hover is the **teal→blue gradient** in `--color-background-primary-hover` — distinctive, not a darker blue. Pressed = `--bk-teal-400`.
 - **Secondary buttons:** white fill; on hover only the border + text shift blue → teal.
-- **Body text:** `--color-text-body` (`#031A48`, dark navy). Subtle text: `--color-text-subtle` (`#7D8695`).
+- **Body text:** `--color-text-body` (`#0B246E`, dark navy). Subtle text: `--color-text-subtle` (`#334155`).
 - **Cards:** white, 1px Grey-300 border, 4px radius, 16px padding, `--shadow-raised`. Borders — not shadow — indicate selection (1px → 1.5px on hover → 3px when selected).
 - **Sentence case** everywhere. Pills/tags = 10px ExtraBold UPPERCASE only.
 - **No emoji.** Icons via [Lucide](https://lucide.dev) CDN; Font Awesome 6 as a fallback for vendor logos and domain pictograms.
@@ -103,8 +103,8 @@ baklava-design-system/
 │   ├── items.js            # Catalog: category structure, taglines, usage + behaviors per item
 │   └── tokens.js           # Per-item token lists (rendered in the Tokens section)
 ├── colors_and_type.css     # Full token system (drop-in CSS variables)
-├── fonts.css               # @font-face for Acherus Grotesque
-├── fonts/                  # Acherus Grotesque WOFF2/OTF, weights 200–900
+├── fonts.css               # @font-face for Inter
+├── fonts/                  # Inter WOFF2/OTF, weights 200–900
 ├── assets/                 # Baklava logo (white wordmark) + AI Assistant mark
 ├── preview/                # 113 standalone preview cards + the combined color-ramps page
 ├── Brand Gradient.html     # Full-page brand-gradient demo
@@ -130,7 +130,7 @@ baklava-design-system/
 - **Icons are Lucide via CDN** as a substitute for the Figma's Untitled UI Icons (~95% visual match). If pixel-perfect Untitled UI Icons are required, swap in the Pro SVGs.
 - **Product launcher gradient icons** (Designer, APIM, AutoSync, Admin Manager, Monitor, Project Manager) are placeholder gradient circles with Lucide glyphs. Real product icons were not exported from Figma.
 - **No formal dark theme.** The dark global navbar is treated as inverted chrome, not full dark mode.
-- **Acherus Grotesque** is licensed; the WOFF2/OTF files in `fonts/` are bundled for use within Baklava surfaces. Confirm license terms before re-distributing outside Baklava.
+- **Inter** is licensed; the WOFF2/OTF files in `fonts/` are bundled for use within Baklava surfaces. Confirm license terms before re-distributing outside Baklava.
 
 ## Sources
 

@@ -91,8 +91,8 @@
             },
             {
               "name": "--shadow-focus-ring",
-              "value": "0 0 0 3px rgba(9, 129, 127, 0.35)",
-              "role": "Focus halo — Teal-600 at 35% alpha"
+              "value": "0 0 0 3px rgba(0, 148, 184, 0.35)",
+              "role": "Focus halo — cyan, 35% alpha"
             },
             {
               "name": "--shadow-inset-sunken",
@@ -196,7 +196,7 @@
             },
             {
               "name": "--color-surface-sunken",
-              "value": "#F5F6F8",
+              "value": "#F1F5F9",
               "role": "Pressed-in section (Grey-100)"
             },
             {
@@ -206,7 +206,7 @@
             },
             {
               "name": "--color-surface-navbar",
-              "value": "#031A48",
+              "value": "#0B246E",
               "role": "Global navbar (Indigo-1000)"
             },
             {
@@ -225,7 +225,7 @@
           "tokens": [
             {
               "name": "--font-sans",
-              "value": "'Acherus Grotesque', system-ui, 'SF Pro', 'Segoe UI', sans-serif",
+              "value": "'Inter', system-ui, 'SF Pro', 'Segoe UI', sans-serif",
               "role": "Body, labels, headings"
             },
             {
@@ -239,12 +239,12 @@
           "name": "Type specimen",
           "file": "preview/type-faces.html",
           "url": "https://jackiecurry.github.io/baklava/preview/type-faces.html",
-          "tagline": "Acherus Grotesque, weights 200–900, plus the SF Mono code font.",
-          "usage": "Acherus Grotesque is the system sans across every weight. Reach for the mono stack only inside code blocks, tokens, JSON snippets, and timestamps. Italic is reserved for placeholders (Light Italic 300) and the rare in-line citation — never used for emphasis.",
+          "tagline": "Inter, weights 200–900, plus the SF Mono code font.",
+          "usage": "Inter is the system sans across every weight. Reach for the mono stack only inside code blocks, tokens, JSON snippets, and timestamps. Italic is reserved for placeholders (Light Italic 300) and the rare in-line citation — never used for emphasis.",
           "tokens": [
             {
               "name": "--font-sans",
-              "value": "'Acherus Grotesque', system-ui, 'SF Pro', 'Segoe UI', sans-serif",
+              "value": "'Inter', system-ui, 'SF Pro', 'Segoe UI', sans-serif",
               "role": "Body, labels, headings"
             },
             {
@@ -380,17 +380,17 @@
           "tokens": [
             {
               "name": "--color-selection-bg",
-              "value": "#CED9F0",
+              "value": "#DCE8FF",
               "role": "Text-highlight fill — Blue-200"
             },
             {
               "name": "--color-selection-text",
-              "value": "#131C35",
+              "value": "#081A4D",
               "role": "Text-highlight foreground — Indigo-900"
             },
             {
               "name": "--color-skeleton",
-              "value": "#C4CAD6",
+              "value": "#94A3B8",
               "role": "Skeleton band, light surface — Grey-400"
             },
             {
@@ -417,17 +417,17 @@
           "tokens": [
             {
               "name": "--bk-blue-600",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Primary brand & action"
             },
             {
               "name": "--bk-teal-600",
-              "value": "#09817F",
-              "role": "Secondary accent — hover, focus"
+              "value": "#0094B8",
+              "role": "Focus ring & cool accent"
             },
             {
               "name": "--bk-indigo-600",
-              "value": "#304684",
+              "value": "#1749E8",
               "role": "Information"
             },
             {
@@ -442,7 +442,7 @@
             },
             {
               "name": "--bk-purple-600",
-              "value": "#623684",
+              "value": "#8B5CF6",
               "role": "Discovery"
             },
             {
@@ -457,12 +457,12 @@
             },
             {
               "name": "--bk-pink-600",
-              "value": "#E31C73",
+              "value": "#FF2D8F",
               "role": "Marketing accent"
             },
             {
               "name": "--bk-grey-600",
-              "value": "#9CA7BA",
+              "value": "#475569",
               "role": "Neutral"
             }
           ]
@@ -471,22 +471,22 @@
           "name": "Brand gradient",
           "file": "preview/colors-gradient-brand.html",
           "url": "https://jackiecurry.github.io/baklava/preview/colors-gradient-brand.html",
-          "tagline": "linear-gradient(90deg, #008380 29%, #0841B4 100%) — horizontal teal → blue.",
+          "tagline": "linear-gradient(90deg, #FF2D8F 29%, #2563FF 100%) — horizontal teal → blue.",
           "usage": "Reserved for hero/marketing surfaces, launcher backgrounds, and brand moments — never for normal UI. Distinct from `--color-background-primary-hover`, which uses a slightly different teal at a 112.63° diagonal for primary-button hover only.",
           "tokens": [
             {
               "name": "--gradient-brand",
-              "value": "linear-gradient(90deg, #008380 29%, #0841B4 100%)",
-              "role": "Horizontal teal → blue brand sweep"
+              "value": "linear-gradient(90deg, #FF2D8F 29%, #2563FF 100%)",
+              "role": "Magenta → blue brand sweep"
             },
             {
               "name": "--gradient-brand-stop-1",
-              "value": "#008380",
-              "role": "Left stop — teal"
+              "value": "#FF2D8F",
+              "role": "Left stop — magenta"
             },
             {
               "name": "--gradient-brand-stop-2",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Right stop — Blue-600"
             }
           ]
@@ -496,26 +496,26 @@
           "file": "preview/colors-semantic-text.html",
           "url": "https://jackiecurry.github.io/baklava/preview/colors-semantic-text.html",
           "tagline": "Body, subtle, link, status, information, discovery, accents.",
-          "usage": "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Indigo-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Indigo-700; Discovery uses Purple-700. AI uses the dedicated SL AI ramp — never substitute purple for AI.",
+          "usage": "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Indigo-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Indigo-700; Discovery uses Purple-700. AI uses the dedicated AI ramp — never substitute purple for AI.",
           "tokens": [
             {
               "name": "--color-text-body",
-              "value": "#131C35",
+              "value": "#081A4D",
               "role": "Default body text — Indigo-900"
             },
             {
               "name": "--color-text-heading",
-              "value": "#131C35",
+              "value": "#081A4D",
               "role": "Headings — Indigo-900"
             },
             {
               "name": "--color-text-subtle",
-              "value": "#7D8695",
+              "value": "#334155",
               "role": "Secondary copy, captions — Grey-700"
             },
             {
               "name": "--color-text-disabled",
-              "value": "#B0B9C8",
+              "value": "#64748B",
               "role": "Disabled labels and values — Grey-500"
             },
             {
@@ -525,22 +525,22 @@
             },
             {
               "name": "--color-text-selected",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Selected text — Blue-600"
             },
             {
               "name": "--color-text-link",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Default link — Blue-600"
             },
             {
               "name": "--color-text-link-hover",
-              "value": "#09817F",
+              "value": "#0094B8",
               "role": "Link hover — Teal-600"
             },
             {
               "name": "--color-text-link-pressed",
-              "value": "#6BB3B2",
+              "value": "#22D3EE",
               "role": "Link pressed — Teal-400"
             },
             {
@@ -560,27 +560,27 @@
             },
             {
               "name": "--color-text-information",
-              "value": "#26386A",
+              "value": "#1237C0",
               "role": "Informational accent — Indigo-700"
             },
             {
               "name": "--color-text-discovery",
-              "value": "#4E2B6A",
+              "value": "#7644EA",
               "role": "Discovery accent — Purple-700"
             },
             {
               "name": "--color-text-accent-blue",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Accent text · blue — Blue-600"
             },
             {
               "name": "--color-text-accent-teal",
-              "value": "#09817F",
+              "value": "#0094B8",
               "role": "Accent text · teal — Teal-600"
             },
             {
               "name": "--color-text-accent-indigo",
-              "value": "#304684",
+              "value": "#1749E8",
               "role": "Accent text · indigo — Indigo-600"
             },
             {
@@ -595,7 +595,7 @@
             },
             {
               "name": "--color-text-accent-purple",
-              "value": "#623684",
+              "value": "#8B5CF6",
               "role": "Accent text · purple — Purple-600"
             },
             {
@@ -610,12 +610,12 @@
             },
             {
               "name": "--color-text-accent-pink",
-              "value": "#E31C73",
+              "value": "#FF2D8F",
               "role": "Accent text · pink — Pink-600"
             },
             {
               "name": "--color-text-accent-grey",
-              "value": "#9CA7BA",
+              "value": "#475569",
               "role": "Accent text · grey — Grey-600"
             }
           ]
@@ -665,12 +665,12 @@
             },
             {
               "name": "--bk-blue-600",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Running"
             },
             {
               "name": "--bk-grey-500",
-              "value": "#B0B9C8",
+              "value": "#64748B",
               "role": "Queued / idle"
             }
           ]
@@ -708,12 +708,12 @@
             },
             {
               "name": "--font-sans",
-              "value": "'Acherus Grotesque', system-ui, …",
+              "value": "'Inter', system-ui, …",
               "role": "ExtraBold 800 uppercase 10px"
             },
             {
               "name": "--bk-blue-100",
-              "value": "#E6ECF8",
+              "value": "#EEF4FF",
               "role": "Info badge fill"
             },
             {
@@ -733,7 +733,7 @@
             },
             {
               "name": "--bk-purple-100",
-              "value": "#EFEBF3",
+              "value": "#F7F2FF",
               "role": "Discovery badge fill"
             }
           ]
@@ -750,22 +750,22 @@
           "tokens": [
             {
               "name": "--color-background-primary",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Primary button background"
             },
             {
               "name": "--color-background-primary-hover",
-              "value": "linear-gradient(112.63deg, #0B9D9B 12.38%, #0841B4 137.46%)",
-              "role": "Primary hover — teal → blue (distinctive)"
+              "value": "linear-gradient(112.63deg, #7C4DFF 12.38%, #2563FF 137.46%)",
+              "role": "Primary hover — violet → blue (distinctive)"
             },
             {
               "name": "--color-background-primary-pressed",
-              "value": "#6BB3B2",
+              "value": "#22D3EE",
               "role": "Primary pressed — Teal-400"
             },
             {
               "name": "--color-background-disabled",
-              "value": "#EBEDF1",
+              "value": "#E2E8F0",
               "role": "Disabled fill"
             },
             {
@@ -775,18 +775,18 @@
             },
             {
               "name": "--color-background-secondary-hover",
-              "value": "#F5F6F8",
+              "value": "#F1F5F9",
               "role": "Secondary hover — Grey-100 wash"
             },
             {
               "name": "--color-border-default",
-              "value": "#C4CAD6",
+              "value": "#94A3B8",
               "role": "Default border — Grey-400"
             },
             {
               "name": "--color-border-focus",
-              "value": "#09817F",
-              "role": "Focus ring (Teal-600)"
+              "value": "#0094B8",
+              "role": "Focus ring (cyan)"
             },
             {
               "name": "--radius-sm",
@@ -795,7 +795,7 @@
             },
             {
               "name": "--shadow-focus-ring",
-              "value": "0 0 0 3px rgba(9, 129, 127, 0.35)",
+              "value": "0 0 0 3px rgba(0, 148, 184, 0.35)",
               "role": "Focus halo"
             }
           ]
@@ -827,17 +827,17 @@
             },
             {
               "name": "--color-border-subtle",
-              "value": "#D7DCE3",
+              "value": "#CBD5E1",
               "role": "Resting border — 1px Grey-300"
             },
             {
               "name": "--color-border-hover",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Hover border — 1.5px Blue-600"
             },
             {
               "name": "--color-border-selected",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Selected border — 3px Blue-600"
             },
             {
@@ -918,22 +918,22 @@
             },
             {
               "name": "--field-bg-disabled",
-              "value": "#E6ECF8",
+              "value": "#EEF4FF",
               "role": "Disabled field fill — Blue-100"
             },
             {
               "name": "--field-border-default",
-              "value": "#C4CAD6",
+              "value": "#94A3B8",
               "role": "Default border — Grey-400"
             },
             {
               "name": "--field-border-hover",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Hover border — Blue-600"
             },
             {
               "name": "--field-border-focus",
-              "value": "#09817F",
+              "value": "#0094B8",
               "role": "Focus border — Teal-600"
             },
             {
@@ -943,22 +943,22 @@
             },
             {
               "name": "--field-border-disabled",
-              "value": "#CED9F0",
+              "value": "#DCE8FF",
               "role": "Disabled border — Blue-200"
             },
             {
               "name": "--field-text-default",
-              "value": "#131C35",
+              "value": "#081A4D",
               "role": "Typed value — Indigo-900"
             },
             {
               "name": "--field-text-placeholder",
-              "value": "#7D8695",
+              "value": "#334155",
               "role": "Placeholder text — Grey-700"
             },
             {
               "name": "--field-text-disabled",
-              "value": "#9CB3E1",
+              "value": "#B8D0FF",
               "role": "Disabled text — Blue-300"
             },
             {
@@ -1075,7 +1075,7 @@
             },
             {
               "name": "--color-text-link",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Default spinner stroke"
             },
             {
@@ -1278,7 +1278,7 @@
           "tokens": [
             {
               "name": "--color-surface-navbar",
-              "value": "#031A48",
+              "value": "#0B246E",
               "role": "Global navbar background — Indigo-1000"
             },
             {
@@ -1405,37 +1405,37 @@
           "tokens": [
             {
               "name": "--bk-grey-100",
-              "value": "#F5F6F8",
+              "value": "#F1F5F9",
               "role": "Row hover background"
             },
             {
               "name": "--bk-blue-100",
-              "value": "#E6ECF8",
+              "value": "#EEF4FF",
               "role": "Selected row background"
             },
             {
               "name": "--bk-grey-200",
-              "value": "#EBEDF1",
+              "value": "#E2E8F0",
               "role": "Row divider + subtle vertical header dividers"
             },
             {
               "name": "--bk-grey-300",
-              "value": "#D7DCE3",
+              "value": "#CBD5E1",
               "role": "Table border + header bottom border"
             },
             {
               "name": "--color-text-body",
-              "value": "#031A48",
+              "value": "#0B246E",
               "role": "Header label + cell text (Indigo-900)"
             },
             {
               "name": "--color-text-subtle",
-              "value": "#7D8695",
+              "value": "#334155",
               "role": "Muted cell text (em-dash placeholders, monospace IDs)"
             },
             {
               "name": "--bk-blue-600",
-              "value": "#0841B4",
+              "value": "#2563FF",
               "role": "Toolbar text-button actions + filter-funnel indicator"
             }
           ]

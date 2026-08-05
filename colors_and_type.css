@@ -13,43 +13,43 @@
   */
 
   /* Blue — primary brand & action color */
-  --bk-blue-50:  #F2F6FC;
-  --bk-blue-100: #E6ECF8;
-  --bk-blue-200: #CED9F0;
-  --bk-blue-300: #9CB3E1;
-  --bk-blue-400: #6B8DD2;
-  --bk-blue-500: #3967C3;
-  --bk-blue-600: #0841B4;
-  --bk-blue-700: #063490;
-  --bk-blue-800: #05276C;
-  --bk-blue-900: #031A48;
-  --bk-blue-1000: #020D24;
+  --bk-blue-50:  #F5F8FF;
+  --bk-blue-100: #EEF4FF;
+  --bk-blue-200: #DCE8FF;
+  --bk-blue-300: #B8D0FF;
+  --bk-blue-400: #8CB2FF;
+  --bk-blue-500: #5C8EFF;
+  --bk-blue-600: #2563FF;
+  --bk-blue-700: #1749E8;
+  --bk-blue-800: #1237C0;
+  --bk-blue-900: #0B246E;
+  --bk-blue-1000: #081A4D;
 
-  /* Teal — primary hover/secondary accent (most hover states pull from teal) */
-  --bk-teal-50:  #F2F8F8;
-  --bk-teal-100: #E6F2F2;
-  --bk-teal-200: #CEE6E5;
-  --bk-teal-300: #9DCDCC;
-  --bk-teal-400: #6BB3B2;
-  --bk-teal-500: #3A9A99;
-  --bk-teal-600: #09817F;
-  --bk-teal-700: #076766;
-  --bk-teal-800: #054D4C;
-  --bk-teal-900: #043433;
-  --bk-teal-1000: #021A19;
+  /* Cyan — focus ring & cool secondary accent (token name kept as -teal-*) */
+  --bk-teal-50:  #ECFCFF;
+  --bk-teal-100: #D5F8FF;
+  --bk-teal-200: #A7F1FF;
+  --bk-teal-300: #67E8FF;
+  --bk-teal-400: #22D3EE;
+  --bk-teal-500: #00B8D9;
+  --bk-teal-600: #0094B8;
+  --bk-teal-700: #007796;
+  --bk-teal-800: #005A73;
+  --bk-teal-900: #003E50;
+  --bk-teal-1000: #00212B;
 
   /* Indigo — dark navigation chrome */
-  --bk-indigo-50:  #F4F6F9;
-  --bk-indigo-100: #EAEDF3;
-  --bk-indigo-200: #D6DAE6;
-  --bk-indigo-300: #ACB5CE;
-  --bk-indigo-400: #8390B5;
-  --bk-indigo-500: #596B9D;
-  --bk-indigo-600: #304684;
-  --bk-indigo-700: #26386A;
-  --bk-indigo-800: #1D2A4F;
-  --bk-indigo-900: #131C35;
-  --bk-indigo-1000: #0A0E1A;
+  --bk-indigo-50:  #EEF4FF;
+  --bk-indigo-100: #DCE8FF;
+  --bk-indigo-200: #B8D0FF;
+  --bk-indigo-300: #8CB2FF;
+  --bk-indigo-400: #5C8EFF;
+  --bk-indigo-500: #2563FF;
+  --bk-indigo-600: #1749E8;
+  --bk-indigo-700: #1237C0;
+  --bk-indigo-800: #0B246E;
+  --bk-indigo-900: #081A4D;
+  --bk-indigo-1000: #040C29;
 
   /* Orange */
   --bk-orange-50:  #FEF7F3;
@@ -78,17 +78,17 @@
   --bk-yellow-1000: #322601;
 
   /* Purple — "discovery" / AI accents */
-  --bk-purple-50:  #F7F5F9;
-  --bk-purple-100: #EFEBF3;
-  --bk-purple-200: #E0D7E6;
-  --bk-purple-300: #C0AFCE;
-  --bk-purple-400: #A186B5;
-  --bk-purple-500: #815E9D;
-  --bk-purple-600: #623684;
-  --bk-purple-700: #4E2B6A;
-  --bk-purple-800: #3B204F;
-  --bk-purple-900: #271635;
-  --bk-purple-1000: #140B1A;
+  --bk-purple-50:  #FBF8FF;
+  --bk-purple-100: #F7F2FF;
+  --bk-purple-200: #EFE5FF;
+  --bk-purple-300: #DFC8FF;
+  --bk-purple-400: #C9A3FF;
+  --bk-purple-500: #A970FF;
+  --bk-purple-600: #8B5CF6;
+  --bk-purple-700: #7644EA;
+  --bk-purple-800: #6133C5;
+  --bk-purple-900: #4A2897;
+  --bk-purple-1000: #341E6A;
 
   /* Green — success */
   --bk-green-50:  #F2F8F3;
@@ -117,44 +117,44 @@
   --bk-red-1000: #2D060C;
 
   /* Pink — promotion / secondary accent */
-  --bk-pink-50:  #FDF3F8;
-  --bk-pink-100: #FCE8F1;
-  --bk-pink-200: #F9D2E3;
-  --bk-pink-300: #F4A5C7;
-  --bk-pink-400: #EE78AB;
-  --bk-pink-500: #E94B8F;
-  --bk-pink-600: #E31C73;
-  --bk-pink-700: #B6165C;
-  --bk-pink-800: #881145;
-  --bk-pink-900: #5B0B2E;
-  --bk-pink-1000: #2D0617;
+  --bk-pink-50:  #FFF6FB;
+  --bk-pink-100: #FFF0F8;
+  --bk-pink-200: #FFE0F0;
+  --bk-pink-300: #FFC0E2;
+  --bk-pink-400: #FF95CC;
+  --bk-pink-500: #FF5EAF;
+  --bk-pink-600: #FF2D8F;
+  --bk-pink-700: #E60073;
+  --bk-pink-800: #BF005E;
+  --bk-pink-900: #8F0046;
+  --bk-pink-1000: #660031;
 
   /* Grey — neutrals (use for surfaces, dividers, text muting) */
-  --bk-grey-50:  #FAFAFB;
-  --bk-grey-100: #F5F6F8;
-  --bk-grey-200: #EBEDF1;
-  --bk-grey-300: #D7DCE3;
-  --bk-grey-400: #C4CAD6;
-  --bk-grey-500: #B0B9C8;
-  --bk-grey-600: #9CA7BA;
-  --bk-grey-700: #7D8695;
-  --bk-grey-800: #5E6470;
-  --bk-grey-900: #3E434A;
-  --bk-grey-1000: #1F2125;
+  --bk-grey-50:  #F8FAFC;
+  --bk-grey-100: #F1F5F9;
+  --bk-grey-200: #E2E8F0;
+  --bk-grey-300: #CBD5E1;
+  --bk-grey-400: #94A3B8;
+  --bk-grey-500: #64748B;
+  --bk-grey-600: #475569;
+  --bk-grey-700: #334155;
+  --bk-grey-800: #1E293B;
+  --bk-grey-900: #0F172A;
+  --bk-grey-1000: #020617;
 
   /* AI — purplish-blue ramp for AI Assistant / AI-generated content. Distinct
      from Blue (action) and Purple (discovery). Default: ai-500. */
-  --bk-ai-50:   #F6F8FF;
-  --bk-ai-100:  #EEF1FF;
-  --bk-ai-200:  #D7DCFF;
-  --bk-ai-300:  #B3BCFF;
-  --bk-ai-400:  #8B97F2;
-  --bk-ai-500:  #6672D8;
-  --bk-ai-600:  #545FC4;
-  --bk-ai-700:  #434AA3;
-  --bk-ai-800:  #313777;
-  --bk-ai-900:  #222652;
-  --bk-ai-1000: #111329;
+  --bk-ai-50:   #F1F3FF;
+  --bk-ai-100:  #E2E7FF;
+  --bk-ai-200:  #C6CFFF;
+  --bk-ai-300:  #A5B2FF;
+  --bk-ai-400:  #7C89FF;
+  --bk-ai-500:  #5A63FF;
+  --bk-ai-600:  #474DE8;
+  --bk-ai-700:  #393AC2;
+  --bk-ai-800:  #2B2D8F;
+  --bk-ai-900:  #1F2166;
+  --bk-ai-1000: #101136;
 
   /* Base neutrals */
   --bk-white: #FFFFFF;
@@ -174,8 +174,8 @@
 
   /* Background tokens */
   --color-background-primary: var(--bk-blue-600);
-  --color-background-primary-hover: linear-gradient(112.63deg, #0B9D9B 12.38%, #0841B4 137.46%);
-  --color-background-primary-pressed: var(--bk-teal-400);
+  --color-background-primary-hover: linear-gradient(112.63deg, #7C4DFF 12.38%, #2563FF 137.46%);
+  --color-background-primary-pressed: var(--bk-blue-700);
   --color-background-secondary: var(--bk-white);
   --color-background-secondary-hover: var(--bk-grey-100);
   --color-background-secondary-pressed: var(--bk-teal-200);
@@ -195,8 +195,8 @@
   --color-text-inverse: var(--bk-white);
   --color-text-selected: var(--bk-blue-600);
   --color-text-link: var(--bk-blue-600);
-  --color-text-link-hover: var(--bk-teal-600);
-  --color-text-link-pressed: var(--bk-teal-400);
+  --color-text-link-hover: var(--bk-blue-700);
+  --color-text-link-pressed: var(--bk-blue-800);
   --color-text-link-visited: var(--bk-blue-800);
   --color-text-alert: var(--bk-red-700);
   --color-text-warning: var(--bk-orange-700);
@@ -253,20 +253,20 @@
   */
 
   /* Brand gradient — teal → blue, horizontal sweep.
-     Stops: #008380 at 29%, #0841B4 at 100%.
+     Stops: #FF2D8F at 29%, #2563FF at 100%.
      Use for hero surfaces, launcher backgrounds, brand moments. */
-  --gradient-brand: linear-gradient(90deg, #008380 29%, #0841B4 100%);
+  --gradient-brand: linear-gradient(90deg, #FF2D8F 29%, #2563FF 100%);
 
   /* Stop colors as standalone tokens (in case you need them
      for icons / strokes that sit on top of the gradient). */
-  --gradient-brand-stop-1: #008380;
-  --gradient-brand-stop-2: #0841B4;
+  --gradient-brand-stop-1: #FF2D8F;
+  --gradient-brand-stop-2: #2563FF;
 
   /* ─── Typography ────────────────────────────────────────────
-     Sans: Acherus Grotesque, system-ui fallback.
+     Sans: Inter (variable), system-ui fallback. Modern · Clear · Confident.
      Mono: SF Mono (system).
   */
-  --font-sans: "Acherus Grotesque", system-ui, "SF Pro", "Segoe UI", sans-serif;
+  --font-sans: "Inter", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   /* Typescale (from /Typography/Fonts-Typograpy) */
@@ -345,7 +345,7 @@
   --shadow-raised-hover: 0px 4px 8px rgba(206, 217, 240, 1);
   --shadow-overlay: 0px 8px 24px rgba(38, 40, 44, 0.18);     /* modal / popover */
   --shadow-overlay-strong: 0px 12px 32px rgba(38, 40, 44, 0.28);
-  --shadow-focus-ring: 0 0 0 3px rgba(9, 129, 127, 0.35);    /* teal-600 focus halo */
+  --shadow-focus-ring: 0 0 0 3px rgba(0, 148, 184, 0.35);    /* cyan focus halo (bk-teal-600 = #0094B8) */
   --shadow-inset-sunken: inset 0 1px 2px rgba(38, 40, 44, 0.08);
 
   /* ─── Form field tokens ─────────────────────────────────────
@@ -391,7 +391,7 @@
   --field-text-success:  var(--bk-green-800);
 
   /* Standardized focus halo — use on every focusable control */
-  --ring-focus: 0 0 0 2px rgba(9, 129, 127, 0.25);
+  --ring-focus: 0 0 0 2px rgba(0, 148, 184, 0.25);
 
   /* AI-state tokens — distinct semantic from "discovery" (purple) and
      "action" (blue). Uses the dedicated purplish-blue AI ramp. */

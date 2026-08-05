@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="Baklava">
+  <!-- bottom layer — blue -->
+  <path d="M10 44 L32 55 L54 44 L54 51 L32 62 L10 51 Z" fill="#1237C0"/>
+  <path d="M32 33 L54 44 L32 55 L10 44 Z" fill="#2563FF"/>
+  <!-- middle layer — violet -->
+  <path d="M13 30 L32 39.5 L51 30 L51 36 L32 45.5 L13 36 Z" fill="#6133C5"/>
+  <path d="M32 20.5 L51 30 L32 39.5 L13 30 Z" fill="#7C4DFF"/>
+  <!-- top layer — magenta -->
+  <path d="M16 17 L32 25 L48 17 L48 22 L32 30 L16 22 Z" fill="#E60073"/>
+  <path d="M32 9 L48 17 L32 25 L16 17 Z" fill="#FF2D8F"/>
+</svg>

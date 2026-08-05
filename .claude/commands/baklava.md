@@ -48,7 +48,7 @@ Before writing any HTML, **print a one-line confirmation** of which preview file
 If you cannot name the files you fetched, stop and fetch them — do not proceed from memory.
 
 > **Always fetch `components-global-header` when building any screen with a top navigation bar.** The header background is `--bk-blue-1000` (not `--bk-blue-900`, not "dark blue from memory"). Read the file.
-> **Use the Baklava brand mark from the Assets section when rendering the brand mark.** Reference the hosted `baklava-mark-white.svg` / `baklava-wordmark-white.svg` at their absolute live URLs (see Assets section below) rather than inventing a wordmark.
+> **Use the Baklava brand mark from the Assets section when rendering the brand mark.** Reference the hosted `baklava-mark.svg` / `baklava-logo-white.svg` at their absolute live URLs (see Assets section below) rather than inventing a wordmark.
 > **Always fetch `components-left-nav` when building any sidebar navigation.** The treatment, spacing, hover states, and selection style are specific to this system.
 
 #### Default chrome — every full screen has header AND collapsible left nav
@@ -138,19 +138,19 @@ All other rules apply equally in React mode: the chrome default (header with all
 
 ### Assets — rewrite relative paths to absolute URLs
 
-Preview files reference brand images via **relative paths** like `../assets/baklava-wordmark-white.svg` or `url("../assets/baklava-mark-white.svg")`. These will NOT resolve in the dev's output environment. Every asset reference you copy from a preview file MUST be rewritten to its absolute URL on the live site:
+Preview files reference brand images via **relative paths** like `../assets/baklava-logo-white.svg` or `url("../assets/baklava-mark.svg")`. These will NOT resolve in the dev's output environment. Every asset reference you copy from a preview file MUST be rewritten to its absolute URL on the live site:
 
 | In the preview file | In your output |
 |---|---|
-| `src="../assets/baklava-wordmark-white.svg"` | `src="https://jackiecurry.github.io/baklava/assets/baklava-wordmark-white.svg"` |
-| `src="../assets/baklava-mark-white.svg"` | `src="https://jackiecurry.github.io/baklava/assets/baklava-mark-white.svg"` |
-| `url("../assets/baklava-mark-white.svg")` | `url("https://jackiecurry.github.io/baklava/assets/baklava-mark-white.svg")` |
+| `src="../assets/baklava-logo-white.svg"` | `src="https://jackiecurry.github.io/baklava/assets/baklava-logo-white.svg"` |
+| `src="../assets/baklava-mark.svg"` | `src="https://jackiecurry.github.io/baklava/assets/baklava-mark.svg"` |
+| `url("../assets/baklava-mark.svg")` | `url("https://jackiecurry.github.io/baklava/assets/baklava-mark.svg")` |
 | `src="../assets/assistant-icon.svg"` | `src="https://jackiecurry.github.io/baklava/assets/assistant-icon.svg"` |
 
 The available brand assets are:
 
-- `baklava-wordmark-white.svg` — full "Baklava" wordmark for dark backgrounds
-- `baklava-mark-white.svg` — round mark only for dark backgrounds
+- `baklava-logo-white.svg` — full "Baklava" wordmark for dark backgrounds
+- `baklava-mark.svg` — round mark only for dark backgrounds
 - `assistant-icon.svg` — neutral AI Assistant glyph (sparkles)
 
 ---
