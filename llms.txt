@@ -104,13 +104,6 @@ Several building blocks assembled into a complete piece of the interface.
 
 Reusable flows that combine components to solve a recurring product problem.
 
-- [Agent activity panel](https://jackiecurry.github.io/baklava/preview/patterns-agent-activity-panel.html): Activity stream of agent tool calls — separate from the chat thread.
-- [Agent plan](https://jackiecurry.github.io/baklava/preview/patterns-agent-plan.html): Plan-and-execute flow — review, approve, then watch steps run.
-- [Agent recovery](https://jackiecurry.github.io/baklava/preview/patterns-agent-recovery.html): Three distinct recovery paths — misunderstood, tool failure, partial success.
-- [Agent step override](https://jackiecurry.github.io/baklava/preview/patterns-agent-step-override.html): Mid-execution controls — pause, resume, modify, skip, stop.
-- [Agent tool disclosure](https://jackiecurry.github.io/baklava/preview/patterns-agent-tool-disclosure.html): Inline tool call + response — collapsed or expanded, success or error.
-- [AI confidence](https://jackiecurry.github.io/baklava/preview/patterns-ai-confidence.html): Visual treatment for AI output the user should sanity-check.
-- [AI-assisted input](https://jackiecurry.github.io/baklava/preview/patterns-ai-assisted-input.html): Field with an inline AI generate button.
 - [Bulk selection](https://jackiecurry.github.io/baklava/preview/patterns-bulk-selection.html): Header checkbox + per-row checkbox + sticky action bar.
 - [Destructive confirm](https://jackiecurry.github.io/baklava/preview/patterns-destructive-confirm.html): Modal with positive-phrasing button labels.
 - [Drag and drop](https://jackiecurry.github.io/baklava/preview/patterns-drag-drop.html): Drop affordances on canvas, lists, and tables.
@@ -147,22 +140,12 @@ Chart and graph types, with guidance on when to use each.
 - [Stacked area](https://jackiecurry.github.io/baklava/preview/dataviz-stacked.html): Time series where the layers stack to show share of total.
 - [Swim-lane Gantt](https://jackiecurry.github.io/baklava/preview/dataviz-gantt.html): Pipeline runs along a timeline — color = final status.
 - [Time series](https://jackiecurry.github.io/baklava/preview/dataviz-timeseries.html): Line chart over time — single or multi-line.
-- [Usage rules](https://jackiecurry.github.io/baklava/preview/dataviz-usage.html): When to reach for each chart type — and when not to.
 
 ## Advanced editors
 
 Specialized multi-field editors for Baklava's configuration surfaces.
 
-- [API parameter builder](https://jackiecurry.github.io/baklava/preview/components-api-param-builder.html): Build a REST request — path, query, headers, body.
 - [Code editor](https://jackiecurry.github.io/baklava/preview/components-code-editor.html): Embedded Monaco-style code editor — JSON, JS, SQL, Python.
-- [Connection picker](https://jackiecurry.github.io/baklava/preview/components-connection-picker.html): Multi-step picker for selecting a connection or creating one inline.
 - [Dynamic repeater](https://jackiecurry.github.io/baklava/preview/components-dynamic-repeater.html): Field group the user can duplicate N times.
 - [JSON editor](https://jackiecurry.github.io/baklava/preview/components-json-editor.html): Tree + raw view of a JSON document with inline edit.
 - [Key/value editor](https://jackiecurry.github.io/baklava/preview/components-key-value-editor.html): Inline editor for headers, params, and other flat dicts.
-- [Schema builder](https://jackiecurry.github.io/baklava/preview/components-schema-builder.html): Visual editor for JSON schemas — output specs, payload shapes.
-
-## Templates
-
-Full-page starting points — complete screens assembled from components and patterns.
-
-- [Designer · Empty canvas](https://jackiecurry.github.io/baklava/preview/templates-designer.html): Full Designer template — global header, left rail, toolbar, and pipeline canvas.

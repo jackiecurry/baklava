@@ -6,7 +6,7 @@ product
 
 ## Users
 
-Designers and frontend engineers building Baklava's products — Designer, Admin Manager, Monitor, AutoSync, APIM, and the Pattern Catalog — plus AI coding agents fetching the system programmatically. They arrive needing a specific component or token: the canonical spec, the exact markup, and the token to use. Their context is "I'm mid-build and need the source of truth, fast." Secondary audience: design-system maintainers extending the catalog, and stakeholders evaluating whether the system is complete and credible.
+Designers and frontend engineers building Baklava's products — the app, Admin Manager, Monitor, AutoSync, APIM, and the Pattern Catalog — plus AI coding agents fetching the system programmatically. They arrive needing a specific component or token: the canonical spec, the exact markup, and the token to use. Their context is "I'm mid-build and need the source of truth, fast." Secondary audience: design-system maintainers extending the catalog, and stakeholders evaluating whether the system is complete and credible.
 
 ## Product Purpose
 

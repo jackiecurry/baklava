@@ -15,7 +15,7 @@ The live gallery is at <https://jackiecurry.github.io/baklava/>.
 ### Fixes
 - **Undo-toast** action pill now uses `--radius-sm` instead of `--field-radius` (identical 4px value; drops a dependency on a non-vendored semantic token).
 
-## 2026-07-16 · Skeleton loaders & Designer loading state
+## 2026-07-16 · Skeleton loaders & loading state
 
 ### New components
 - **Left nav skeleton** (Composed components) — a loading placeholder for the dark navigation rail. Uses white-alpha bands tuned to the navy surface rather than the light-grey Skeleton loader, which reads too bright on `--bk-blue-1000`. Expanded (icon + label bars) and minimized (icon circles) states, matching the real nav's geometry.
@@ -31,7 +31,7 @@ The live gallery is at <https://jackiecurry.github.io/baklava/>.
 - **Global header** now documents the **combo loader bar** — the 5px cyan → blue → cyan gradient bar on the header's bottom edge that fills left→right over 4s while an inner band walks on a 1s loop for global loading.
 
 ### Off-gallery
-- **Designer · Loading state** (`preview/templates-designer-loading.html`) — a full load-time treatment for the Designer: skeleton chrome around a canvas that centers the Baklava mark breathing in a soft halo, with a caption that cycles through what's loading and swaps in connector / toolbar glyphs. It is **kept out of the gallery catalog on purpose**: the gallery injects a preview's `<body>` inline and does not run head-level CSS/JS, so this page only animates when opened directly. Share the URL: `/preview/templates-designer-loading.html`.
+- **Loading state** — a full load-time treatment for a full-page canvas: skeleton chrome around a canvas that centers the Baklava mark breathing in a soft halo, with a caption that cycles through what's loading and swaps in connector / toolbar glyphs. It is **kept out of the gallery catalog on purpose**: the gallery injects a preview's `<body>` inline and does not run head-level CSS/JS, so this page only animates when opened directly.
 
 ## 2026-07-16 · Quiet in-cell Select for dense tables
 

@@ -202,7 +202,7 @@
 
     <!-- ───────────── On DARK ───────────── -->
     <div>
-      <div class="section-h">On dark surfaces <span class="meta">add <code>sc--inverse</code> · Designer rail · AI Assistant panel</span></div>
+      <div class="section-h">On dark surfaces <span class="meta">add <code>sc--inverse</code> · dark rail · AI Assistant panel</span></div>
       <div class="dark-stage">
         <div>
           <div class="lbl-section">Snaps</div>
@@ -236,7 +236,7 @@
 
     <dl class="spec">
       <dt>shape</dt><dd>Sunken track with a <b>3px inset pad</b> and 1px outer border. Outer corners use <b>4px radius</b>; the selected pill nested inside also uses <b>4px radius</b>. Selected = Blue 600 pill; unselected = transparent.</dd>
-      <dt>surfaces</dt><dd>Default light = transparent track with a subtle border. Add <b>sc--on-sunken</b> on Grey 100 / <code>--color-surface-sunken</code> backgrounds for a white track with the standard Grey 400 control border. Add <b>sc--inverse</b> on dark surfaces (Designer rail, AI Assistant panel, Blue 1000 nav). These surface modifiers are mutually exclusive; the selected Blue 600 pill is identical in every mode.</dd>
+      <dt>surfaces</dt><dd>Default light = transparent track with a subtle border. Add <b>sc--on-sunken</b> on Grey 100 / <code>--color-surface-sunken</code> backgrounds for a white track with the standard Grey 400 control border. Add <b>sc--inverse</b> on dark surfaces (dark rail, AI Assistant panel, Blue 1000 nav). These surface modifiers are mutually exclusive; the selected Blue 600 pill is identical in every mode.</dd>
       <dt>states</dt><dd><b>Idle</b>: Grey 700 (light) / Grey 400 (dark). <b>Hover</b>: text darkens / brightens with a subtle fill (Blue 6% on light · white 6% on dark). <b>Selected</b>: Blue 600 fill, white text. <b>Disabled</b>: Grey 400, no hover. <b>Focus</b>: 2px cyan outline on the segment only.</dd>
       <dt>sizes</dt><dd><b>lg</b> · <b>40px</b> tall, 14px ExtraBold, 16px icon, 18px segment padding — use in page or table toolbars beside 40px fields. <b>md</b> (default) · <b>30px</b> tall, 13px ExtraBold, 14px icon, 14px padding — use standalone. <b>sm</b> · <b>24px</b> tall, 12px ExtraBold, 12px icon, 10px padding — use in dense toolbars, rails, and compact filters.</dd>
       <dt>content</dt><dd>Icon + label, label only, or icon only. <b>Always show labels</b> when space allows. Icon-only is reserved for dense rails — give every segment an <code>aria-label</code> and a tooltip.</dd>

@@ -273,7 +273,7 @@ window.BAKLAVA_DATA = {
           parent: "preview/components-inputs.html",
           tagline: "Label, optional indicator, control, help text, error — in that order.",
           meta: {
-            usage: "Reference for the canonical field stack. Label above (14/22 ExtraBold) · optional optional/required indicator · control · help text below (12/18 Grey-700) · inline error in Red-600 with a `circle-alert` icon. Never invert this order, and never put help text above the control. Trailing slot: a clear `×` pairs freely with a *passive* trailing element (validation check, status, loading spinner, `⌘K` badge), but do not stack two interactive buttons. The test is scope: the trailing slot is for affordances acting on the value in this field (clear it, reveal it, validate it). Anything acting on the results the field filters (group by, sort, density, saved view) is a different object and by default moves outside as a sibling button in the same toolbar row, per Filter, sort, faceted search — where it can carry a visible label and its current setting instead of hiding behind an icon. Rail exception: where the field spans a narrow panel with no toolbar row to move into (the Designer asset palette and other inverse rails), one view control may share the slot if it acts on the list below, is icon-only at 16px in the magnifier's subtle grey with no button chrome, is the only one (clear + one is the ceiling), and is a real `<button>` with `aria-label` plus `aria-haspopup`/`aria-expanded` when it opens a menu. Order still applies in both cases: clear innermost, the persistent control pins the edge — reversed, the persistent icon shifts sideways every time the transient `×` appears or leaves."
+            usage: "Reference for the canonical field stack. Label above (14/22 ExtraBold) · optional optional/required indicator · control · help text below (12/18 Grey-700) · inline error in Red-600 with a `circle-alert` icon. Never invert this order, and never put help text above the control. Trailing slot: a clear `×` pairs freely with a *passive* trailing element (validation check, status, loading spinner, `⌘K` badge), but do not stack two interactive buttons. The test is scope: the trailing slot is for affordances acting on the value in this field (clear it, reveal it, validate it). Anything acting on the results the field filters (group by, sort, density, saved view) is a different object and by default moves outside as a sibling button in the same toolbar row, per Filter, sort, faceted search — where it can carry a visible label and its current setting instead of hiding behind an icon. Rail exception: where the field spans a narrow panel with no toolbar row to move into (the asset palette and other inverse rails), one view control may share the slot if it acts on the list below, is icon-only at 16px in the magnifier's subtle grey with no button chrome, is the only one (clear + one is the ceiling), and is a real `<button>` with `aria-label` plus `aria-haspopup`/`aria-expanded` when it opens a menu. Order still applies in both cases: clear innermost, the persistent control pins the edge — reversed, the persistent icon shifts sideways every time the transient `×` appears or leaves."
           }
         },
         {
@@ -354,7 +354,7 @@ window.BAKLAVA_DATA = {
           tagline: "Input with a leading search icon and a clear-on-typed affordance.",
           meta: {
             anatomy: "Leading Lucide `search-sm` icon · field · trailing clear `×` button that appears once there is text. Placeholder describes the shape (`Search snaps`). The clear `×` owns the trailing slot. Passive elements may share it freely: the `⌘K` badge, a validation check, a loading spinner. Controls that act on the *results* rather than on the text (group by, sort, density, saved view) sit outside as sibling buttons in the same toolbar row, per Filter, sort, faceted search — except in a narrow rail, where there is no toolbar row to move into and one icon-only view control may share the slot (see Field anatomy's rail exception). Either way the order holds: clear innermost, the persistent control pinned to the edge, so the transient `×` can come and go without shifting it.",
-            options: "Sizes: default 40px or compact 32px — use compact on dense surfaces such as table and filter toolbars. Surfaces: default bordered white field, or `sl-search--inverse` on dark surfaces (Designer rail, AI Assistant panel, Blue 1000 nav), which swaps to a near-transparent fill with a Blue-300 25% border and keeps the cyan focus ring. Inverse is a surface modifier only — compose it with the compact size for the rail. There is no filled variant: an opaque grey fill would collide with the state fills (Grey-100 read-only, Blue-100 disabled, Red-100 error, AI-100 review). On light surfaces the field keeps its border even when compact, so the input target stays discoverable in a toolbar.",
+            options: "Sizes: default 40px or compact 32px — use compact on dense surfaces such as table and filter toolbars. Surfaces: default bordered white field, or `sl-search--inverse` on dark surfaces (dark rail, AI Assistant panel, Blue 1000 nav), which swaps to a near-transparent fill with a Blue-300 25% border and keeps the cyan focus ring. Inverse is a surface modifier only — compose it with the compact size for the rail. There is no filled variant: an opaque grey fill would collide with the state fills (Grey-100 read-only, Blue-100 disabled, Red-100 error, AI-100 review). On light surfaces the field keeps its border even when compact, so the input target stays discoverable in a toolbar.",
             usage: "Use for filtering visible content on the current screen. For navigating to results on another screen, use the global Search overlay instead. Debounce input by 150ms before triggering a request.",
             behaviors: "Esc clears when focused. Clear button removes text and refocuses the field. On submit (Enter), the request fires immediately, bypassing the debounce."
           }
@@ -594,7 +594,7 @@ window.BAKLAVA_DATA = {
           meta: {
             anatomy: "Vertical rail · 56px or 240px wide depending on state · 20px Lucide icons in the collapsed state · 14/22 labels alongside in the expanded state · section headers in 10px ExtraBold uppercase.",
             options: "Collapsed (icons only) or expanded (labels visible). With or without nested item groups.",
-            usage: "Use as the primary product-level nav inside each app. Designer's snap palette, Manager's org tree, and Monitor's pipeline list all live here. Items represent destinations or scopes — never actions.",
+            usage: "Use as the primary product-level nav inside each app. the app's snap palette, Manager's org tree, and Monitor's pipeline list all live here. Items represent destinations or scopes — never actions.",
             behaviors: "Collapse toggle is persistent per user. Hover on a collapsed item shows the label as a tooltip. Active route is marked with a 3px Blue-600 left border and Blue-100 row background."
           }
         },
@@ -746,69 +746,13 @@ window.BAKLAVA_DATA = {
       name: "Patterns",
       description: "Reusable flows that combine components to solve a recurring product problem.",
       items: [
-        {
-          file: "preview/patterns-agent-activity-panel.html",
-          name: "Agent activity panel",
-          tagline: "Activity stream of agent tool calls — separate from the chat thread.",
-          meta: {
-            usage: "Use to surface what an agent is doing as it runs, grouped into Done, In progress, Blocked, and Queued. Kept distinct from the AI Assistant chat thread — linked but never merged into one stream. Only non-empty sections render.",
-            behaviors: "The running item carries a 2px `--bk-blue-600` left border, a `--bk-blue-100` tint, and an inline spinner; blocked items use an orange left border. Clicking an item expands an inline tool disclosure with the tool name, request payload, and truncated response plus a `View all` link. The footer tracks overall progress (`Running step 2 of 4` → `Completed in 1m 22s`)."
-          }
-        },
-        {
-          file: "preview/patterns-agent-plan.html",
-          name: "Agent plan",
-          tagline: "Plan-and-execute flow — review, approve, then watch steps run.",
-          meta: {
-            usage: "Use when an agent proposes a multi-step plan the user should review before it runs. In the review state the user can approve the whole plan or edit/remove individual steps; during execution, completed steps lock while still-pending steps remain editable.",
-            behaviors: "Steps move through pending → running → complete. Edit/Remove links appear on row hover and are hidden on running and completed steps. The running step gets a 2px `--bk-blue-600` left border, a `--bk-blue-100` tint, bold label, and comet-tail spinner. The footer swaps from Approve / Edit (review) to Pause / Stop (executing)."
-          }
-        },
-        {
-          file: "preview/patterns-agent-recovery.html",
-          name: "Agent recovery",
-          tagline: "Three distinct recovery paths — misunderstood, tool failure, partial success.",
-          meta: {
-            usage: "Use when an agent run goes wrong. Three paths: (A) misunderstood request — yellow, with an editable prompt and a Try again; (B) tool call failure — red, with tool detail (tool, status, retries, step) and Retry tool / Skip and continue; (C) partial success — orange, with a step-by-step status list and Retry from step N / Skip / Stop here.",
-            behaviors: "Every recovery message is 3-part — what happened · why · what to try next — never a generic `Something went wrong`. Completed steps are always preserved as locked Done rows and are never lost on retry."
-          }
-        },
-        {
-          file: "preview/patterns-agent-step-override.html",
-          name: "Agent step override",
-          tagline: "Mid-execution controls — pause, resume, modify, skip, stop.",
-          meta: {
-            usage: "Use to give the user control over an agent mid-run. The executing state shows Pause + Stop, with Edit/Skip on hover for pending steps; pausing exposes Resume / Modify / Stop on the active step; modifying opens an inline text input (no modal); skipping dims and strikes through the step.",
-            behaviors: "The paused active step takes a yellow border and background; modifying takes a blue border, background, and a focused input with Save / Cancel. Skipped steps drop to 45% opacity with a struck-through label. Completed steps are locked — only upcoming steps ever show Edit / Skip."
-          }
-        },
-        {
-          file: "preview/patterns-agent-tool-disclosure.html",
-          name: "Agent tool disclosure",
-          tagline: "Inline tool call + response — collapsed or expanded, success or error.",
-          meta: {
-            usage: "Use to show a single agent tool call inline in the chat thread or inside an activity-panel item. Collapsed shows the tool icon, tool name, and a summary chip; expanded reveals the request payload and a truncated response with copy / view full.",
-            behaviors: "The chevron rotates up on expand. Success uses a green treatment; error uses a red trigger with an error message and Retry + Skip step affordances. Placed inline between chat messages or inside an activity panel item expansion."
-          }
-        },
-        {
-          file: "preview/patterns-ai-confidence.html",
-          name: "AI confidence",
-          tagline: "Visual treatment for AI output the user should sanity-check.",
-          meta: {
-            usage: "Use to flag AI output that is below high-confidence threshold — uncertain field mappings, partial generations. The user is asked to confirm or refine before continuing.",
-            behaviors: "Low-confidence values render in the AI tint with a Yellow-600 left border and a `Review` chip. Confirming the value clears both the tint and the chip; refining re-runs the generation with the user's correction as context."
-          }
-        },
-        {
-          file: "preview/patterns-ai-assisted-input.html",
-          name: "AI-assisted input",
-          tagline: "Field with an inline AI generate button.",
-          meta: {
-            usage: "Use on free-text fields where AI can offer a useful first draft — pipeline description, error message, recipe name. The user always sees the AI suggestion before it becomes the value.",
-            behaviors: "Click the AI button to generate; the suggestion streams into the field with the AI tint. Accept commits the value; Reject reverts to what was there. While generating, the field is read-only and the AI tint is visible."
-          }
-        },
+        
+        
+        
+        
+        
+        
+        
         {
           file: "preview/patterns-bulk-selection.html",
           name: "Bulk selection",
@@ -905,7 +849,7 @@ window.BAKLAVA_DATA = {
           tagline: "Shortcut conventions across the suite.",
           meta: {
             usage: "Use the suite's keyboard conventions: `⌘ K` opens the global search overlay; `⌘ S` saves; `⌘ /` toggles AI Assistant; `?` opens the shortcut cheat-sheet. Single-key shortcuts (without modifier) only work when no input is focused — never hijack typing.",
-            behaviors: "All shortcuts surface in the `?` cheat-sheet. Custom shortcuts inside a product (e.g., Designer's `R` for run pipeline) list under their own product section."
+            behaviors: "All shortcuts surface in the `?` cheat-sheet. Custom shortcuts inside a product (e.g., the app's `R` for run pipeline) list under their own product section."
           }
         },
         {
@@ -1098,14 +1042,6 @@ window.BAKLAVA_DATA = {
             usage: "Use for any over-time trend with 1–5 series. For more than 5 series, use small multiples. For percentages of a total over time, use Stacked area instead.",
             behaviors: "Hover snaps a crosshair to the nearest x value and shows a multi-series tooltip. Click-drag selects a range and zooms in; double-click resets the zoom."
           }
-        },
-        {
-          file: "preview/dataviz-usage.html",
-          name: "Usage rules",
-          tagline: "When to reach for each chart type — and when not to.",
-          meta: {
-            usage: "Use this card as the decision tree for picking a chart. The default is the simplest visualization that answers the question — a number for a KPI, a sparkline for a trend, a small-multiple grid before a giant chart. Never use a chart to decorate; if the chart does not answer a specific question, remove it."
-          }
         }
       ]
     },
@@ -1115,17 +1051,7 @@ window.BAKLAVA_DATA = {
       name: "Advanced editors",
       description: "Specialized multi-field editors for Baklava's configuration surfaces.",
       items: [
-        {
-          file: "preview/components-api-param-builder.html",
-          name: "API parameter builder",
-          tagline: "Build a REST request — path, query, headers, body.",
-          meta: {
-            anatomy: "Method picker (GET/POST/...) · URL field with inline `{path-param}` chips · tabbed editor for Query / Headers / Body / Auth · response preview below.",
-            options: "Variants per HTTP method. Body editor mode (Raw / JSON / Form-data / x-www-form-urlencoded).",
-            usage: "Use anywhere the user builds an outbound HTTP request — REST Snap, webhook test tool, custom API source. Pair with a `Send test request` action that shows the live response in the preview pane.",
-            behaviors: "Path params chip out automatically from `{name}` segments in the URL. Switching body mode preserves edits where possible; otherwise warns before discarding. Auth tab swaps in the relevant auth fields (Basic, Bearer, OAuth, API key)."
-          }
-        },
+        
         {
           file: "preview/components-code-editor.html",
           name: "Code editor",
@@ -1137,16 +1063,7 @@ window.BAKLAVA_DATA = {
             behaviors: "Syntax highlighting and bracket matching per-language. `⌘ /` toggles comment on selection; `⌘ Enter` formats. Errors gutter-mark with Red-600 squiggles; warnings with Yellow-600."
           }
         },
-        {
-          file: "preview/components-connection-picker.html",
-          name: "Connection picker",
-          tagline: "Multi-step picker for selecting a connection or creating one inline.",
-          meta: {
-            anatomy: "Step 1: source type grid (Postgres, Salesforce, REST, etc.) · Step 2: existing connections for the chosen type · Step 3: inline new-connection form when no existing connection fits.",
-            usage: "Use when a Snap or step needs to bind to a SaaS endpoint or database. Surfaces existing connections first so the user does not re-enter credentials; falls back to inline creation only when needed.",
-            behaviors: "Step 1 is keyboard-navigable as a grid; arrow keys move the focus, Enter selects. Type-ahead in step 1 filters the grid by source name. Step 3 reuses the Form section + Form row primitives."
-          }
-        },
+        
         {
           file: "preview/components-dynamic-repeater.html",
           name: "Dynamic repeater",
@@ -1178,34 +1095,6 @@ window.BAKLAVA_DATA = {
             options: "Plain k/v, with description column, with disable toggle, with auth/secret masking on the value column.",
             usage: "Use for HTTP headers, query params, environment overrides — any short flat dictionary. For nested structures, use the JSON editor.",
             behaviors: "Tab from value to the next key (auto-appending a new row when on the last value). Drag-handle column reorders rows. Removing a row leaves no trace; disabling keeps the row but greys it and excludes it from the saved value."
-          }
-        },
-        {
-          file: "preview/components-schema-builder.html",
-          name: "Schema builder",
-          tagline: "Visual editor for JSON schemas — output specs, payload shapes.",
-          meta: {
-            anatomy: "Tree of fields · each field row: name, type, required toggle, default · child fields indented under their parent · `+` adds a child or sibling depending on the focused row.",
-            options: "Output schema, input schema, request body, response body. Types: string, number, boolean, object, array, enum.",
-            usage: "Use anywhere the user defines a structured payload — Snap output schema, custom API responses, webhook contracts. Pair with a sample-data view that validates against the schema as the user types.",
-            behaviors: "Changing a parent type between object / array shows/hides the child editor. Required fields surface a red dot in the tree. Validation errors appear inline next to the offending row."
-          }
-        }
-      ]
-    },
-    {
-      num: "08",
-      id: "templates",
-      name: "Templates",
-      description: "Full-page starting points — complete screens assembled from components and patterns.",
-      items: [
-        {
-          file: "preview/templates-designer.html",
-          name: "Designer · Empty canvas",
-          tagline: "Full Designer template — global header, left rail, toolbar, and pipeline canvas.",
-          meta: {
-            usage: "Use as the reference layout for the Designer workspace. Composes the Global header, Left nav (snap palette), Toolbar (Build / Execution / Configuration / Version Control / Transfer groups), and the pipeline Canvas. The empty canvas shows a drag-Snaps hint.",
-            behaviors: "Toolbar collapses to icons-only or expands with labels and group headers; the chevron toggles. Left rail can be resized and persists per user. The properties panel is hidden until a snap is selected. A standalone load-time treatment lives at preview/templates-designer-loading.html (kept out of the gallery because its head-level CSS/JS don't run when the gallery injects a preview body inline — open it directly)."
           }
         }
       ]

@@ -74,8 +74,8 @@
     border-radius: 50%; background: var(--bk-blue-600);
   }
 
-  /* ─── Canvas drop (Designer-style) ─────────────────────────── */
-  .designer {
+  /* ─── Canvas drop (canvas-style) ─────────────────────────── */
+  .dd-canvas {
     display: grid; grid-template-columns: 180px 1fr;
     height: 280px;
   }
@@ -250,9 +250,9 @@
     <div class="divider"></div>
 
     <div>
-      <div class="section-h">Canvas drop <span class="meta">Designer-style · palette → canvas · drop target hint</span></div>
+      <div class="section-h">Canvas drop <span class="meta">canvas-style · palette → canvas · drop target hint</span></div>
       <div class="frame">
-        <div class="designer">
+        <div class="dd-canvas">
           <div class="palette">
             <div class="pal-item"><span class="ic"><i data-lucide="cloud"></i></span>Salesforce Read</div>
             <div class="pal-item pal-item--ghost"><span class="ic"><i data-lucide="filter"></i></span>Filter</div>
@@ -309,7 +309,7 @@
       <dt>handle</dt><dd>Always provide an explicit grip icon (<code>grip-vertical</code>) when rows or columns are draggable. Don't make the whole row draggable — conflicts with click-to-select. Cursor is <code>grab</code> at rest, <code>grabbing</code> while dragging.</dd>
       <dt>dragging row</dt><dd>The original row gets a subtle elevation: <b>Blue 600 border</b>, raised shadow, small rotation (~−0.5°) and 2px offset. The row remains <b>in place</b> as the ghost — don't remove it; the insertion-line tells the user where the drop will land.</dd>
       <dt>insertion line</dt><dd>2px Blue 600 line with a 8px filled dot on the left, rendered between target rows. Snaps to row gaps, never overlaps content. Only one line visible at a time.</dd>
-      <dt>canvas drop</dt><dd>Designer-style: dashed Blue 600 outline + Blue 50 fill on valid drop targets. Show "Drop here" with a <code>+</code> icon, sized to match the dropped node. Invalid zones (full lanes, type mismatch) don't highlight at all — never use red on hover.</dd>
+      <dt>canvas drop</dt><dd>canvas-style: dashed Blue 600 outline + Blue 50 fill on valid drop targets. Show "Drop here" with a <code>+</code> icon, sized to match the dropped node. Invalid zones (full lanes, type mismatch) don't highlight at all — never use red on hover.</dd>
       <dt>floating ghost</dt><dd>When dragging from palette to canvas, render a <b>floating ghost</b> that tracks the pointer: white card with Blue 600 border, slight rotation, raised shadow. Hidden when over an invalid zone.</dd>
       <dt>file drop zone</dt><dd>Dashed Blue 400 border + Blue 50 fill at rest. <b>Active</b> (file over zone): Blue 600 solid border + Blue 100 fill + name the file. <b>Rejected</b>: red border + red fill + specific reason ("This zone only accepts JSON, YAML, or AVRO").</dd>
       <dt>keyboard</dt><dd>Every draggable affordance must have a <b>keyboard equivalent</b>: rows reorder via focus + <kbd>Space</kbd> to pick up, <kbd>↑</kbd>/<kbd>↓</kbd> to move, <kbd>Space</kbd> to drop, <kbd>Esc</kbd> to cancel. Files have a "Browse" link. Canvas placement has the snap palette's "+" button.</dd>

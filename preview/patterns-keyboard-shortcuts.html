@@ -149,7 +149,7 @@
   "url": "https://jackiecurry.github.io/baklava/preview/patterns-keyboard-shortcuts.html",
   "tagline": "Shortcut conventions across the suite.",
   "usage": "Use the suite's keyboard conventions: `⌘ K` opens the global search overlay; `⌘ S` saves; `⌘ /` toggles AI Assistant; `?` opens the shortcut cheat-sheet. Single-key shortcuts (without modifier) only work when no input is focused — never hijack typing.",
-  "behaviors": "All shortcuts surface in the `?` cheat-sheet. Custom shortcuts inside a product (e.g., Designer's `R` for run pipeline) list under their own product section."
+  "behaviors": "All shortcuts surface in the `?` cheat-sheet. Custom shortcuts inside a product (e.g., the app's `R` for run pipeline) list under their own product section."
 }
 </script>
 </head>
@@ -187,14 +187,14 @@
               <h4>Global</h4>
               <div class="sheet__row"><span>Quick open</span><span class="kgroup"><span class="k">⌘</span><span class="sep">+</span><span class="k">K</span></span></div>
               <div class="sheet__row"><span>Search the org</span><span class="kgroup"><span class="k">/</span></span></div>
-              <div class="sheet__row"><span>Go to Designer</span><span class="kgroup"><span class="k">G</span><span class="sep">then</span><span class="k">D</span></span></div>
+              <div class="sheet__row"><span>Go to Home</span><span class="kgroup"><span class="k">G</span><span class="sep">then</span><span class="k">D</span></span></div>
               <div class="sheet__row"><span>Go to Monitor</span><span class="kgroup"><span class="k">G</span><span class="sep">then</span><span class="k">M</span></span></div>
               <div class="sheet__row"><span>Open AI Assistant</span><span class="kgroup"><span class="k">⌘</span><span class="sep">+</span><span class="k">J</span></span></div>
               <div class="sheet__row"><span>Show this cheatsheet</span><span class="kgroup"><span class="k">?</span></span></div>
             </div>
 
             <div class="sheet__col">
-              <h4>Designer canvas</h4>
+              <h4>canvas</h4>
               <div class="sheet__row"><span>Save pipeline</span><span class="kgroup"><span class="k">⌘</span><span class="sep">+</span><span class="k">S</span></span></div>
               <div class="sheet__row"><span>Validate pipeline</span><span class="kgroup"><span class="k">⇧</span><span class="sep">+</span><span class="k">↵</span></span></div>
               <div class="sheet__row"><span>Execute</span><span class="kgroup"><span class="k">⌘</span><span class="sep">+</span><span class="k">↵</span></span></div>
@@ -251,7 +251,7 @@
     <dl class="spec">
       <dt>key token</dt><dd>22px high, mono font ExtraBold 11px, white background, 1px grey border with a <b>2px bottom border</b> (gives the "physical key" feel), 4px radius. Joined with <code>+</code> separators in mono grey. Symbols: <kbd class="k">⌘</kbd> Cmd · <kbd class="k">⌃</kbd> Ctrl · <kbd class="k">⌥</kbd> Opt · <kbd class="k">⇧</kbd> Shift · <kbd class="k">↵</kbd> Enter · <kbd class="k">⌫</kbd> Delete.</dd>
       <dt>cheatsheet</dt><dd>Opens with <kbd class="k">?</kbd> from anywhere. Modal overlay (Overlay surface), <b>720px wide</b>, columns grouped by scope: Global · current-product context · Tables · Editing. Filter input at top searches both labels and key combos.</dd>
-      <dt>scope</dt><dd>Cheatsheet contents <b>change per product</b> — Designer shows canvas shortcuts; Monitor shows table/timeline shortcuts. Global section is always present.</dd>
+      <dt>scope</dt><dd>Cheatsheet contents <b>change per product</b> — the app shows canvas shortcuts; Monitor shows table/timeline shortcuts. Global section is always present.</dd>
       <dt>discovery</dt><dd><b>Status bar</b> at the bottom of each product persistently shows the 2 most useful shortcuts (<kbd class="k">?</kbd> and <kbd class="k">⌘</kbd>+<kbd class="k">K</kbd>). New users learn shortcuts here without opening the sheet.</dd>
       <dt>tooltips</dt><dd>Every clickable action with a shortcut shows it in its tooltip on hover. Dark navy background, key tokens flip to dark variant. Label first, keys aligned right.</dd>
       <dt>chord vs combo</dt><dd><b>Combo</b> (held simultaneously): <kbd class="k">⌘</kbd>+<kbd class="k">S</kbd>. <b>Chord</b> (sequential): <kbd class="k">G</kbd> then <kbd class="k">D</kbd> — separator is the word "then" in muted text, not a plus sign. Chord prefix shows a transient HUD ("G then…") at 300ms.</dd>

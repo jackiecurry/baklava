@@ -1,6 +1,6 @@
 # Baklava Design System 2.0
 
-The design system for **Baklava** — an enterprise iPaaS for connecting applications, data, and AI agents. Baklava is the source of truth for Designer, Admin Manager, Monitor, AutoSync, APIM, and the Pattern Catalog.
+The design system for **Baklava** — an enterprise iPaaS for connecting applications, data, and AI agents. Baklava is the source of truth for the app, Admin Manager, Monitor, AutoSync, APIM, and the Pattern Catalog.
 
 ## For AI coding agents
 
@@ -55,7 +55,7 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-The gallery lists 106 design assets — foundations, color ramps, brand, primitives, components, advanced editors, patterns, the Designer template, and data-visualization charts. A left-hand accordion lists every asset under its category; a top-of-sidebar search filters both the nav and the grid. Click any tile to open its detail page — the preview renders inline (no iframes), alongside the Adobe Spectrum-style Anatomy / Options / Usage guidelines / Behaviors / Tokens sections.
+The gallery lists 106 design assets — foundations, color ramps, brand, primitives, components, advanced editors, patterns, the app template, and data-visualization charts. A left-hand accordion lists every asset under its category; a top-of-sidebar search filters both the nav and the grid. Click any tile to open its detail page — the preview renders inline (no iframes), alongside the Adobe Spectrum-style Anatomy / Options / Usage guidelines / Behaviors / Tokens sections.
 
 If you want to publish this on GitHub Pages, push to a repo and enable Pages from `main` → `/ (root)`. No build step required — it's all static HTML/CSS + Inter webfonts.
 
@@ -122,16 +122,16 @@ baklava-design-system/
 | 05 | Components            | 18    | Card, modal, table, tabs, toast, global header…   |
 | 06 | Advanced editors      | 7     | Code, JSON, schema, connection, API param builder   |
 | 07 | Patterns              | 17    | Validation, save/discard, AI-assisted input, wizard |
-| 08 | Templates             | 1     | Designer · Empty canvas                             |
+| 08 | Templates             | 1     | the app · Empty canvas                             |
 | 09 | Data visualization    | 23    | KPI, sparkline, time series, Sankey, Gantt, hive plot… |
 
 ## Caveats
 
 - **Icons are Lucide via CDN** as a substitute for the Figma's Untitled UI Icons (~95% visual match). If pixel-perfect Untitled UI Icons are required, swap in the Pro SVGs.
-- **Product launcher gradient icons** (Designer, APIM, AutoSync, Admin Manager, Monitor, Project Manager) are placeholder gradient circles with Lucide glyphs. Real product icons were not exported from Figma.
+- **Product launcher gradient icons** (the app, APIM, AutoSync, Admin Manager, Monitor, Project Manager) are placeholder gradient circles with Lucide glyphs. Real product icons were not exported from Figma.
 - **No formal dark theme.** The dark global navbar is treated as inverted chrome, not full dark mode.
 - **Inter** is licensed; the WOFF2/OTF files in `fonts/` are bundled for use within Baklava surfaces. Confirm license terms before re-distributing outside Baklava.
 
 ## Sources
 
-Built from the Baklava Figma library (60 pages, 279 frames) and the Baklava Confluence design-tokens documentation. Design rationale was captured during a back-and-forth in Claude Design across three sessions covering color ramps, primitive components, AI patterns, the spinner, the Designer template, and the data-viz wave (network graph, hive plot, Sankey, swim-lane Gantt, calendar heatmap, etc.).
+Built from the Baklava Figma library (60 pages, 279 frames) and the Baklava Confluence design-tokens documentation. Design rationale was captured during a back-and-forth in Claude Design across three sessions covering color ramps, primitive components, AI patterns, the spinner, the app template, and the data-viz wave (network graph, hive plot, Sankey, swim-lane Gantt, calendar heatmap, etc.).

@@ -230,7 +230,7 @@
   --color-border-discovery: var(--bk-violet-600);
 
   /* Inverse borders — Blue-300 at three alphas, by role. For dark surfaces
-     only: the Designer rail, the AI Assistant panel, and the Navy 1000 nav.
+     only: the dark rail, the AI Assistant panel, and the Navy 1000 nav.
      Grey borders disappear on these surfaces, which is why they get their
      own scale rather than reusing --color-border-*. */
   --color-border-inverse-control: rgba(156, 179, 225, 0.25);        /* control chrome — fields, pickers, segmented tracks */
