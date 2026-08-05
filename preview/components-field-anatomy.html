@@ -17,7 +17,7 @@
   .sl-field { display: flex; flex-direction: column; gap: 4px; }
   .sl-field__label {
     font: 800 14px/22px var(--font-sans);
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
     display: flex; align-items: baseline; gap: 4px;
   }
   .sl-field__label .req  { color: var(--bk-red-600); font-weight: 800; }
@@ -143,7 +143,7 @@
     font: 800 10px/12px var(--font-mono);
     flex: none;
   }
-  .legend .name { font: 800 12px/16px var(--font-sans); color: var(--bk-indigo-900); }
+  .legend .name { font: 800 12px/16px var(--font-sans); color: var(--bk-navy-900); }
   .legend .desc { font: 400 11px/16px var(--font-sans); color: var(--color-text-subtle); }
   .legend .desc code { font: 400 11px/16px var(--font-mono); background: rgba(0,0,0,0.06); padding: 1px 4px; border-radius: 2px; }
 
@@ -315,7 +315,7 @@
 
     <!-- ─── SPEC ─────────────────────────────────────────────── -->
     <dl class="spec">
-      <dt>label</dt><dd><b>14/22 ExtraBold</b> Indigo-900, sentence case. Always associated to control via <code>for</code>/<code>id</code> or wrapping.</dd>
+      <dt>label</dt><dd><b>14/22 ExtraBold</b> Navy-900, sentence case. Always associated to control via <code>for</code>/<code>id</code> or wrapping.</dd>
       <dt>required</dt><dd>Red-600 asterisk after label, <code>aria-hidden="true"</code> (the semantic comes from <code>aria-required="true"</code> on the control).</dd>
       <dt>optional</dt><dd>Lowercase "(optional)" in subtle grey, 12px regular. Use when most fields in a form are required and a few are not. Don't use both required asterisks and optional labels in the same form.</dd>
       <dt>control</dt><dd>40px default height · 12px horizontal padding · 4px radius · 1px Grey-400 border. Uses <code>--field-*</code> tokens — never invent new values.</dd>

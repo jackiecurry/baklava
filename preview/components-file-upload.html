@@ -9,7 +9,7 @@
 <style>
   .card { gap: 18px; }
   .sl-field { display: flex; flex-direction: column; gap: 4px; }
-  .sl-field__label { font: 800 14px/22px var(--font-sans); color: var(--bk-indigo-900); }
+  .sl-field__label { font: 800 14px/22px var(--font-sans); color: var(--bk-navy-900); }
 
   /* Inline button style upload */
   .sl-upload-inline {
@@ -32,7 +32,7 @@
   .sl-upload-inline .btn:focus-visible {
     outline: none;
     box-shadow: var(--ring-focus);
-    border-color: var(--bk-teal-600);
+    border-color: var(--bk-cyan-600);
   }
   .sl-upload-inline .btn:disabled {
     background: var(--field-bg-disabled);
@@ -58,7 +58,7 @@
   .sl-dropzone:focus-visible {
     outline: none;
     box-shadow: var(--ring-focus);
-    border-color: var(--bk-teal-600);
+    border-color: var(--bk-cyan-600);
   }
   .sl-dropzone__icon {
     display: inline-flex; align-items: center; justify-content: center;
@@ -72,7 +72,7 @@
   .sl-dropzone__icon svg { width: 24px; height: 24px; }
   .sl-dropzone__title {
     font: 800 14px/20px var(--font-sans);
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
     margin-bottom: 4px;
   }
   .sl-dropzone__title a { color: var(--bk-blue-600); text-decoration: underline; cursor: pointer; }
@@ -109,7 +109,7 @@
   .sl-file__body { min-width: 0; }
   .sl-file__name {
     font: 800 13px/18px var(--font-sans);
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
   .sl-file__meta { font: 400 11px/14px var(--font-mono); color: var(--color-text-subtle); margin-top: 2px; }
@@ -261,7 +261,7 @@
       <dt>drag states</dt><dd>Default border Grey-400 dashed. On <code>dragover</code>: border + background shift to Blue-600 + Blue-100. Title updates to "Release to upload N files". Hover (without drag) has no visual change.</dd>
       <dt>file list</dt><dd>Each file is a row with icon · name · meta · cancel/remove. States: <b>uploading</b> (blue border + progress bar), <b>success</b> (green border + check), <b>error</b> (red border + tint + reason).</dd>
       <dt>progress</dt><dd>4px bar inside the file row. Shows percent + size pair ("8.1 MB of 24.3 MB · 33%"). Cancel button is the same X.</dd>
-      <dt>a11y</dt><dd>Drop zone has a focusable button inside ("browse") with teal focus ring. The dropzone itself is <code>role="region" aria-label="Upload files"</code>. Announce progress via <code>aria-live="polite"</code> at milestones (25%, 50%, 75%, completion/error)—not every tick.</dd>
+      <dt>a11y</dt><dd>Drop zone has a focusable button inside ("browse") with cyan focus ring. The dropzone itself is <code>role="region" aria-label="Upload files"</code>. Announce progress via <code>aria-live="polite"</code> at milestones (25%, 50%, 75%, completion/error)—not every tick.</dd>
     </dl>
   </div>
   <script>lucide.createIcons();</script>

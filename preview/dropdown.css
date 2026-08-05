@@ -29,14 +29,14 @@
   margin-bottom: 14px;
 }
 
-/* Tappable text rows — 14px, near-white, teal-on-hover */
+/* Tappable text rows — 14px, near-white, cyan-on-hover */
 .dd-link {
   font: 500 14px/26px var(--font-sans);
   color: rgba(255, 255, 255, 0.92);
   cursor: pointer;
   display: block;
 }
-.dd-link:hover { color: var(--bk-teal-300); }
+.dd-link:hover { color: var(--bk-cyan-300); }
 
 /* Hairline divider between sections */
 .dd-divider {

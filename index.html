@@ -15,12 +15,12 @@
   :root {
     --topbar-h: 72px;
     --sidebar-w: 300px;
-    --cat-foundations:    var(--bk-indigo-600);
-    --cat-color:          var(--bk-pink-600);
-    --cat-brand:          var(--bk-purple-600);
+    --cat-foundations:    var(--bk-navy-600);
+    --cat-color:          var(--bk-magenta-600);
+    --cat-brand:          var(--bk-violet-600);
     --cat-primitives:     var(--bk-blue-600);
-    --cat-components:     var(--bk-teal-600);
-    --cat-editors:        var(--bk-indigo-700, #1237C0);
+    --cat-components:     var(--bk-cyan-600);
+    --cat-editors:        var(--bk-navy-700, #1237C0);
     --cat-patterns:       var(--bk-orange-600);
     --cat-templates:      var(--bk-yellow-700, #C99603);
     --cat-data-viz:       var(--bk-green-600);
@@ -36,7 +36,7 @@
 
   /* ── Top bar ─────────────────────────────────────────────── */
   .topbar {
-    background: var(--bk-indigo-1000, #0B246E);
+    background: var(--bk-navy-1000, #0B246E);
     color: var(--bk-white);
     padding: 12px 32px;
     display: flex;
@@ -407,7 +407,7 @@
     background: var(--bk-grey-200, #E5E8EE);
     color: var(--bk-grey-700, #334155);
   }
-  .sidebar-icons .si-row[data-set="fa"] .si-tag { background: var(--bk-purple-100); color: var(--bk-purple-700); }
+  .sidebar-icons .si-row[data-set="fa"] .si-tag { background: var(--bk-violet-100); color: var(--bk-violet-700); }
 
   /* Highlight matched text in search */
   .hl { background: var(--bk-yellow-200, #FEF2CD); padding: 0 1px; border-radius: 2px; }
@@ -430,7 +430,7 @@
   /* ── Hero ────────────────────────────────────────────────── */
   .hero {
     position: relative;
-    background: linear-gradient(135deg, var(--bk-indigo-1000, #0B246E) 0%, var(--bk-indigo-900, #081A4D) 60%, #1F2A52 100%);
+    background: linear-gradient(135deg, var(--bk-navy-1000, #0B246E) 0%, var(--bk-navy-900, #081A4D) 60%, #1F2A52 100%);
     color: var(--bk-white);
     border-radius: var(--radius-lg, 8px);
     margin: 0 0 40px;
@@ -477,14 +477,14 @@
     font-weight: 800;
     letter-spacing: 0.10em;
     text-transform: uppercase;
-    color: var(--bk-teal-300, #67E8FF);
+    color: var(--bk-cyan-300, #67E8FF);
     margin-bottom: 16px;
   }
   .hero-eyebrow::before {
     content: "";
     width: 24px;
     height: 1px;
-    background: var(--bk-teal-400, #22D3EE);
+    background: var(--bk-cyan-400, #22D3EE);
   }
   .hero h1 {
     font-size: 56px;
@@ -531,15 +531,15 @@
   .hero-btn svg { width: 16px; height: 16px; stroke-width: 2; }
   .hero-btn.primary {
     background: var(--bk-white);
-    color: var(--bk-indigo-1000, #0B246E);
+    color: var(--bk-navy-1000, #0B246E);
   }
-  .hero-btn.primary:hover { background: var(--bk-teal-100, #D5F8FF); color: var(--bk-teal-1000, #00212B); }
+  .hero-btn.primary:hover { background: var(--bk-cyan-100, #D5F8FF); color: var(--bk-cyan-1000, #00212B); }
   .hero-btn.secondary {
     background: transparent;
     color: var(--bk-white);
     border-color: rgba(255,255,255,0.30);
   }
-  .hero-btn.secondary:hover { border-color: var(--bk-teal-300, #67E8FF); color: var(--bk-teal-300, #67E8FF); }
+  .hero-btn.secondary:hover { border-color: var(--bk-cyan-300, #67E8FF); color: var(--bk-cyan-300, #67E8FF); }
 
   /* Hero visual composition — real Baklava bits floating on the right */
   .hero-visual {
@@ -743,7 +743,7 @@
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--bk-teal-700, #007796);
+    color: var(--bk-cyan-700, #007796);
     margin-top: 4px;
   }
 
@@ -813,7 +813,7 @@
     width: 6px;
     height: 6px;
     border-radius: 999px;
-    background: var(--p-color, var(--bk-teal-700));
+    background: var(--p-color, var(--bk-cyan-700));
     flex: none;
   }
   .principle .p-body {
@@ -845,7 +845,7 @@
     text-transform: uppercase;
     color: var(--color-text-subtle);
   }
-  .diag .row-label.good { color: var(--p-color, var(--bk-teal-700)); }
+  .diag .row-label.good { color: var(--p-color, var(--bk-cyan-700)); }
   .diag .row-label.bad { color: var(--bk-grey-500, #64748B); }
   .diag .strike { text-decoration: line-through; text-decoration-color: var(--bk-red-400, #EE778B); text-decoration-thickness: 1.5px; opacity: 0.55; }
 
@@ -990,11 +990,11 @@
     flex: none;
   }
   .diag-clarity .step.focus {
-    background: var(--p-color, var(--bk-indigo-700));
-    border-color: var(--p-color, var(--bk-indigo-700));
+    background: var(--p-color, var(--bk-navy-700));
+    border-color: var(--p-color, var(--bk-navy-700));
     width: 40px;
     height: 40px;
-    box-shadow: 0 0 0 4px var(--p-tint, var(--bk-indigo-100));
+    box-shadow: 0 0 0 4px var(--p-tint, var(--bk-navy-100));
     position: relative;
   }
   .diag-clarity .step.focus::after {
@@ -1010,7 +1010,7 @@
     position: absolute;
     inset: 11px;
     border-radius: 999px;
-    background: var(--p-color, var(--bk-indigo-700));
+    background: var(--p-color, var(--bk-navy-700));
     z-index: 1;
   }
   .diag-clarity .connector {
@@ -1018,7 +1018,7 @@
     width: 36px;
     background: var(--bk-grey-300, #CBD5E1);
   }
-  .diag-clarity .connector.active { background: var(--p-color, var(--bk-indigo-700)); }
+  .diag-clarity .connector.active { background: var(--p-color, var(--bk-navy-700)); }
 
   /* 05 Real icons — outlined good row vs mixed bad row */
   .diag-icons { gap: 12px; align-items: stretch; }
@@ -1029,7 +1029,7 @@
     justify-content: flex-start;
   }
   .diag-icons .row svg { width: 22px; height: 22px; stroke-width: 1.5; flex: none; }
-  .diag-icons .row.good svg { color: var(--p-color, var(--bk-purple-700)); }
+  .diag-icons .row.good svg { color: var(--p-color, var(--bk-violet-700)); }
   .diag-icons .row.bad .badico {
     width: 22px; height: 22px;
     display: inline-flex; align-items: center; justify-content: center;
@@ -1037,8 +1037,8 @@
   }
   .diag-icons .row.bad .badico.b1 { background: var(--bk-red-500); border-radius: 4px; }
   .diag-icons .row.bad .badico.b2 { background: var(--bk-yellow-500); border-radius: 999px; }
-  .diag-icons .row.bad .badico.b3 { color: var(--bk-pink-600); font-size: 18px; font-weight: 800; }
-  .diag-icons .row.bad .badico.b4 { background: linear-gradient(135deg, var(--bk-orange-500), var(--bk-purple-500)); border-radius: 4px; }
+  .diag-icons .row.bad .badico.b3 { color: var(--bk-magenta-600); font-size: 18px; font-weight: 800; }
+  .diag-icons .row.bad .badico.b4 { background: linear-gradient(135deg, var(--bk-orange-500), var(--bk-violet-500)); border-radius: 4px; }
   .diag-icons .row.bad .badico.b5 { color: var(--bk-green-500); font-size: 18px; font-weight: 800; }
 
   .category-strip {
@@ -1095,8 +1095,8 @@
     gap: 16px;
   }
   .gs-role {
-    background: linear-gradient(180deg, var(--bk-indigo-1000, #0B246E) 0%, var(--bk-indigo-900, #081A4D) 100%);
-    border: 1px solid var(--bk-indigo-800, #0B246E);
+    background: linear-gradient(180deg, var(--bk-navy-1000, #0B246E) 0%, var(--bk-navy-900, #081A4D) 100%);
+    border: 1px solid var(--bk-navy-800, #0B246E);
     border-radius: var(--radius-md, 6px);
     padding: 22px 20px 20px;
     display: flex;
@@ -1127,7 +1127,7 @@
     width: 18px;
     height: 18px;
     stroke-width: 2;
-    color: var(--bk-teal-300, #67E8FF);
+    color: var(--bk-cyan-300, #67E8FF);
   }
   .gs-role .r-intro {
     font-size: 12px;
@@ -1184,7 +1184,7 @@
     width: 14px;
     height: 14px;
     stroke-width: 2;
-    color: var(--bk-teal-300, #67E8FF);
+    color: var(--bk-cyan-300, #67E8FF);
     margin-top: 2px;
   }
   .gs-role .r-list li strong {
@@ -1998,7 +1998,7 @@ Implement: <span class="tk-var">&lt;describe what you want built&gt;</span></pre
         <div class="principles">
 
           <!-- 01 Clarity — focus flow -->
-          <div class="principle" style="--p-color: var(--bk-indigo-700); --p-tint: var(--bk-indigo-50);">
+          <div class="principle" style="--p-color: var(--bk-navy-700); --p-tint: var(--bk-navy-50);">
             <div class="visual">
               <div class="diag diag-clarity">
                 <span class="step"></span>
@@ -2015,7 +2015,7 @@ Implement: <span class="tk-var">&lt;describe what you want built&gt;</span></pre
           </div>
 
           <!-- 02 Calm and technical — message panels -->
-          <div class="principle" style="--p-color: var(--bk-teal-700); --p-tint: var(--bk-teal-50);">
+          <div class="principle" style="--p-color: var(--bk-cyan-700); --p-tint: var(--bk-cyan-50);">
             <div class="visual">
               <div class="diag diag-calm">
                 <div class="msg good">
@@ -2114,7 +2114,7 @@ Implement: <span class="tk-var">&lt;describe what you want built&gt;</span></pre
           </div>
 
           <!-- 05 Real icons — outlined good row vs mixed bad row -->
-          <div class="principle" style="--p-color: var(--bk-purple-700); --p-tint: var(--bk-purple-50);">
+          <div class="principle" style="--p-color: var(--bk-violet-700); --p-tint: var(--bk-violet-50);">
             <div class="visual">
               <div class="diag diag-icons">
                 <div>
@@ -2535,12 +2535,12 @@ Implement: <span class="tk-var">&lt;describe what you want built&gt;</span></pre
 
   // Category background tint + accent color CSS variables consumed by .tile + .tile-visual.
   const CATEGORY_VARS = {
-    "foundations":      { color: "var(--cat-foundations)",   tint: "var(--bk-indigo-50, #EEF4FF)" },
-    "color":            { color: "var(--cat-color)",         tint: "var(--bk-pink-50,   #FFF6FB)" },
-    "brand":            { color: "var(--cat-brand)",         tint: "var(--bk-purple-50, #FBF8FF)" },
+    "foundations":      { color: "var(--cat-foundations)",   tint: "var(--bk-navy-50, #EEF4FF)" },
+    "color":            { color: "var(--cat-color)",         tint: "var(--bk-magenta-50,   #FFF6FB)" },
+    "brand":            { color: "var(--cat-brand)",         tint: "var(--bk-violet-50, #FBF8FF)" },
     "primitives":       { color: "var(--cat-primitives)",    tint: "var(--bk-blue-50,   #F5F8FF)" },
-    "components":       { color: "var(--cat-components)",    tint: "var(--bk-teal-50,   #ECFCFF)" },
-    "advanced-editors": { color: "var(--cat-editors)",       tint: "var(--bk-indigo-50, #EEF4FF)" },
+    "components":       { color: "var(--cat-components)",    tint: "var(--bk-cyan-50,   #ECFCFF)" },
+    "advanced-editors": { color: "var(--cat-editors)",       tint: "var(--bk-navy-50, #EEF4FF)" },
     "patterns":         { color: "var(--cat-patterns)",      tint: "var(--bk-orange-50, #FEF7F3)" },
     "templates":        { color: "var(--cat-templates)",     tint: "var(--bk-yellow-50, #FFFBF2)" },
     "data-viz":         { color: "var(--cat-data-viz)",      tint: "var(--bk-green-50,  #F2F8F3)" },
@@ -2989,12 +2989,12 @@ Implement: <span class="tk-var">&lt;describe what you want built&gt;</span></pre
     const sec = item.section;
     const cssVar = `--cat-${sec.id}`;
     const tintMap = {
-      "foundations": "var(--bk-indigo-50, #EEF4FF)",
-      "color": "var(--bk-pink-50, #FFF6FB)",
-      "brand": "var(--bk-purple-50, #FBF8FF)",
+      "foundations": "var(--bk-navy-50, #EEF4FF)",
+      "color": "var(--bk-magenta-50, #FFF6FB)",
+      "brand": "var(--bk-violet-50, #FBF8FF)",
       "primitives": "var(--bk-blue-50, #F5F8FF)",
-      "components": "var(--bk-teal-50, #ECFCFF)",
-      "advanced-editors": "var(--bk-indigo-50, #EEF4FF)",
+      "components": "var(--bk-cyan-50, #ECFCFF)",
+      "advanced-editors": "var(--bk-navy-50, #EEF4FF)",
       "patterns": "var(--bk-orange-50, #FEF7F3)",
       "templates": "var(--bk-yellow-50, #FFFBF2)",
       "data-viz": "var(--bk-green-50, #F2F8F3)",

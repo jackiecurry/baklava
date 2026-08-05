@@ -9,7 +9,7 @@
 <style>
   .card { gap: 18px; }
   .sl-field { display: flex; flex-direction: column; gap: 4px; }
-  .sl-field__label { font: 800 14px/22px var(--font-sans); color: var(--bk-indigo-900); }
+  .sl-field__label { font: 800 14px/22px var(--font-sans); color: var(--bk-navy-900); }
 
   .sl-select {
     height: var(--field-height-md);
@@ -58,7 +58,7 @@
   .sl-menu__item {
     padding: 8px 12px;
     font: 400 14px/22px var(--font-sans);
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
     cursor: pointer;
     display: flex; align-items: center; gap: 8px;
   }
@@ -205,7 +205,7 @@
 
     <div>
       <div class="section-h">In a table · quiet variant <span class="meta">.sl-select--quiet</span></div>
-      <p style="font: 400 12px/18px var(--font-sans); color: var(--color-text-subtle); margin: 0 0 12px;">Inside a dense table, the bordered field repeated down every row reads as noise. The quiet variant shows the value as plain text with a subtle chevron, then reveals its border on hover and a teal ring when open — so the column reads as data, not a wall of boxes.</p>
+      <p style="font: 400 12px/18px var(--font-sans); color: var(--color-text-subtle); margin: 0 0 12px;">Inside a dense table, the bordered field repeated down every row reads as noise. The quiet variant shows the value as plain text with a subtle chevron, then reveals its border on hover and a cyan ring when open — so the column reads as data, not a wall of boxes.</p>
       <table class="dt">
         <thead>
           <tr><th style="width:40%">Name</th><th style="width:35%">Email</th><th>Role</th></tr>
@@ -244,7 +244,7 @@
       <dt>keyboard</dt><dd><code>↑/↓</code> navigate · <code>Enter</code> select · <code>Esc</code> close · <code>Home/End</code> first/last · type-ahead jumps to first match.</dd>
       <dt>a11y</dt><dd><code>role="combobox" aria-expanded aria-haspopup="listbox" aria-controls="menu-id"</code>. Menu: <code>role="listbox"</code>; items: <code>role="option" aria-selected</code>.</dd>
       <dt>virtualize</dt><dd>For lists with &gt;200 options (Snaplex picker, account list), virtualize rows. Don't paint 5,000 DOM nodes.</dd>
-      <dt>quiet</dt><dd>Borderless in-cell variant (<code>.sl-select--quiet</code>) for dense tables and editable cells. Reads as plain text with a subtle always-visible chevron; reveals a Grey-300 border + white fill on hover, teal focus ring when open. Use it instead of a bordered field in every row.</dd>
+      <dt>quiet</dt><dd>Borderless in-cell variant (<code>.sl-select--quiet</code>) for dense tables and editable cells. Reads as plain text with a subtle always-visible chevron; reveals a Grey-300 border + white fill on hover, cyan focus ring when open. Use it instead of a bordered field in every row.</dd>
     </dl>
   </div>
   <script>lucide.createIcons();</script>

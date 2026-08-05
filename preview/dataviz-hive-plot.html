@@ -92,7 +92,7 @@
           <marker id="arr-blue" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
             <path d="M0,0 L8,4 L0,8 z" fill="#2563FF"/>
           </marker>
-          <marker id="arr-teal" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+          <marker id="arr-cyan" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
             <path d="M0,0 L8,4 L0,8 z" fill="#7C4DFF"/>
           </marker>
         </defs>
@@ -145,7 +145,7 @@
           <path d="M 400 110 Q 480 235 568 337" stroke="#2563FF" stroke-width="1.5" opacity="0.45"/>
           <path d="M 400 200 Q 445 240 488 290" stroke="#2563FF" stroke-width="1.5" opacity="0.5"/>
 
-          <!-- Sources → Destinations passthrough (teal · AutoSync direct) -->
+          <!-- Sources → Destinations passthrough (cyan · AutoSync direct) -->
           <path d="M 250 327 Q 400 410 538 320" stroke="#7C4DFF" stroke-width="2" opacity="0.55"/>
           <path d="M 290 300 Q 400 380 510 305" stroke="#7C4DFF" stroke-width="1.5" opacity="0.45"/>
         </g>
@@ -390,7 +390,7 @@
       <dt>selection</dt><dd>Click a node to focus: dim all non-neighbour nodes + edges to 0.2 opacity, keep selected node + 1-hop edges + 1-hop nodes at full opacity. Dashed halo around the selected node. Click empty canvas to clear.</dd>
       <dt>node ribbons</dt><dd>When position alone doesn't convey the secondary metric clearly, layer concentric tier rings behind the axes — each ring = one bucket (log decade, status, etc.) and tints sequentially. Rings stay in the green ramp so cluster colors on nodes stay distinguishable. Don't use rings AND tick labels; pick one calibration system per chart.</dd>
       <dt>vs. network</dt><dd>Use <b>Network graph</b> when structure is exploratory and clusters emerge from layout. Use <b>Hive plot</b> when categories are known up-front and you need a stable, comparable view across datasets. Pair them: Network for discovery, Hive for reports.</dd>
-      <dt>a11y</dt><dd>Always pair with a sortable table view of nodes + their connections (toggle in toolbar). Each axis labelled with <code>aria-label</code>; nodes are <code>role="button" aria-label="{name}, axis {category}, position {value}"</code>. Colorblind-safe palette (Orange / Blue / Teal). Pattern overlays on stroke when used as the only differentiator in print export.</dd>
+      <dt>a11y</dt><dd>Always pair with a sortable table view of nodes + their connections (toggle in toolbar). Each axis labelled with <code>aria-label</code>; nodes are <code>role="button" aria-label="{name}, axis {category}, position {value}"</code>. Colorblind-safe palette (Orange / Blue / Cyan). Pattern overlays on stroke when used as the only differentiator in print export.</dd>
     </dl>
   </div>
 </body>

@@ -28,7 +28,7 @@ The live gallery is at <https://jackiecurry.github.io/baklava/>.
 - **Selection & skeleton** (Foundations) now demos both a light and a dark skeleton card and documents the two tokens.
 
 ### Docs
-- **Global header** now documents the **combo loader bar** — the 5px teal → blue → teal gradient bar on the header's bottom edge that fills left→right over 4s while an inner band walks on a 1s loop for global loading.
+- **Global header** now documents the **combo loader bar** — the 5px cyan → blue → cyan gradient bar on the header's bottom edge that fills left→right over 4s while an inner band walks on a 1s loop for global loading.
 
 ### Off-gallery
 - **Designer · Loading state** (`preview/templates-designer-loading.html`) — a full load-time treatment for the Designer: skeleton chrome around a canvas that centers the Baklava mark breathing in a soft halo, with a caption that cycles through what's loading and swaps in connector / toolbar glyphs. It is **kept out of the gallery catalog on purpose**: the gallery injects a preview's `<body>` inline and does not run head-level CSS/JS, so this page only animates when opened directly. Share the URL: `/preview/templates-designer-loading.html`.
@@ -36,7 +36,7 @@ The live gallery is at <https://jackiecurry.github.io/baklava/>.
 ## 2026-07-16 · Quiet in-cell Select for dense tables
 
 ### Components
-- **Select** gains a **quiet** (borderless, in-cell) variant (`.sl-select--quiet`) for dense tables and editable cells. It reads as plain text with a subtle, always-visible chevron, then reveals a Grey-300 border + white fill on hover and the standard Teal-600 focus ring when open — the Select equivalent of the existing editable-cell affordance. This replaces the full bordered field in table cells, where repeating it down every row turned a column into a wall of boxes that competed with the data. No new tokens (reuses `--bk-grey-300`, `--field-border-focus`, `--ring-focus`, `--color-text-subtle`).
+- **Select** gains a **quiet** (borderless, in-cell) variant (`.sl-select--quiet`) for dense tables and editable cells. It reads as plain text with a subtle, always-visible chevron, then reveals a Grey-300 border + white fill on hover and the standard Cyan-600 focus ring when open — the Select equivalent of the existing editable-cell affordance. This replaces the full bordered field in table cells, where repeating it down every row turned a column into a wall of boxes that competed with the data. No new tokens (reuses `--bk-grey-300`, `--field-border-focus`, `--ring-focus`, `--color-text-subtle`).
 - **Table** now demos the quiet Select in the real interactive data table — the Snaplex column reads as data, not chrome, while keeping its sort and per-column filter working.
 
 ### Docs
@@ -44,7 +44,7 @@ The live gallery is at <https://jackiecurry.github.io/baklava/>.
 
 ### Components
 - **Avatar group** now specs and demos the **overflow member-list popover**: click `+N` to open a white card (1px Grey-300 border, `radius-sm`, raised shadow, min-width 240px, no header) whose rows pair an xs avatar with the member's full name and a muted right-aligned presence label (**Inactive** where applicable), scrolling after ~5 rows. Wired with `aria-haspopup="dialog"` / `aria-expanded` / `aria-controls`; Escape closes and returns focus to the button.
-- **Avatar group** individual avatars are now **keyboard-focusable** (`tabindex="0"`, `role="img"`) — focus shows the same name tooltip and teal focus ring as `+N`, so keyboard users can reach every name (previously only screen readers got them via `aria-label`).
+- **Avatar group** individual avatars are now **keyboard-focusable** (`tabindex="0"`, `role="img"`) — focus shows the same name tooltip and cyan focus ring as `+N`, so keyboard users can reach every name (previously only screen readers got them via `aria-label`).
 
 ### Fixes
 - **Tooltip max-width corrected to 240px.** The CSS shipped `280px` while every doc, comment, and the "vs alt text" table said 240px; the CSS was the typo.
@@ -55,7 +55,7 @@ The live gallery is at <https://jackiecurry.github.io/baklava/>.
 ## 2026-07-08 · Selection controls spec cleanup
 
 ### Components
-- **Radio and Checkbox** now share the same selection-control rules: 20px default controls, 16px dense controls for tables / trees / popovers, Grey-600 unselected borders, explicit disabled colors instead of opacity, and global Teal focus halos that layer on top of state.
+- **Radio and Checkbox** now share the same selection-control rules: 20px default controls, 16px dense controls for tables / trees / popovers, Grey-600 unselected borders, explicit disabled colors instead of opacity, and global Cyan focus halos that layer on top of state.
 - **Radio** now documents and draws error, selected-hover, selected-focus, and vertical / horizontal radio group layouts with semantic `fieldset` + `legend` treatment.
 - **Checkbox** now draws error and focus variants, documents the 20px / 16px size tiers, and confirms there is no 14px tier.
 - **Toggle** now matches its drawn geometry and product usage: small / default / large sizes, global focus halo, optional left/right labels and Off / On status text, solid Grey-700 / Blue-700 hover treatments, and `role="switch"` guidance.

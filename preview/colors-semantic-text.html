@@ -134,10 +134,10 @@
   .status-tile.warning .label     { color: var(--bk-orange-700); }
   .status-tile.alert       { background: var(--bk-red-100); }
   .status-tile.alert .label       { color: var(--bk-red-700); }
-  .status-tile.information { background: var(--bk-indigo-100); }
-  .status-tile.information .label { color: var(--bk-indigo-700); }
-  .status-tile.discovery   { background: var(--bk-purple-100); }
-  .status-tile.discovery .label   { color: var(--bk-purple-700); }
+  .status-tile.information { background: var(--bk-navy-100); }
+  .status-tile.information .label { color: var(--bk-navy-700); }
+  .status-tile.discovery   { background: var(--bk-violet-100); }
+  .status-tile.discovery .label   { color: var(--bk-violet-700); }
 
   /* ── Accent palette ── */
   .accent-grid {
@@ -175,7 +175,7 @@
   "section": "Color",
   "url": "https://jackiecurry.github.io/baklava/preview/colors-semantic-text.html",
   "tagline": "Body, subtle, link, status, information, discovery, accents.",
-  "usage": "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Indigo-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Indigo-700; Discovery uses Purple-700. AI uses the dedicated AI ramp — never substitute purple for AI.",
+  "usage": "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Navy-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Navy-700; Discovery uses Violet-700. AI uses the dedicated AI ramp — never substitute violet for AI.",
   "tokens": [
     "--color-text-body",
     "--color-text-heading",
@@ -192,14 +192,14 @@
     "--color-text-information",
     "--color-text-discovery",
     "--color-text-accent-blue",
-    "--color-text-accent-teal",
-    "--color-text-accent-indigo",
+    "--color-text-accent-cyan",
+    "--color-text-accent-navy",
     "--color-text-accent-orange",
     "--color-text-accent-yellow",
-    "--color-text-accent-purple",
+    "--color-text-accent-violet",
     "--color-text-accent-green",
     "--color-text-accent-red",
-    "--color-text-accent-pink",
+    "--color-text-accent-magenta",
     "--color-text-accent-grey"
   ]
 }
@@ -221,8 +221,8 @@
         <p class="disabled">Field name (disabled)</p>
       </div>
       <div class="annot">
-        <div class="tag"><span class="dot" style="background: var(--color-text-heading)"></span><b>Heading</b> · indigo-900</div>
-        <div class="tag"><span class="dot" style="background: var(--color-text-body)"></span><b>Body</b> · indigo-900</div>
+        <div class="tag"><span class="dot" style="background: var(--color-text-heading)"></span><b>Heading</b> · navy-900</div>
+        <div class="tag"><span class="dot" style="background: var(--color-text-body)"></span><b>Body</b> · navy-900</div>
         <div class="tag"><span class="dot" style="background: var(--color-text-link)"></span><b>Link</b> · blue-600</div>
         <div class="tag"><span class="dot" style="background: var(--color-text-subtle)"></span><b>Subtle</b> · grey-700</div>
         <div class="tag"><span class="dot" style="background: var(--color-text-disabled)"></span><b>Disabled</b> · grey-500</div>
@@ -248,11 +248,11 @@
       </div>
       <div class="ls">
         <span class="sample" style="color: var(--color-text-link-hover)">Hover link</span>
-        <span class="meta">text.link-hover · teal-600 · #0094B8</span>
+        <span class="meta">text.link-hover · cyan-600 · #0094B8</span>
       </div>
       <div class="ls">
         <span class="sample" style="color: var(--color-text-link-pressed)">Pressed link</span>
-        <span class="meta">text.link-pressed · teal-400 · #22D3EE</span>
+        <span class="meta">text.link-pressed · cyan-400 · #22D3EE</span>
       </div>
     </div>
 
@@ -276,11 +276,11 @@
       </div>
       <div class="status-tile information">
         <div class="label"><i data-lucide="info"></i> Information</div>
-        <div class="meta">text.information<br/>indigo-700<br/>#1237C0</div>
+        <div class="meta">text.information<br/>navy-700<br/>#1237C0</div>
       </div>
       <div class="status-tile discovery">
         <div class="label"><i data-lucide="sparkles"></i> Discovery</div>
-        <div class="meta">text.discovery<br/>purple-700<br/>#7644EA</div>
+        <div class="meta">text.discovery<br/>violet-700<br/>#7644EA</div>
       </div>
     </div>
 
@@ -291,14 +291,14 @@
     </div>
     <div class="accent-grid">
       <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-blue)">Aa</div><div class="name">Blue</div></div>
-      <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-teal)">Aa</div><div class="name">Teal</div></div>
-      <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-indigo)">Aa</div><div class="name">Indigo</div></div>
+      <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-cyan)">Aa</div><div class="name">Cyan</div></div>
+      <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-navy)">Aa</div><div class="name">Navy</div></div>
       <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-orange)">Aa</div><div class="name">Orange</div></div>
-      <div class="accent-cell" style="background: var(--bk-indigo-1000)"><div class="Aa" style="color: var(--color-text-accent-yellow)">Aa</div><div class="name" style="color: var(--bk-grey-300)">Yellow</div></div>
-      <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-purple)">Aa</div><div class="name">Purple</div></div>
+      <div class="accent-cell" style="background: var(--bk-navy-1000)"><div class="Aa" style="color: var(--color-text-accent-yellow)">Aa</div><div class="name" style="color: var(--bk-grey-300)">Yellow</div></div>
+      <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-violet)">Aa</div><div class="name">Violet</div></div>
       <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-green)">Aa</div><div class="name">Green</div></div>
       <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-red)">Aa</div><div class="name">Red</div></div>
-      <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-pink)">Aa</div><div class="name">Pink</div></div>
+      <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-magenta)">Aa</div><div class="name">Magenta</div></div>
       <div class="accent-cell"><div class="Aa" style="color: var(--color-text-accent-grey)">Aa</div><div class="name">Grey</div></div>
     </div>
   </div>

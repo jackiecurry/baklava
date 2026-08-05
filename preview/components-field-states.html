@@ -13,7 +13,7 @@
   .sl-field { display: flex; flex-direction: column; gap: 4px; }
   .sl-field__label {
     font: 800 14px/22px var(--font-sans);
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
     display: flex; align-items: baseline; gap: 4px;
   }
   .sl-field__label.muted { color: var(--field-text-disabled); }
@@ -83,7 +83,7 @@
   .matrix .h { font: 800 10px/14px var(--font-sans); text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-subtle); padding-bottom: 6px; border-bottom: 1px solid var(--bk-grey-200); }
   .matrix .rowlbl {
     font: 800 13px/20px var(--font-sans);
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
     padding-top: 28px;
   }
   .matrix .rowlbl small {
@@ -151,10 +151,10 @@
         <div class="sl-field s-hover"><div class="sl-field__label">Pipeline name</div><div class="sl-field__control"><input value="sf-nightly" /></div></div>
         <div class="when">Pointer over the control. Subtle border shift signals it's interactive.</div>
 
-        <div class="rowlbl">Focus<small>halo + border: teal-600</small></div>
+        <div class="rowlbl">Focus<small>halo + border: cyan-600</small></div>
         <div class="sl-field s-focus"><div class="sl-field__label">Pipeline name</div><div class="sl-field__control"><input placeholder="Enter a name" /></div></div>
         <div class="sl-field s-focus"><div class="sl-field__label">Pipeline name</div><div class="sl-field__control"><input value="sf-nightly" /></div></div>
-        <div class="when">Keyboard or pointer focus. <b>2px teal halo</b> via <code>--ring-focus</code>.</div>
+        <div class="when">Keyboard or pointer focus. <b>2px cyan halo</b> via <code>--ring-focus</code>.</div>
 
         <div class="rowlbl">Disabled<small>bg: blue-100</small></div>
         <div class="sl-field s-disabled"><div class="sl-field__label muted">Pipeline name</div><div class="sl-field__control"><input value="" placeholder="not available" disabled /></div></div>
@@ -186,15 +186,15 @@
         <div class="sl-field"><div class="sl-field__label">Pipeline name</div><div class="sl-field__control"><input value="checking…" /><span class="sl-spinner sl-spinner--sm" role="status" aria-label="Checking availability"></span></div><div class="sl-field__meta"><span aria-live="polite">Checking availability…</span></div></div>
         <div class="when">Async validation in flight (debounce <code>350ms</code> via <code>--validate-debounce</code>).</div>
 
-        <div class="rowlbl">AI generating<small>purple sweep</small></div>
+        <div class="rowlbl">AI generating<small>violet sweep</small></div>
         <div class="sl-field s-ai"><div class="sl-field__label">Pipeline name</div><div class="sl-field__control"><input value="" placeholder="AI Assistant is writing…" /><span class="icon"><img src="../assets/assistant-icon.svg" width="16" height="16" alt="" /></span></div></div>
         <div class="sl-field s-ai"><div class="sl-field__label">Pipeline name</div><div class="sl-field__control"><input value="sf-to-snowflake-nightly-ingestion" /><span class="icon"><img src="../assets/assistant-icon.svg" width="16" height="16" alt="" /></span></div></div>
-        <div class="when">AI Assistant is generating the value. Purple sweep gradient + AI Assistant logo. Wave 3.</div>
+        <div class="when">AI Assistant is generating the value. Violet sweep gradient + AI Assistant logo. Wave 3.</div>
 
-        <div class="rowlbl">AI review<small>tint: purple-100</small></div>
+        <div class="rowlbl">AI review<small>tint: violet-100</small></div>
         <div class="sl-field" style="--field-border-default: var(--ai-accent);"><div class="sl-field__label">Pipeline name</div><div class="sl-field__control" style="background: var(--ai-tint); border-color: var(--ai-accent);"><input value="sf-to-snowflake-nightly-ingestion" /><span class="icon" style="color: var(--ai-accent);"><img src="../assets/assistant-icon.svg" width="16" height="16" alt="" /></span></div><div class="sl-field__meta" style="color: var(--ai-accent);">Generated · review and accept.</div></div>
         <div class="sl-field" style="--field-border-default: var(--ai-accent);"><div class="sl-field__label">Pipeline name</div><div class="sl-field__control" style="background: var(--ai-tint); border-color: var(--ai-accent);"><input value="sf-to-snowflake-nightly-ingestion" /><span class="icon" style="color: var(--ai-accent);"><img src="../assets/assistant-icon.svg" width="16" height="16" alt="" /></span></div><div class="sl-field__meta" style="color: var(--ai-accent);">Generated · review and accept.</div></div>
-        <div class="when">AI-generated value awaiting human confirmation. Purple tint + AI Assistant logo. Wave 3.</div>
+        <div class="when">AI-generated value awaiting human confirmation. Violet tint + AI Assistant logo. Wave 3.</div>
       </div>
     </div>
 

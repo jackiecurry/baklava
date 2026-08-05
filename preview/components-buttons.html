@@ -71,13 +71,13 @@
   /* ─── PRIMARY ───────────────────────────────────────────── */
   .sl-btn--primary { background: var(--bk-blue-600); color: var(--bk-white); }
   .sl-btn--primary.hover    { background: linear-gradient(112.63deg, #7C4DFF 12.38%, #2563FF 137.46%) border-box; }
-  .sl-btn--primary.pressed  { background: var(--bk-teal-400); }
+  .sl-btn--primary.pressed  { background: var(--bk-cyan-400); }
   .sl-btn--primary.disabled { background: var(--bk-blue-200); color: var(--bk-white); }
 
   /* ─── SECONDARY ─────────────────────────────────────────── */
   .sl-btn--secondary { background: var(--bk-white); color: var(--bk-blue-600); border-color: var(--bk-blue-600); }
-  .sl-btn--secondary.hover    { background: var(--bk-white); border-color: var(--bk-teal-600); color: var(--bk-teal-600); }
-  .sl-btn--secondary.pressed  { background: var(--bk-teal-200); border-color: var(--bk-teal-400); color: var(--bk-teal-400); }
+  .sl-btn--secondary.hover    { background: var(--bk-white); border-color: var(--bk-cyan-600); color: var(--bk-cyan-600); }
+  .sl-btn--secondary.pressed  { background: var(--bk-cyan-200); border-color: var(--bk-cyan-400); color: var(--bk-cyan-400); }
   .sl-btn--secondary.disabled { background: var(--bk-white); border-color: var(--bk-blue-200); color: var(--bk-blue-300); }
 
   /* ─── TERTIARY ──────────────────────────────────────────── */
@@ -86,8 +86,8 @@
   .sl-btn--tertiary.sl-btn--md { padding: 6px 10px; }
   .sl-btn--tertiary.sl-btn--sm { padding: 4px 8px;  }
   .sl-btn--tertiary.sl-btn--icon-only { padding: 0; }
-  .sl-btn--tertiary.hover    { color: var(--bk-teal-600); text-decoration: underline; }
-  .sl-btn--tertiary.pressed  { color: var(--bk-teal-400); text-decoration: underline; }
+  .sl-btn--tertiary.hover    { color: var(--bk-cyan-600); text-decoration: underline; }
+  .sl-btn--tertiary.pressed  { color: var(--bk-cyan-400); text-decoration: underline; }
   .sl-btn--tertiary.disabled { color: var(--bk-blue-300); }
 
   /* ─── COUNT / BADGE CHIP (inside button) ───────────────── */
@@ -118,17 +118,17 @@
   .sl-btn--tertiary  .sl-btn__badge { background: var(--bk-grey-200); color: var(--bk-blue-700); }
 
   /* Chips follow the hover/pressed color so they don't stay blue
-     while the label/border go teal. Primary keeps the translucent
+     while the label/border go cyan. Primary keeps the translucent
      white chip — it reads correctly on both the solid and gradient
      fills, so no override needed. */
   .sl-btn--secondary.hover   .sl-btn__count,
   .sl-btn--secondary.hover   .sl-btn__badge,
   .sl-btn--tertiary.hover    .sl-btn__count,
-  .sl-btn--tertiary.hover    .sl-btn__badge { background: var(--bk-teal-100); color: var(--bk-teal-700); }
+  .sl-btn--tertiary.hover    .sl-btn__badge { background: var(--bk-cyan-100); color: var(--bk-cyan-700); }
   .sl-btn--secondary.pressed .sl-btn__count,
   .sl-btn--secondary.pressed .sl-btn__badge,
   .sl-btn--tertiary.pressed  .sl-btn__count,
-  .sl-btn--tertiary.pressed  .sl-btn__badge { background: var(--bk-teal-200); color: var(--bk-teal-700); }
+  .sl-btn--tertiary.pressed  .sl-btn__badge { background: var(--bk-cyan-200); color: var(--bk-cyan-700); }
 
   /* ─── ICON-DROPDOWN (icon + chevron, no text) ──────────── */
   .sl-btn--icon-dropdown { gap: 2px; }
@@ -179,7 +179,7 @@
   "anatomy": "Label (sentence case, 1–3 words) · optional leading or trailing 16px icon · 1.5px transparent or colored border · 4px radius. Heights: lg 40px, md 36px, sm 28px. Icon-only buttons are square at the same height.",
   "options": "Variants: primary (filled blue), secondary (white with blue border), tertiary/text (no border, underline on hover), destructive (red fill). Sizes: lg / md / sm. Icon-only variant for each.",
   "usage": "One primary per screen for the single most important action. Secondary for supporting actions. Tertiary/text for low-emphasis actions inside dense forms or tables. Destructive only for irreversible operations — pair with a confirm modal.",
-  "behaviors": "Primary hover applies the teal→blue gradient (`--color-background-primary-hover`) — not a darker blue. Pressed = Teal-400. Secondary stays white on hover; only border + text shift blue → teal. Tertiary underlines on hover. Press never uses transforms — color only. Disabled drops to Blue-200 with white text and removes the pointer.",
+  "behaviors": "Primary hover applies the cyan→blue gradient (`--color-background-primary-hover`) — not a darker blue. Pressed = Cyan-400. Secondary stays white on hover; only border + text shift blue → cyan. Tertiary underlines on hover. Press never uses transforms — color only. Disabled drops to Blue-200 with white text and removes the pointer.",
   "tokens": [
     "--color-background-primary",
     "--color-background-primary-hover",

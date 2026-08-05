@@ -39,7 +39,7 @@ body {
 }
 .swatch .step { font-size: 11px; }
 .swatch .hex { font-size: 9px; font-weight: 400; opacity: 0.85; font-family: var(--font-mono); letter-spacing: 0; }
-.swatch.light { color: var(--bk-indigo-900); }
+.swatch.light { color: var(--bk-navy-900); }
 .swatch.dark { color: var(--bk-white); }
 
 .row-label {

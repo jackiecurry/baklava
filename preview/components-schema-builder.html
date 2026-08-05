@@ -82,7 +82,7 @@
   .sb-row__name {
     display: flex; align-items: center; gap: 4px;
     font-family: var(--font-mono);
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
     font-weight: 800;
     min-width: 0;
   }
@@ -106,9 +106,9 @@
   .sb-row__icon svg { width: 11px; height: 11px; }
   .sb-row__icon.s-string  { background: var(--bk-green-600); }
   .sb-row__icon.s-number  { background: var(--bk-orange-600); }
-  .sb-row__icon.s-bool    { background: var(--bk-purple-600); }
+  .sb-row__icon.s-bool    { background: var(--bk-violet-600); }
   .sb-row__icon.s-object  { background: var(--bk-blue-600); }
-  .sb-row__icon.s-array   { background: var(--bk-teal-600); }
+  .sb-row__icon.s-array   { background: var(--bk-cyan-600); }
   .sb-row__type-pill {
     display: inline-flex; align-items: center;
     font: 400 11px/14px var(--font-mono);
@@ -334,7 +334,7 @@
       <dt>tabs</dt><dd><b>Input</b> · <b>Output</b> · <b>Settings</b>. Input/output show their own schemas. Settings holds version, draft mode, etc.</dd>
       <dt>toolbar</dt><dd><b>Add field</b> · <b>Import schema</b> (JSON Schema / Avro / Protobuf paste-or-upload) · <b>Infer from sample</b> (paste a JSON payload, system inspects types) · <b>AI Assistant suggest</b> · <b>Export JSON</b>.</dd>
       <dt>type chips</dt><dd>Each row shows: name (mono ExtraBold) · type pill · format pill (uuid, email, regex, range) · required flag · row actions.</dd>
-      <dt>colors</dt><dd><span style="color: var(--bk-green-600); font-weight: 800;">string</span> · <span style="color: var(--bk-orange-600); font-weight: 800;">number</span> · <span style="color: var(--bk-purple-600); font-weight: 800;">boolean</span> · <span style="color: var(--bk-blue-600); font-weight: 800;">object</span> · <span style="color: var(--bk-teal-600); font-weight: 800;">array</span>.</dd>
+      <dt>colors</dt><dd><span style="color: var(--bk-green-600); font-weight: 800;">string</span> · <span style="color: var(--bk-orange-600); font-weight: 800;">number</span> · <span style="color: var(--bk-violet-600); font-weight: 800;">boolean</span> · <span style="color: var(--bk-blue-600); font-weight: 800;">object</span> · <span style="color: var(--bk-cyan-600); font-weight: 800;">array</span>.</dd>
       <dt>nesting</dt><dd>Tree-style indentation (16px per level). Objects/arrays expand via chevron. Drag-reorder via grab handle (hover state).</dd>
       <dt>selection</dt><dd>Click a row to select; right panel (not shown — see Drawer integration) opens the field's detail editor with format/validation rules.</dd>
     </dl>

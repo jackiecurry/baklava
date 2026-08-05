@@ -62,7 +62,7 @@
     color: var(--color-text-heading);
     padding: 2px 8px;
     border-radius: var(--radius-xs);
-    border: 1px solid var(--bk-teal-600);
+    border: 1px solid var(--bk-cyan-600);
     box-shadow: var(--shadow-focus-ring);
     outline: none;
     width: 360px;
@@ -136,7 +136,7 @@
     font: 400 13px/20px var(--font-sans);
     padding: 3px 8px;
     border-radius: var(--radius-xs);
-    border: 1px solid var(--bk-teal-600);
+    border: 1px solid var(--bk-cyan-600);
     box-shadow: var(--shadow-focus-ring);
     outline: none;
     color: var(--color-text-body);
@@ -149,8 +149,8 @@
     text-transform: uppercase; letter-spacing: 0.05em;
     padding: 3px 8px; border-radius: 999px;
   }
-  .pill--saving { background: var(--bk-teal-100); color: var(--bk-teal-800); }
-  .pill--saving::before { content: ""; width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--bk-teal-600); border-top-color: transparent; animation: pspin 0.9s linear infinite; }
+  .pill--saving { background: var(--bk-cyan-100); color: var(--bk-cyan-800); }
+  .pill--saving::before { content: ""; width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--bk-cyan-600); border-top-color: transparent; animation: pspin 0.9s linear infinite; }
   .pill--err { background: var(--bk-red-100); color: var(--bk-red-800); }
   .pill--err::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--bk-red-600); }
   @keyframes pspin { to { transform: rotate(360deg); } }
@@ -252,7 +252,7 @@
     <dl class="spec">
       <dt>affordance</dt><dd>Editable text shows a pencil icon on hover, plus a subtle grey background. Don't show the pencil at rest — it adds noise to every row. Hover state is enough to discover the affordance.</dd>
       <dt>activate</dt><dd>Click anywhere on the value to enter edit mode. <code>F2</code> or <code>Enter</code> from keyboard focus also enters edit mode. Field auto-selects the full value on entry so typing replaces it.</dd>
-      <dt>border</dt><dd>Active field uses the standard input style — <b>1px teal-600 border + focus ring</b>. Inherits sibling typography (don't shrink to default 14px when editing a 22px heading).</dd>
+      <dt>border</dt><dd>Active field uses the standard input style — <b>1px cyan-600 border + focus ring</b>. Inherits sibling typography (don't shrink to default 14px when editing a 22px heading).</dd>
       <dt>commit</dt><dd>Save on <code>Enter</code>, <b>blur</b>, or check-button click. Cancel on <code>Esc</code> or X-button. Show keyboard hint inline while editing. Empty submit reverts to original value, never clears the field permanently.</dd>
       <dt>optimistic</dt><dd>Update the cell visually on commit and show an inline <b>"Saving…"</b> chip. If save fails, revert the value and surface an inline error message in red below the cell — never a toast.</dd>
       <dt>validation</dt><dd>Validate client-side on commit. Show error inline beneath the cell with row-tint <code>red-50</code>. Field stays in edit mode until valid or cancelled.</dd>

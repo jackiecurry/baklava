@@ -39,7 +39,7 @@
   .ai-out__head .actions .revise { background: transparent; color: var(--ai-accent); }
   .ai-out__head .actions svg { width: 12px; height: 12px; }
 
-  .ai-out__body { padding: 14px 16px; font: 400 14px/22px var(--font-sans); color: var(--bk-indigo-900); }
+  .ai-out__body { padding: 14px 16px; font: 400 14px/22px var(--font-sans); color: var(--bk-navy-900); }
 
   /* Diff view */
   .diff { font: 400 13px/22px var(--font-mono); padding: 8px 14px; background: var(--bk-grey-100); border-bottom: 1px solid var(--bk-grey-200); }
@@ -57,7 +57,7 @@
     border-radius: var(--field-radius);
     cursor: pointer;
     font: 400 13px/20px var(--font-sans);
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
   }
   .suggestion-item:hover { border-color: var(--ai-accent); background: var(--ai-tint); }
   .suggestion-item.active { border-color: var(--ai-accent); background: var(--ai-tint); }
@@ -161,7 +161,7 @@
     </div>
 
     <dl class="spec">
-      <dt>chrome</dt><dd>Purple bordered card with header band. Header carries label · confidence pill · actions. Always make it visually clear this is AI-generated, not user-typed.</dd>
+      <dt>chrome</dt><dd>Violet bordered card with header band. Header carries label · confidence pill · actions. Always make it visually clear this is AI-generated, not user-typed.</dd>
       <dt>confidence pill</dt><dd>Three levels: <span style="color: var(--ai-confidence-high); font-weight: 800;">High</span> (green dot · &gt;0.85) · <span style="color: var(--ai-confidence-med); font-weight: 800;">Medium</span> (yellow · 0.6–0.85) · <span style="color: var(--ai-confidence-low); font-weight: 800;">Low</span> (orange · &lt;0.6). Encourage human review more aggressively when low.</dd>
       <dt>diff view</dt><dd>Word-level diff between previous value and AI proposal. Adds in green (Green-100/800), deletes in red strikethrough (Red-100/700), unchanged in body color. Best for "rewrite this" interactions.</dd>
       <dt>candidates</dt><dd>For ambiguous fields (names, labels), surface N suggestions ranked by confidence. Single radio-style select. "Use selected" applies the active one.</dd>

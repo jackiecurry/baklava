@@ -25,31 +25,31 @@
   --bk-blue-900: #0B246E;
   --bk-blue-1000: #081A4D;
 
-  /* Cyan — focus ring & cool secondary accent (token name kept as -teal-*) */
-  --bk-teal-50:  #ECFCFF;
-  --bk-teal-100: #D5F8FF;
-  --bk-teal-200: #A7F1FF;
-  --bk-teal-300: #67E8FF;
-  --bk-teal-400: #22D3EE;
-  --bk-teal-500: #00B8D9;
-  --bk-teal-600: #0094B8;
-  --bk-teal-700: #007796;
-  --bk-teal-800: #005A73;
-  --bk-teal-900: #003E50;
-  --bk-teal-1000: #00212B;
+  /* Cyan — focus ring & cool secondary accent (token name kept as -cyan-*) */
+  --bk-cyan-50:  #ECFCFF;
+  --bk-cyan-100: #D5F8FF;
+  --bk-cyan-200: #A7F1FF;
+  --bk-cyan-300: #67E8FF;
+  --bk-cyan-400: #22D3EE;
+  --bk-cyan-500: #00B8D9;
+  --bk-cyan-600: #0094B8;
+  --bk-cyan-700: #007796;
+  --bk-cyan-800: #005A73;
+  --bk-cyan-900: #003E50;
+  --bk-cyan-1000: #00212B;
 
-  /* Indigo — dark navigation chrome */
-  --bk-indigo-50:  #EEF4FF;
-  --bk-indigo-100: #DCE8FF;
-  --bk-indigo-200: #B8D0FF;
-  --bk-indigo-300: #8CB2FF;
-  --bk-indigo-400: #5C8EFF;
-  --bk-indigo-500: #2563FF;
-  --bk-indigo-600: #1749E8;
-  --bk-indigo-700: #1237C0;
-  --bk-indigo-800: #0B246E;
-  --bk-indigo-900: #081A4D;
-  --bk-indigo-1000: #040C29;
+  /* Navy — dark navigation chrome */
+  --bk-navy-50:  #EEF4FF;
+  --bk-navy-100: #DCE8FF;
+  --bk-navy-200: #B8D0FF;
+  --bk-navy-300: #8CB2FF;
+  --bk-navy-400: #5C8EFF;
+  --bk-navy-500: #2563FF;
+  --bk-navy-600: #1749E8;
+  --bk-navy-700: #1237C0;
+  --bk-navy-800: #0B246E;
+  --bk-navy-900: #081A4D;
+  --bk-navy-1000: #040C29;
 
   /* Orange */
   --bk-orange-50:  #FEF7F3;
@@ -77,18 +77,18 @@
   --bk-yellow-900: #644B02;
   --bk-yellow-1000: #322601;
 
-  /* Purple — "discovery" / AI accents */
-  --bk-purple-50:  #FBF8FF;
-  --bk-purple-100: #F7F2FF;
-  --bk-purple-200: #EFE5FF;
-  --bk-purple-300: #DFC8FF;
-  --bk-purple-400: #C9A3FF;
-  --bk-purple-500: #A970FF;
-  --bk-purple-600: #8B5CF6;
-  --bk-purple-700: #7644EA;
-  --bk-purple-800: #6133C5;
-  --bk-purple-900: #4A2897;
-  --bk-purple-1000: #341E6A;
+  /* Violet — "discovery" / AI accents */
+  --bk-violet-50:  #FBF8FF;
+  --bk-violet-100: #F7F2FF;
+  --bk-violet-200: #EFE5FF;
+  --bk-violet-300: #DFC8FF;
+  --bk-violet-400: #C9A3FF;
+  --bk-violet-500: #A970FF;
+  --bk-violet-600: #8B5CF6;
+  --bk-violet-700: #7644EA;
+  --bk-violet-800: #6133C5;
+  --bk-violet-900: #4A2897;
+  --bk-violet-1000: #341E6A;
 
   /* Green — success */
   --bk-green-50:  #F2F8F3;
@@ -116,18 +116,18 @@
   --bk-red-900: #5B0B18;
   --bk-red-1000: #2D060C;
 
-  /* Pink — promotion / secondary accent */
-  --bk-pink-50:  #FFF6FB;
-  --bk-pink-100: #FFF0F8;
-  --bk-pink-200: #FFE0F0;
-  --bk-pink-300: #FFC0E2;
-  --bk-pink-400: #FF95CC;
-  --bk-pink-500: #FF5EAF;
-  --bk-pink-600: #FF2D8F;
-  --bk-pink-700: #E60073;
-  --bk-pink-800: #BF005E;
-  --bk-pink-900: #8F0046;
-  --bk-pink-1000: #660031;
+  /* Magenta — promotion / secondary accent */
+  --bk-magenta-50:  #FFF6FB;
+  --bk-magenta-100: #FFF0F8;
+  --bk-magenta-200: #FFE0F0;
+  --bk-magenta-300: #FFC0E2;
+  --bk-magenta-400: #FF95CC;
+  --bk-magenta-500: #FF5EAF;
+  --bk-magenta-600: #FF2D8F;
+  --bk-magenta-700: #E60073;
+  --bk-magenta-800: #BF005E;
+  --bk-magenta-900: #8F0046;
+  --bk-magenta-1000: #660031;
 
   /* Grey — neutrals (use for surfaces, dividers, text muting) */
   --bk-grey-50:  #F8FAFC;
@@ -143,7 +143,7 @@
   --bk-grey-1000: #020617;
 
   /* AI — purplish-blue ramp for AI Assistant / AI-generated content. Distinct
-     from Blue (action) and Purple (discovery). Default: ai-500. */
+     from Blue (action) and Violet (discovery). Default: ai-500. */
   --bk-ai-50:   #F1F3FF;
   --bk-ai-100:  #E2E7FF;
   --bk-ai-200:  #C6CFFF;
@@ -178,18 +178,18 @@
   --color-background-primary-pressed: var(--bk-blue-700);
   --color-background-secondary: var(--bk-white);
   --color-background-secondary-hover: var(--bk-grey-100);
-  --color-background-secondary-pressed: var(--bk-teal-200);
+  --color-background-secondary-pressed: var(--bk-cyan-200);
   --color-background-disabled: var(--bk-grey-200);
   --color-background-subtle: var(--bk-grey-100);
   --color-background-alert: var(--bk-red-100);
   --color-background-warning: var(--bk-orange-100);
   --color-background-success: var(--bk-green-100);
-  --color-background-discovery: var(--bk-purple-100);
-  --color-background-information: var(--bk-indigo-100);
+  --color-background-discovery: var(--bk-violet-100);
+  --color-background-information: var(--bk-navy-100);
 
   /* Text tokens */
-  --color-text-body: var(--bk-indigo-900);      /* default body text */
-  --color-text-heading: var(--bk-indigo-900);   /* same family, used in headings */
+  --color-text-body: var(--bk-navy-900);      /* default body text */
+  --color-text-heading: var(--bk-navy-900);   /* same family, used in headings */
   --color-text-subtle: var(--bk-grey-700);      /* secondary copy, captions */
   --color-text-disabled: var(--bk-grey-500);
   --color-text-inverse: var(--bk-white);
@@ -201,24 +201,24 @@
   --color-text-alert: var(--bk-red-700);
   --color-text-warning: var(--bk-orange-700);
   --color-text-success: var(--bk-green-800);
-  --color-text-discovery: var(--bk-purple-700);
-  --color-text-information: var(--bk-indigo-700);
+  --color-text-discovery: var(--bk-violet-700);
+  --color-text-information: var(--bk-navy-700);
   --color-text-accent-blue: var(--bk-blue-600);
-  --color-text-accent-teal: var(--bk-teal-600);
-  --color-text-accent-indigo: var(--bk-indigo-600);
+  --color-text-accent-cyan: var(--bk-cyan-600);
+  --color-text-accent-navy: var(--bk-navy-600);
   --color-text-accent-orange: var(--bk-orange-600);
   --color-text-accent-yellow: var(--bk-yellow-500);
-  --color-text-accent-purple: var(--bk-purple-600);
+  --color-text-accent-violet: var(--bk-violet-600);
   --color-text-accent-green: var(--bk-green-600);
   --color-text-accent-red: var(--bk-red-600);
-  --color-text-accent-pink: var(--bk-pink-600);
+  --color-text-accent-magenta: var(--bk-magenta-600);
   --color-text-accent-grey: var(--bk-grey-600);
 
   /* Borders & strokes */
   --color-border-default: var(--bk-grey-400);   /* button outlines, dividers */
   --color-border-subtle: var(--bk-grey-300);    /* card borders */
-  --color-border-strong: var(--bk-indigo-900);
-  --color-border-focus: var(--bk-teal-600);     /* focus ring — high-contrast teal */
+  --color-border-strong: var(--bk-navy-900);
+  --color-border-focus: var(--bk-cyan-600);     /* focus ring — high-contrast cyan */
   --color-border-selected: var(--bk-blue-600);
   --color-border-hover: var(--bk-blue-600);
   --color-border-disabled: var(--bk-grey-300);
@@ -226,11 +226,11 @@
   --color-border-alert: var(--bk-red-600);
   --color-border-warning: var(--bk-orange-600);
   --color-border-success: var(--bk-green-600);
-  --color-border-information: var(--bk-indigo-600);
-  --color-border-discovery: var(--bk-purple-600);
+  --color-border-information: var(--bk-navy-600);
+  --color-border-discovery: var(--bk-violet-600);
 
   /* Inverse borders — Blue-300 at three alphas, by role. For dark surfaces
-     only: the Designer rail, the AI Assistant panel, and the Indigo 1000 nav.
+     only: the Designer rail, the AI Assistant panel, and the Navy 1000 nav.
      Grey borders disappear on these surfaces, which is why they get their
      own scale rather than reusing --color-border-*. */
   --color-border-inverse-control: rgba(156, 179, 225, 0.25);        /* control chrome — fields, pickers, segmented tracks */
@@ -252,7 +252,7 @@
      hero/marketing surfaces, AI Assistant accents).
   */
 
-  /* Brand gradient — teal → blue, horizontal sweep.
+  /* Brand gradient — cyan → blue, horizontal sweep.
      Stops: #FF2D8F at 29%, #2563FF at 100%.
      Use for hero surfaces, launcher backgrounds, brand moments. */
   --gradient-brand: linear-gradient(90deg, #FF2D8F 29%, #2563FF 100%);
@@ -345,7 +345,7 @@
   --shadow-raised-hover: 0px 4px 8px rgba(206, 217, 240, 1);
   --shadow-overlay: 0px 8px 24px rgba(38, 40, 44, 0.18);     /* modal / popover */
   --shadow-overlay-strong: 0px 12px 32px rgba(38, 40, 44, 0.28);
-  --shadow-focus-ring: 0 0 0 3px rgba(0, 148, 184, 0.35);    /* cyan focus halo (bk-teal-600 = #0094B8) */
+  --shadow-focus-ring: 0 0 0 3px rgba(0, 148, 184, 0.35);    /* cyan focus halo (bk-cyan-600 = #0094B8) */
   --shadow-inset-sunken: inset 0 1px 2px rgba(38, 40, 44, 0.08);
 
   /* ─── Form field tokens ─────────────────────────────────────
@@ -371,7 +371,7 @@
 
   --field-border-default:  var(--bk-grey-400);
   --field-border-hover:    var(--bk-blue-600);
-  --field-border-focus:    var(--bk-teal-600);
+  --field-border-focus:    var(--bk-cyan-600);
   --field-border-error:    var(--bk-red-600);
   --field-border-warning:  var(--bk-yellow-700);
   --field-border-success:  var(--bk-green-600);
@@ -382,7 +382,7 @@
      enclosure than an interactive input target. */
   --field-group-border:    var(--bk-grey-200);
 
-  --field-text-default:  var(--bk-indigo-900);
+  --field-text-default:  var(--bk-navy-900);
   --field-text-disabled: var(--bk-blue-300);
   --field-text-readonly: var(--bk-grey-800);
   --field-text-placeholder: var(--bk-grey-700);
@@ -393,7 +393,7 @@
   /* Standardized focus halo — use on every focusable control */
   --ring-focus: 0 0 0 2px rgba(0, 148, 184, 0.25);
 
-  /* AI-state tokens — distinct semantic from "discovery" (purple) and
+  /* AI-state tokens — distinct semantic from "discovery" (violet) and
      "action" (blue). Uses the dedicated purplish-blue AI ramp. */
   --ai-tint:   var(--bk-ai-100);
   --ai-accent: var(--bk-ai-500);
@@ -442,7 +442,7 @@
      Text selection highlight and skeleton/loading placeholders.
   */
   --color-selection-bg:   var(--bk-blue-200);
-  --color-selection-text: var(--bk-indigo-900);
+  --color-selection-text: var(--bk-navy-900);
   /* Skeleton / loading placeholder band fill — opacity pulses 1 → 0.5 → 1. */
   --color-skeleton:         var(--bk-grey-400);         /* on light surfaces */
   --color-skeleton-on-dark: rgba(255, 255, 255, 0.10);  /* on dark surfaces — navy nav, etc. */

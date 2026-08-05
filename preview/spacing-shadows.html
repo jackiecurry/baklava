@@ -7,12 +7,12 @@
 <link rel="stylesheet" href="card.css" />
 <style>
   .shadows { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 12px; }
-  .shadow-tile { aspect-ratio: 1.4; background: var(--bk-white); border-radius: var(--radius-sm); display:flex; flex-direction:column; align-items:center; justify-content:center; gap: 4px; color: var(--bk-indigo-900); }
+  .shadow-tile { aspect-ratio: 1.4; background: var(--bk-white); border-radius: var(--radius-sm); display:flex; flex-direction:column; align-items:center; justify-content:center; gap: 4px; color: var(--bk-navy-900); }
   .shadow-tile .v { font-weight: 800; font-size: 13px; }
   .shadow-tile .t { font-family: var(--font-mono); font-size: 10px; color: var(--color-text-subtle); text-align: center; padding: 0 8px; }
   .tile-raised { box-shadow: var(--shadow-raised); }
   .tile-overlay { box-shadow: var(--shadow-overlay); }
-  .tile-focus { box-shadow: var(--shadow-focus-ring); border: 1px solid var(--bk-teal-600); }
+  .tile-focus { box-shadow: var(--shadow-focus-ring); border: 1px solid var(--bk-cyan-600); }
 </style>
 <script type="application/json" id="baklava-meta">
 {
@@ -20,7 +20,7 @@
   "section": "Foundations",
   "url": "https://jackiecurry.github.io/baklava/preview/spacing-shadows.html",
   "tagline": "Light, blueish, low-spread — borders carry more weight than shadows in this system.",
-  "usage": "Resting card shadow is `0 2px 4px rgba(206, 217, 240, 0.8)` — literally a tint of Blue-200. Modals use `0 8px 24px rgba(38, 40, 44, 0.18)`. Focus rings use a 3px Teal-600 halo at 35% alpha. No heavy drop shadows, no neumorphism, no glow.",
+  "usage": "Resting card shadow is `0 2px 4px rgba(206, 217, 240, 0.8)` — literally a tint of Blue-200. Modals use `0 8px 24px rgba(38, 40, 44, 0.18)`. Focus rings use a 3px Cyan-600 halo at 35% alpha. No heavy drop shadows, no neumorphism, no glow.",
   "tokens": [
     "--shadow-raised",
     "--shadow-raised-hover",
@@ -38,7 +38,7 @@
     <div class="shadows">
       <div class="shadow-tile tile-raised"><div class="v">Raised</div><div class="t">cards, drawers — 2y, 4 blur</div></div>
       <div class="shadow-tile tile-overlay"><div class="v">Overlay</div><div class="t">modal, popover — 8y, 24 blur</div></div>
-      <div class="shadow-tile tile-focus"><div class="v">Focus ring</div><div class="t">3px teal-600 @ 35%</div></div>
+      <div class="shadow-tile tile-focus"><div class="v">Focus ring</div><div class="t">3px cyan-600 @ 35%</div></div>
     </div>
   </div>
 </body>

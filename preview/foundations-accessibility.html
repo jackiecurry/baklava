@@ -13,7 +13,7 @@
   /* ── Page header ── */
   .a11y-header {
     padding: 36px 40px 32px;
-    background: linear-gradient(135deg, var(--bk-indigo-1000) 0%, var(--bk-indigo-900) 60%, #1F2A52 100%);
+    background: linear-gradient(135deg, var(--bk-navy-1000) 0%, var(--bk-navy-900) 60%, #1F2A52 100%);
     position: relative;
     overflow: hidden;
     border-radius: 0;
@@ -29,7 +29,7 @@
     font: 800 10px/14px var(--font-sans);
     letter-spacing: 0.10em;
     text-transform: uppercase;
-    color: var(--bk-teal-300);
+    color: var(--bk-cyan-300);
     margin-bottom: 10px;
   }
   .a11y-header h1 {
@@ -57,7 +57,7 @@
     color: var(--bk-white);
     letter-spacing: 0.04em;
   }
-  .wcag-badge i { width: 13px; height: 13px; color: var(--bk-teal-300); }
+  .wcag-badge i { width: 13px; height: 13px; color: var(--bk-cyan-300); }
 
   /* ── Body ── */
   .a11y-body { padding: 32px 40px 48px; display: flex; flex-direction: column; gap: 40px; }
@@ -148,7 +148,7 @@
     background: var(--bk-grey-100);
     padding: 1px 5px;
     border-radius: 3px;
-    color: var(--bk-indigo-700);
+    color: var(--bk-navy-700);
   }
 
   /* ── Contrast table ── */
@@ -270,7 +270,7 @@
     background: var(--bk-grey-100);
     padding: 1px 5px;
     border-radius: 3px;
-    color: var(--bk-indigo-700);
+    color: var(--bk-navy-700);
     display: block;
     white-space: pre;
   }
@@ -431,7 +431,7 @@
                 <span class="sw" style="background:#0B246E"></span>
                 <span class="sw" style="background:#FFFFFF"></span>
               </span>
-              <span style="margin-left:8px; font:400 12px/18px var(--font-mono);">Indigo-1000 on White</span>
+              <span style="margin-left:8px; font:400 12px/18px var(--font-mono);">Navy-1000 on White</span>
             </td>
             <td>Body text, headings</td>
             <td><span class="ratio">17.5:1 <span class="pass">AA</span></span></td>
@@ -497,7 +497,7 @@
         <div class="icon-wrap"><i data-lucide="keyboard"></i></div>
         <h2>Keyboard navigation</h2>
       </div>
-      <p style="font:400 13px/20px var(--font-sans); color:var(--color-text-body); margin:0 0 14px;">Every interactive element in Baklava must be reachable and operable by keyboard alone. All focus indicators use a 3px teal halo at 35% alpha — never remove the outline without providing an equivalent replacement.</p>
+      <p style="font:400 13px/20px var(--font-sans); color:var(--color-text-body); margin:0 0 14px;">Every interactive element in Baklava must be reachable and operable by keyboard alone. All focus indicators use a 3px cyan halo at 35% alpha — never remove the outline without providing an equivalent replacement.</p>
       <div class="key-table-wrap"><table class="key-table">
         <thead>
           <tr>
@@ -681,7 +681,7 @@
           <div class="g-check"><i data-lucide="check"></i></div>
           <div class="g-text">
             <div class="g-title">Never suppress the visible focus ring</div>
-            <div class="g-desc">The Baklava focus ring is a 3px teal halo. Use <code>:focus-visible</code> to show it for keyboard users while hiding it on mouse click. Setting <code>outline: none</code> without a replacement fails WCAG 2.4.7.</div>
+            <div class="g-desc">The Baklava focus ring is a 3px cyan halo. Use <code>:focus-visible</code> to show it for keyboard users while hiding it on mouse click. Setting <code>outline: none</code> without a replacement fails WCAG 2.4.7.</div>
           </div>
         </div>
         <div class="guideline">

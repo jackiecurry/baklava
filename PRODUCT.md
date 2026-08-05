@@ -18,7 +18,7 @@ Precise and confident. Engineering-grade and exact — the gallery should look a
 
 ## Anti-references
 
-- **Generic Material/Bootstrap defaults** — off-the-shelf framework look (purple buttons, ambient drop shadows, no brand identity). Baklava uses 1px `--bk-grey-300` borders, not shadow-soup, and its own blue/teal identity.
+- **Generic Material/Bootstrap defaults** — off-the-shelf framework look (violet buttons, ambient drop shadows, no brand identity). Baklava uses 1px `--bk-grey-300` borders, not shadow-soup, and its own blue/cyan identity.
 - **Cluttered legacy enterprise dashboard** — dense gray over-paneled UI with tiny text, border-on-everything, no breathing room. Use the 4-pt spacing grid for rhythm; let content breathe.
 - **Trendy AI-startup landing** — gradient text, glassmorphism, dark-mode-by-default, eyebrow-on-every-section. Gradients are reserved (product launcher icons, AI Assistant accent, brand gradient only).
 - **Over-animated / playful** — bouncy, gamified, illustration-heavy styling that undercuts an enterprise system's credibility. Motion is intentional and restrained.
@@ -33,4 +33,4 @@ Precise and confident. Engineering-grade and exact — the gallery should look a
 
 ## Accessibility & Inclusion
 
-WCAG 2.1 AA. Body text ≥4.5:1 contrast against its background (including placeholders); large text ≥3:1. Visible, consistent focus rings — `box-shadow: var(--ring-focus)` with `border-color: var(--bk-teal-600)`. Full keyboard navigability across the gallery nav and detail views. Every animation ships a `prefers-reduced-motion: reduce` alternative. Icon-only controls require `aria-label`. Selection state never relies on color alone (uses a thicker 3px Blue-600 border).
+WCAG 2.1 AA. Body text ≥4.5:1 contrast against its background (including placeholders); large text ≥3:1. Visible, consistent focus rings — `box-shadow: var(--ring-focus)` with `border-color: var(--bk-cyan-600)`. Full keyboard navigability across the gallery nav and detail views. Every animation ships a `prefers-reduced-motion: reduce` alternative. Icon-only controls require `aria-label`. Selection state never relies on color alone (uses a thicker 3px Blue-600 border).

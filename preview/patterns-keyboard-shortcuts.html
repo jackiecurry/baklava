@@ -26,7 +26,7 @@
     color: var(--color-text-body);
     box-shadow: 0 1px 0 rgba(0,0,0,0.04);
   }
-  .k.dark { background: var(--bk-indigo-900); color: var(--bk-white); border-color: rgba(255,255,255,0.18); }
+  .k.dark { background: var(--bk-navy-900); color: var(--bk-white); border-color: rgba(255,255,255,0.18); }
   .kgroup { display: inline-flex; align-items: center; gap: 4px; }
   .kgroup .sep { color: var(--color-text-subtle); font: 400 12px/16px var(--font-mono); }
 
@@ -124,7 +124,7 @@
   }
   .tt-btn i { width: 14px; height: 14px; }
   .tt {
-    background: var(--bk-indigo-1000, var(--bk-indigo-900));
+    background: var(--bk-navy-1000, var(--bk-navy-900));
     color: var(--bk-white);
     border-radius: var(--radius-xs);
     padding: 6px 10px;
@@ -253,7 +253,7 @@
       <dt>cheatsheet</dt><dd>Opens with <kbd class="k">?</kbd> from anywhere. Modal overlay (Overlay surface), <b>720px wide</b>, columns grouped by scope: Global · current-product context · Tables · Editing. Filter input at top searches both labels and key combos.</dd>
       <dt>scope</dt><dd>Cheatsheet contents <b>change per product</b> — Designer shows canvas shortcuts; Monitor shows table/timeline shortcuts. Global section is always present.</dd>
       <dt>discovery</dt><dd><b>Status bar</b> at the bottom of each product persistently shows the 2 most useful shortcuts (<kbd class="k">?</kbd> and <kbd class="k">⌘</kbd>+<kbd class="k">K</kbd>). New users learn shortcuts here without opening the sheet.</dd>
-      <dt>tooltips</dt><dd>Every clickable action with a shortcut shows it in its tooltip on hover. Dark indigo background, key tokens flip to dark variant. Label first, keys aligned right.</dd>
+      <dt>tooltips</dt><dd>Every clickable action with a shortcut shows it in its tooltip on hover. Dark navy background, key tokens flip to dark variant. Label first, keys aligned right.</dd>
       <dt>chord vs combo</dt><dd><b>Combo</b> (held simultaneously): <kbd class="k">⌘</kbd>+<kbd class="k">S</kbd>. <b>Chord</b> (sequential): <kbd class="k">G</kbd> then <kbd class="k">D</kbd> — separator is the word "then" in muted text, not a plus sign. Chord prefix shows a transient HUD ("G then…") at 300ms.</dd>
       <dt>collisions</dt><dd>Never override platform shortcuts (<kbd class="k">⌘</kbd>+<kbd class="k">W</kbd>, <kbd class="k">⌘</kbd>+<kbd class="k">T</kbd>). Don't bind <kbd class="k">Tab</kbd> to a custom action — it always cycles focus.</dd>
       <dt>platform</dt><dd>Show <kbd class="k">⌘</kbd> on macOS, <kbd class="k">Ctrl</kbd> on Windows / Linux. Detect with <code>navigator.platform</code>. Don't show both with a slash — pick one per session.</dd>

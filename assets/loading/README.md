@@ -3,7 +3,7 @@
 Everything shown in the Designer loading page
 (`preview/templates-designer-loading.html`), collected for handoff.
 
-Display color in the loader is **Indigo-900 `#081A4D`** (navy). All single-color
+Display color in the loader is **Navy-900 `#081A4D`** (navy). All single-color
 SVGs use `currentColor` or are pre-tinted navy — recolor as needed.
 
 ```

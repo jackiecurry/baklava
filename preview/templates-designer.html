@@ -274,7 +274,7 @@
     padding: 4px 8px 4px;
     border-radius: var(--radius-xs);
     cursor: pointer;
-    color: var(--bk-indigo-900);
+    color: var(--bk-navy-900);
     font: 400 12px/16px var(--font-sans);
     gap: 4px;
     position: relative;
@@ -658,7 +658,7 @@
       <dt>frame</dt><dd>1440 × 900. Two-row grid: <b>56px navbar</b> (full width) + <b>flex body</b>. The body is itself a two-column grid: <b>rail</b> (variable width) + <b>right column</b>. The 4px brand gradient sits under the navbar.</dd>
       <dt>rail</dt><dd>Flush with the underside of the global navbar — runs full body height. 280px with search + filter segmented control + Snaps tree + My Assets tree + Open Project Manager footer. Collapses to a 48px icon column via the bottom chevron (not shown in these states).</dd>
       <dt>right column</dt><dd>Owns toolbar, tabs+canvas, and status bar. <b>None</b> of these extend under the rail — they begin at the rail's right edge and run to the frame's right edge.</dd>
-      <dt>toolbar</dt><dd>Light surface, lives only inside the right column. Default (collapsed) state shows icons only at compact height. Expanding reveals group headers (Build / Execution / Configuration / Version Control / Transfer) and a label under each icon — toggled by the right-end chevron. Execute = blue, Validate = green; everything else is Indigo 900.</dd>
+      <dt>toolbar</dt><dd>Light surface, lives only inside the right column. Default (collapsed) state shows icons only at compact height. Expanding reveals group headers (Build / Execution / Configuration / Version Control / Transfer) and a label under each icon — toggled by the right-end chevron. Execute = blue, Validate = green; everything else is Navy 900.</dd>
       <dt>status bar</dt><dd>32px grey strip pinned to the bottom of the right column only — never under the rail. Container-query responsive: at <code>≤1080px</code> right-column width, the hint cluster collapses to a single lightbulb icon (tooltip carries the full hint).</dd>
       <dt>canvas</dt><dd>White, flex-centered hint copy when empty. Zoom controls dock bottom-left in a small elevated stack (fit / + / − / percent). Right-edge tab pulls in a right panel.</dd>
       <dt>composed from</dt><dd>Global header · Left nav · Toolbar (custom for Designer) · Tabs · AI Assistant brand pill. Reuse these primitives; don't fork their visuals here.</dd>

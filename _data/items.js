@@ -45,7 +45,7 @@ window.BAKLAVA_DATA = {
           name: "Shadows",
           tagline: "Light, blueish, low-spread — borders carry more weight than shadows in this system.",
           meta: {
-            usage: "Resting card shadow is `0 2px 4px rgba(206, 217, 240, 0.8)` — literally a tint of Blue-200. Modals use `0 8px 24px rgba(38, 40, 44, 0.18)`. Focus rings use a 3px Teal-600 halo at 35% alpha. No heavy drop shadows, no neumorphism, no glow."
+            usage: "Resting card shadow is `0 2px 4px rgba(206, 217, 240, 0.8)` — literally a tint of Blue-200. Modals use `0 8px 24px rgba(38, 40, 44, 0.18)`. Focus rings use a 3px Cyan-600 halo at 35% alpha. No heavy drop shadows, no neumorphism, no glow."
           }
         },
         {
@@ -69,7 +69,7 @@ window.BAKLAVA_DATA = {
           name: "Surfaces",
           tagline: "Navbar · Canvas · Sunken · Raised · Overlay — five elevation planes.",
           meta: {
-            usage: "Compose interfaces from five surfaces. Navbar (Indigo-1000) carries the dark global chrome only. Canvas (white) is the default page. Sunken (Grey-100) nests inside Canvas for inline panels. Raised (white + shadow) lifts cards and drawers. Overlay sits on top for modals and popovers. Use elevation to organize complexity, not for decoration."
+            usage: "Compose interfaces from five surfaces. Navbar (Navy-1000) carries the dark global chrome only. Canvas (white) is the default page. Sunken (Grey-100) nests inside Canvas for inline panels. Raised (white + shadow) lifts cards and drawers. Overlay sits on top for modals and popovers. Use elevation to organize complexity, not for decoration."
           }
         },
         {
@@ -139,9 +139,9 @@ window.BAKLAVA_DATA = {
         {
           file: "preview/colors-gradient-brand.html",
           name: "Brand gradient",
-          tagline: "linear-gradient(90deg, #FF2D8F 29%, #2563FF 100%) — horizontal teal → blue.",
+          tagline: "linear-gradient(90deg, #FF2D8F 29%, #2563FF 100%) — horizontal cyan → blue.",
           meta: {
-            usage: "Reserved for hero/marketing surfaces, launcher backgrounds, and brand moments — never for normal UI. Distinct from `--color-background-primary-hover`, which uses a slightly different teal at a 112.63° diagonal for primary-button hover only."
+            usage: "Reserved for hero/marketing surfaces, launcher backgrounds, and brand moments — never for normal UI. Distinct from `--color-background-primary-hover`, which uses a slightly different cyan at a 112.63° diagonal for primary-button hover only."
           }
         },
         {
@@ -149,7 +149,7 @@ window.BAKLAVA_DATA = {
           name: "Semantic text",
           tagline: "Body, subtle, link, status, information, discovery, accents.",
           meta: {
-            usage: "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Indigo-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Indigo-700; Discovery uses Purple-700. AI uses the dedicated AI ramp — never substitute purple for AI."
+            usage: "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Navy-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Navy-700; Discovery uses Violet-700. AI uses the dedicated AI ramp — never substitute violet for AI."
           }
         },
         {
@@ -220,7 +220,7 @@ window.BAKLAVA_DATA = {
             anatomy: "Label (sentence case, 1–3 words) · optional leading or trailing 16px icon · 1.5px transparent or colored border · 4px radius. Heights: lg 40px, md 36px, sm 28px. Icon-only buttons are square at the same height.",
             options: "Variants: primary (filled blue), secondary (white with blue border), tertiary/text (no border, underline on hover), destructive (red fill). Sizes: lg / md / sm. Icon-only variant for each.",
             usage: "One primary per screen for the single most important action. Secondary for supporting actions. Tertiary/text for low-emphasis actions inside dense forms or tables. Destructive only for irreversible operations — pair with a confirm modal.",
-            behaviors: "Primary hover applies the teal→blue gradient (`--color-background-primary-hover`) — not a darker blue. Pressed = Teal-400. Secondary stays white on hover; only border + text shift blue → teal. Tertiary underlines on hover. Press never uses transforms — color only. Disabled drops to Blue-200 with white text and removes the pointer."
+            behaviors: "Primary hover applies the cyan→blue gradient (`--color-background-primary-hover`) — not a darker blue. Pressed = Cyan-400. Secondary stays white on hover; only border + text shift blue → cyan. Tertiary underlines on hover. Press never uses transforms — color only. Disabled drops to Blue-200 with white text and removes the pointer."
           }
         },
         {
@@ -253,7 +253,7 @@ window.BAKLAVA_DATA = {
             anatomy: "20px square · 1.5px Grey-600 border · 4px radius · label to the right (14/22). Checked: Blue-600 fill with white check. Indeterminate: Blue-600 fill with white horizontal dash. Error: white fill with Red-600 border.",
             options: "States: unchecked, checked, indeterminate, disabled, error. Sizes: default 20px; dense 16px (same 4px radius) for table, tree, and popover contexts. The dense size is the same shared control the Tree and Tree select rows use.",
             usage: "Use for boolean selections in forms and for selecting rows in a table or list. For a single optional yes/no, prefer a Toggle. Indeterminate is reserved for the parent of a partially-selected group.",
-            behaviors: "Click anywhere on the box or label toggles. Space toggles when focused. Disabled uses explicit muted fill, border, and label colors instead of opacity. Focus uses the global 3px Teal-600 halo."
+            behaviors: "Click anywhere on the box or label toggles. Space toggles when focused. Disabled uses explicit muted fill, border, and label colors instead of opacity. Focus uses the global 3px Cyan-600 halo."
           }
         },
         {
@@ -293,7 +293,7 @@ window.BAKLAVA_DATA = {
             anatomy: "Label above (14/22 ExtraBold) · field (40px tall, 8px top/bottom × 12px left/right padding, 1px Grey-400 border, 4px radius) · optional help text below (12/18 Grey-700) · optional inline error.",
             options: "Sizes: default 40px, compact 32px. States: rest, hover, focus, filled, disabled, read-only, error. Optional leading or trailing icon slot.",
             usage: "Use for short single-line input — names, emails, IDs. Placeholder is Light Italic and describes the shape (`dd/mm/yyyy`, `Search snaps`), not an exhortation. Help text clarifies expectations rather than restating the label.",
-            behaviors: "Border shifts Grey-400 → Blue-600 on hover and → Teal-600 on focus, where it pairs with the `--ring-focus` halo. Error replaces the border with Red-600, fills Red-100, and shows an inline message. Disabled swaps to the disabled tokens (Blue-100 fill, Blue-200 border) with `cursor: not-allowed` — it does not change opacity. Read-only keeps a de-emphasized Grey-300 border on a Grey-100 fill, and the value stays selectable."
+            behaviors: "Border shifts Grey-400 → Blue-600 on hover and → Cyan-600 on focus, where it pairs with the `--ring-focus` halo. Error replaces the border with Red-600, fills Red-100, and shows an inline message. Disabled swaps to the disabled tokens (Blue-100 fill, Blue-200 border) with `cursor: not-allowed` — it does not change opacity. Read-only keeps a de-emphasized Grey-300 border on a Grey-100 fill, and the value stays selectable."
           }
         },
         {
@@ -345,7 +345,7 @@ window.BAKLAVA_DATA = {
             anatomy: "20px circle · 1.5px Grey-600 border · label to the right (14/22). Checked: white fill with a Blue-600 ring and 10px Blue-600 center dot. Error: white fill with Red-600 border.",
             options: "States: unselected, hover, focus, selected, disabled, error. Sizes: default 20px; dense 16px for table, tree, and popover contexts. Layout: vertical (8px gap, default) or horizontal (24px column gap, 8px row gap).",
             usage: "Use for picking one of 2–5 options where all options should be visible at once. Above 5 options, prefer a Select. Below 2 options, this is a toggle, not a radio group.",
-            behaviors: "Use fieldset + legend for semantic groups. Click anywhere on the circle or label selects. Arrow keys move between options within the group; Tab jumps past the group. Focus uses the global Teal halo and does not replace state borders. Selected + hover has no extra visual change. Disabled uses explicit muted fill, border, dot, and label colors instead of opacity."
+            behaviors: "Use fieldset + legend for semantic groups. Click anywhere on the circle or label selects. Arrow keys move between options within the group; Tab jumps past the group. Focus uses the global Cyan halo and does not replace state borders. Selected + hover has no extra visual change. Disabled uses explicit muted fill, border, dot, and label colors instead of opacity."
           }
         },
         {
@@ -354,7 +354,7 @@ window.BAKLAVA_DATA = {
           tagline: "Input with a leading search icon and a clear-on-typed affordance.",
           meta: {
             anatomy: "Leading Lucide `search-sm` icon · field · trailing clear `×` button that appears once there is text. Placeholder describes the shape (`Search snaps`). The clear `×` owns the trailing slot. Passive elements may share it freely: the `⌘K` badge, a validation check, a loading spinner. Controls that act on the *results* rather than on the text (group by, sort, density, saved view) sit outside as sibling buttons in the same toolbar row, per Filter, sort, faceted search — except in a narrow rail, where there is no toolbar row to move into and one icon-only view control may share the slot (see Field anatomy's rail exception). Either way the order holds: clear innermost, the persistent control pinned to the edge, so the transient `×` can come and go without shifting it.",
-            options: "Sizes: default 40px or compact 32px — use compact on dense surfaces such as table and filter toolbars. Surfaces: default bordered white field, or `sl-search--inverse` on dark surfaces (Designer rail, AI Assistant panel, Indigo 1000 nav), which swaps to a near-transparent fill with a Blue-300 25% border and keeps the teal focus ring. Inverse is a surface modifier only — compose it with the compact size for the rail. There is no filled variant: an opaque grey fill would collide with the state fills (Grey-100 read-only, Blue-100 disabled, Red-100 error, AI-100 review). On light surfaces the field keeps its border even when compact, so the input target stays discoverable in a toolbar.",
+            options: "Sizes: default 40px or compact 32px — use compact on dense surfaces such as table and filter toolbars. Surfaces: default bordered white field, or `sl-search--inverse` on dark surfaces (Designer rail, AI Assistant panel, Navy 1000 nav), which swaps to a near-transparent fill with a Blue-300 25% border and keeps the cyan focus ring. Inverse is a surface modifier only — compose it with the compact size for the rail. There is no filled variant: an opaque grey fill would collide with the state fills (Grey-100 read-only, Blue-100 disabled, Red-100 error, AI-100 review). On light surfaces the field keeps its border even when compact, so the input target stays discoverable in a toolbar.",
             usage: "Use for filtering visible content on the current screen. For navigating to results on another screen, use the global Search overlay instead. Debounce input by 150ms before triggering a request.",
             behaviors: "Esc clears when focused. Clear button removes text and refocuses the field. On submit (Enter), the request fires immediately, bypassing the debounce."
           }
@@ -367,7 +367,7 @@ window.BAKLAVA_DATA = {
             anatomy: "Inset track with a 1px outer border and 2–3px padding · selected segment is a Blue-600 pill with white text · unselected segments are transparent · text-only, icon-only, or icon + text segments.",
             options: "Sizes: large 40px, medium 30px (default), small 24px. Surfaces: default transparent light track, white `sc--on-sunken` track for Grey-100 backgrounds, or `sc--inverse` for dark backgrounds.",
             usage: "Use to flip between views inside a single surface (list / grid, day / week / month, summary / details). Use large in page or table toolbars beside 40px fields, medium as the standalone default, and small in dense toolbars or rails. Add `sc--on-sunken` only when the transparent track loses separation on a light grey surface. For navigating between unrelated screens, use Tabs. For more than 5 options, use a Select.",
-            behaviors: "Click selects; arrow keys cycle; Home and End jump to the first and last segments. Hover adds a subtle surface fill, focus uses the teal ring, and disabled segments reject input. The selected segment remains Blue-600 on every surface."
+            behaviors: "Click selects; arrow keys cycle; Home and End jump to the first and last segments. Hover adds a subtle surface fill, focus uses the cyan ring, and disabled segments reject input. The selected segment remains Blue-600 on every surface."
           }
         },
         {
@@ -398,7 +398,7 @@ window.BAKLAVA_DATA = {
           meta: {
             anatomy: "A ring masked out of a conic gradient that ramps transparent → `currentColor` over 360°, with a round head dot capping the seam so the comet reads as one tapered tail. Ring thickness via `--bk-spin-thick`; rotation 1.1s linear infinite, slowing to 2.8s under `prefers-reduced-motion`.",
             options: "Sizes: xs 12 / sm 16 / md 24 (default) / lg 40 / xl 64 — stroke widens at the small end for visibility. Color inherits `currentColor`; variants (`--brand · --ai · --success · --warning · --danger · --subtle · --inverse`) are shortcuts.",
-            usage: "Use for in-progress operations under 10 seconds where the user is actively waiting. For longer or background work, use a Skeleton or a progress bar. Never block a whole screen with a centered spinner — prefer skeletons. Color: Blue-600 (`--brand`, the default) for all loading, including every field and popover in the Select family. Use another tone only when the spinner sits on a surface that already carries it — `--inverse` on dark chrome, `--ai` on AI Assistant surfaces, a status pill's own tone via `currentColor`. Never tint a loading spinner teal: teal is the focus color (`--ring-focus` and the focus border are both Teal-600), so a teal spinner inside an open, focused control double-encodes and erodes what teal means; Blue-600 also carries 8.7:1 on white against Teal-600's 4.7:1, which the 1px ring needs. `--teal` is deprecated."
+            usage: "Use for in-progress operations under 10 seconds where the user is actively waiting. For longer or background work, use a Skeleton or a progress bar. Never block a whole screen with a centered spinner — prefer skeletons. Color: Blue-600 (`--brand`, the default) for all loading, including every field and popover in the Select family. Use another tone only when the spinner sits on a surface that already carries it — `--inverse` on dark chrome, `--ai` on AI Assistant surfaces, a status pill's own tone via `currentColor`. Never tint a loading spinner cyan: cyan is the focus color (`--ring-focus` and the focus border are both Cyan-600), so a cyan spinner inside an open, focused control double-encodes and erodes what cyan means; Blue-600 also carries 8.7:1 on white against Cyan-600's 4.7:1, which the 1px ring needs. `--cyan` is deprecated."
           }
         },
         {
@@ -429,7 +429,7 @@ window.BAKLAVA_DATA = {
             anatomy: "Pill track with flat white thumb. Sizes: small 26×14 track / 10px thumb, default 32×18 / 14px thumb, large 40×22 / 18px thumb. Track is Grey-600 when off and Blue-600 when on.",
             options: "Sizes: small, default, large. Label may sit left or right. Optional inline status text (`Off` / `On`) may flank the switch outside the track.",
             usage: "Use for settings that take effect immediately — feature toggles, autosave, notifications. For form fields that submit later, use a Checkbox.",
-            behaviors: "Use role=\"switch\" with aria-checked. Click anywhere on the track or label toggles; Space toggles, and Enter may toggle when implemented as a button. Focus uses the global Teal halo. Hover shifts off to Grey-700 and on to Blue-700; no gradient, loading, or special pressed state. Animation is a 150ms slide of the thumb with a color swap of the track — no bounce or overshoot."
+            behaviors: "Use role=\"switch\" with aria-checked. Click anywhere on the track or label toggles; Space toggles, and Enter may toggle when implemented as a button. Focus uses the global Cyan halo. Hover shifts off to Grey-700 and on to Blue-700; no gradient, loading, or special pressed state. Animation is a 150ms slide of the thumb with a color swap of the track — no bounce or overshoot."
           }
         },
         {
@@ -437,7 +437,7 @@ window.BAKLAVA_DATA = {
           name: "Tooltip",
           tagline: "Short label or description surfaced on hover or focus.",
           meta: {
-            anatomy: "Dark navy pill (Indigo-900 fill, white 12/16 text, 4px radius, 5×10px padding) · 5px triangle arrow pointing at the trigger · max-width 240px.",
+            anatomy: "Dark navy pill (Navy-900 fill, white 12/16 text, 4px radius, 5×10px padding) · 5px triangle arrow pointing at the trigger · max-width 240px.",
             options: "Placement: top (default), bottom, left, right. Variants: default (sizes to content on a single line, wraps past 240px) · rich (bold title + muted body, wraps within 320px — keep to ~2 lines). Works on any focusable trigger.",
             usage: "Use to label icon-only controls, surface truncated text, or add a short explanation to a disabled element. Keep copy to one short sentence — for more detail, use a Popover. Never put interactive content (links, buttons) inside a tooltip.",
             behaviors: "Appears after a 300ms hover delay; disappears immediately on mouse-out. Also shows on keyboard focus so it is accessible without a pointer. For disabled triggers, wrap the trigger in a container that handles the hover — the button itself cannot receive hover events when disabled."
@@ -480,7 +480,7 @@ window.BAKLAVA_DATA = {
             anatomy: "Avatars overlap by 8px at the default size in left-to-right DOM and visual order. Overflow is a grey `+N` button at the right edge. Active is the default presence state; inactive avatars are neutral on light surfaces and dimmed on the dark global header.",
             options: "Visible count 2–6; active or inactive presence; soft identity tints on light surfaces and saturated fills in the dark global header. Each visible avatar is keyboard-focusable and shows the user's full name in a tooltip on hover or focus, including the inactive state when applicable. The `+N` button shows `Show N more members` on hover or focus. Sizes follow Avatar.",
             usage: "Use to surface a small set of collaborators or assignees — pipeline owners, mentioned users. Above 6 visible avatars, the row stops being scannable; show only 3–4 and use `+N`.",
-            behaviors: "Hovering or focusing a visible avatar raises it above its neighbors and shows the user's full name after 300ms without changing its color or outline; keyboard focus adds the standard teal ring so every name is reachable without a pointer. Inactive avatars include their state in the tooltip and accessible name so presence is not conveyed by color alone. The `+N` button shifts from Grey-200 to Grey-300 on hover and on click opens a member-list Popover — a white card (1px Grey-300 border, radius-sm, raised shadow, min-width 240px, no header) whose rows each pair an xs avatar with the member's full name and a muted right-aligned presence label (`Inactive` where applicable), active members first and inactive sorted to the bottom, scrolling after ~5 rows. Wire the trigger with `aria-haspopup=\"dialog\"`, `aria-expanded`, and `aria-controls`; Escape closes it and returns focus to the button."
+            behaviors: "Hovering or focusing a visible avatar raises it above its neighbors and shows the user's full name after 300ms without changing its color or outline; keyboard focus adds the standard cyan ring so every name is reachable without a pointer. Inactive avatars include their state in the tooltip and accessible name so presence is not conveyed by color alone. The `+N` button shifts from Grey-200 to Grey-300 on hover and on click opens a member-list Popover — a white card (1px Grey-300 border, radius-sm, raised shadow, min-width 240px, no header) whose rows each pair an xs avatar with the member's full name and a muted right-aligned presence label (`Inactive` where applicable), active members first and inactive sorted to the bottom, scrolling after ~5 rows. Wire the trigger with `aria-haspopup=\"dialog\"`, `aria-expanded`, and `aria-controls`; Escape closes it and returns focus to the button."
           }
         },
         {
@@ -502,7 +502,7 @@ window.BAKLAVA_DATA = {
             anatomy: "Input · trailing chevron · panel of suggestions that updates as the user types. Highlighted match shown bold.",
             options: "Async-loaded suggestions, creatable (typed values become new options), grouped options, icons.",
             usage: "Use for 50+ options, async-loaded sets, or open-ended pickers where the user may want to type a value that does not exist yet (tags, custom names). Below 50 options, use a Select.",
-            behaviors: "Typing filters in 150ms debounce. Arrow keys cycle filtered results; Enter accepts the highlighted suggestion; Tab moves focus. For creatable comboboxes, typing a new value and pressing Enter creates it. Field states: default/hover/focus/disabled/read-only/error (border/background/message — chevron unchanged); loading is the one state that swaps the trailing chevron for a spinner during async fetch — the shared `.sl-spinner` at its default Blue-600, never tinted teal. No success state."
+            behaviors: "Typing filters in 150ms debounce. Arrow keys cycle filtered results; Enter accepts the highlighted suggestion; Tab moves focus. For creatable comboboxes, typing a new value and pressing Enter creates it. Field states: default/hover/focus/disabled/read-only/error (border/background/message — chevron unchanged); loading is the one state that swaps the trailing chevron for a spinner during async fetch — the shared `.sl-spinner` at its default Blue-600, never tinted cyan. No success state."
           }
         },
         {
@@ -580,11 +580,11 @@ window.BAKLAVA_DATA = {
         {
           file: "preview/components-global-header.html",
           name: "Global header",
-          tagline: "The dark Indigo-1000 chrome that spans every product.",
+          tagline: "The dark Navy-1000 chrome that spans every product.",
           meta: {
-            anatomy: "56px tall · Indigo-1000 fill · left: waffle launcher + product wordmark · center: contextual search + breadcrumb · right: env picker + notifications + user menu. A 5px teal → blue → teal gradient loader bar sits on the bottom edge for global loading states.",
+            anatomy: "56px tall · Navy-1000 fill · left: waffle launcher + product wordmark · center: contextual search + breadcrumb · right: env picker + notifications + user menu. A 5px cyan → blue → cyan gradient loader bar sits on the bottom edge for global loading states.",
             usage: "Use across every product as the only chrome that crosses product boundaries. Never inject product-specific controls into the global header — those belong on the Left nav or the page itself.",
-            behaviors: "Sticky to the top of the viewport. Hover states on icons use a 12% white overlay; selected states use a 24% white overlay. The waffle launcher opens the Product launcher popover. The combo loader bar fills left → right over 4s while an inner band walks on a 1s loop — shown while a page or product-level action loads, hidden when idle. It uses the brand teal → blue gradient (matching `--color-background-primary-hover`)."
+            behaviors: "Sticky to the top of the viewport. Hover states on icons use a 12% white overlay; selected states use a 24% white overlay. The waffle launcher opens the Product launcher popover. The combo loader bar fills left → right over 4s while an inner band walks on a 1s loop — shown while a page or product-level action loads, hidden when idle. It uses the brand cyan → blue gradient (matching `--color-background-primary-hover`)."
           }
         },
         {
@@ -657,7 +657,7 @@ window.BAKLAVA_DATA = {
           name: "Search overlay",
           tagline: "Full-page search modal triggered from anywhere by `⌘ K`.",
           meta: {
-            anatomy: "Centered modal (no scrim — backdrop blur is not used; instead a flat Indigo-1000 60% fill) · search input · grouped results by type (Pipelines / Snaps / Accounts / Docs) · keyboard hint footer.",
+            anatomy: "Centered modal (no scrim — backdrop blur is not used; instead a flat Navy-1000 60% fill) · search input · grouped results by type (Pipelines / Snaps / Accounts / Docs) · keyboard hint footer.",
             usage: "Use as the global navigate-to-result entry point. For filtering content visible on the current screen, use a local Search field instead.",
             behaviors: "Opens on `⌘ K` / `Ctrl K` from any page; Esc closes. Up/Down arrows cycle results; Enter activates. Recent searches show on empty input; typing replaces them with live results."
           }

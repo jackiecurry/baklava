@@ -78,14 +78,14 @@ This gives you every Baklava token as a CSS custom property — color ramps, sem
   font: 800 14px/22px var(--font-sans);
 }
 .my-button:hover {
-  background: var(--color-background-primary-hover); /* teal→blue gradient */
+  background: var(--color-background-primary-hover); /* cyan→blue gradient */
 }
 ```
 
 ### Quick rules
 
-- **Primary brand:** `--bk-blue-600` (`#2563FF`). Primary hover is the **teal→blue gradient** in `--color-background-primary-hover` — distinctive, not a darker blue. Pressed = `--bk-teal-400`.
-- **Secondary buttons:** white fill; on hover only the border + text shift blue → teal.
+- **Primary brand:** `--bk-blue-600` (`#2563FF`). Primary hover is the **cyan→blue gradient** in `--color-background-primary-hover` — distinctive, not a darker blue. Pressed = `--bk-cyan-400`.
+- **Secondary buttons:** white fill; on hover only the border + text shift blue → cyan.
 - **Body text:** `--color-text-body` (`#0B246E`, dark navy). Subtle text: `--color-text-subtle` (`#334155`).
 - **Cards:** white, 1px Grey-300 border, 4px radius, 16px padding, `--shadow-raised`. Borders — not shadow — indicate selection (1px → 1.5px on hover → 3px when selected).
 - **Sentence case** everywhere. Pills/tags = 10px ExtraBold UPPERCASE only.

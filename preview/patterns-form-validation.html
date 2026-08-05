@@ -36,7 +36,7 @@
     outline: none;
   }
   .field textarea { height: auto; min-height: 80px; resize: vertical; }
-  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--bk-teal-600); box-shadow: var(--shadow-focus-ring); }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--bk-cyan-600); box-shadow: var(--shadow-focus-ring); }
   .field .help { font: 400 12px/18px var(--font-sans); color: var(--color-text-subtle); display: flex; gap: 4px; align-items: center; }
   .field .help i, .field .help svg { width: 12px; height: 12px; flex: none; }
   .field .hint-end { display: flex; justify-content: space-between; }
@@ -61,8 +61,8 @@
   .field--ok .help i, .field--ok .help svg { color: var(--color-text-success); }
 
   /* Async checking */
-  .field--checking input { border-color: var(--bk-teal-400); }
-  .field--checking .help { color: var(--bk-teal-800); }
+  .field--checking input { border-color: var(--bk-cyan-400); }
+  .field--checking .help { color: var(--bk-cyan-800); }
   /* The checking indicator is the shared comet-tail spinner at xs (12px) to
      match the helper text — Blue-600, never a rotated Lucide `loader` glyph. */
   .sl-spinner {
@@ -236,7 +236,7 @@
       <dt>required marker</dt><dd>Red asterisk <code>*</code> after the label, with <code>aria-required="true"</code>. <b>Optional</b> fields show a muted "(optional)" — never mark every required field <i>and</i> every optional one; pick one convention per form. Baklava convention: mark required.</dd>
       <dt>error</dt><dd>Border <code>--field-border-error</code>, background <code>--field-bg-error</code>. Help text turns red ExtraBold with an alert-circle icon. Message is <b>specific and actionable</b> — never "Invalid input." Cite the offending characters when possible.</dd>
       <dt>warning</dt><dd>Yellow border + yellow ExtraBold help text. For non-blocking concerns (cost implications, deprecations, unusual values). Doesn't prevent save.</dd>
-      <dt>async / checking</dt><dd>Teal border (the focus border, since the user just typed) + the shared Blue-600 <code>.sl-spinner</code> at <code>xs</code> while the check runs ("Checking reachability…"). Resolves to <b>success</b> (green check, "Available") or <b>error</b> (red, specific failure). Debounce 300ms after last keystroke.</dd>
+      <dt>async / checking</dt><dd>Cyan border (the focus border, since the user just typed) + the shared Blue-600 <code>.sl-spinner</code> at <code>xs</code> while the check runs ("Checking reachability…"). Resolves to <b>success</b> (green check, "Available") or <b>error</b> (red, specific failure). Debounce 300ms after last keystroke.</dd>
       <dt>summary banner</dt><dd>On <b>submit failure</b>, render a red banner at the top of the form listing all errored fields as anchor links to the field. Headline counts errors ("3 fields need attention"). Focus moves to the banner, then the user can tab into links.</dd>
       <dt>strength meter</dt><dd>Reserved for password / passphrase / API-key fields. 4 segments, colored Red → Yellow → Green. Label states the rule that would advance to the next level — never just "weak / strong" without guidance.</dd>
       <dt>positioning</dt><dd>Help / error text always <b>beneath</b> the field, never beside it (alignment breaks at narrow widths). Character counters go bottom-right of the field, opposite the help.</dd>
