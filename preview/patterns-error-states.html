@@ -36,7 +36,7 @@
     overflow: hidden;
   }
   .err-nav {
-    background: var(--bk-navy-900);
+    background: var(--bk-grey-900);
     color: var(--bk-white);
     padding: 12px 20px;
     display: flex; align-items: center; gap: 14px;
@@ -81,7 +81,7 @@
 
   .err-headline {
     font: 800 18px/26px var(--font-sans);
-    color: var(--bk-navy-900);
+    color: var(--bk-grey-900);
     margin: 0 0 4px;
   }
   .err-sub {
@@ -463,7 +463,7 @@
 
     <dl class="spec">
       <dt>severity</dt><dd>Pick the smallest container that fully scopes the failure. <b>Inline</b> &lt; <b>Section</b> &lt; <b>Banner</b> &lt; <b>Branded page</b>. Don't wrap a page in an error state if only one panel failed.</dd>
-      <dt>branded page</dt><dd>Reserved for <b>routing-level errors</b>: 404 / 403 / 401 / 400 / 500 / 503. The signature mark is the <i>"Oops!"</i> headline with two interlocking cyan rings as the leading O — the snap mark. Always paired with the dark Navy 900 navbar showing the error code in the title.</dd>
+      <dt>branded page</dt><dd>Reserved for <b>routing-level errors</b>: 404 / 403 / 401 / 400 / 500 / 503. The signature mark is the <i>"Oops!"</i> headline with two interlocking cyan rings as the leading O — the snap mark. Always paired with the dark Blue 1000 navbar showing the error code in the title.</dd>
       <dt>action area</dt><dd>By error code: <b>404 / 403</b> show product launchers (Monitor / Designer / AutoSync) so the user can recover sideways. <b>401</b> shows "Return to login page". <b>400</b> shows "Return to previous page". <b>500</b> shows a contact-support link.</dd>
       <dt>copy</dt><dd>Headline is a <b>complete sentence</b> ending in a period, sentence case, leads with "Sorry" only on 4xx (the user's intent failed). 500 uses "Well, this is unexpected…" — calmer self-deprecation. Always paired with one descriptive sub-line.</dd>
       <dt>color</dt><dd>Red is for <b>errors</b> — something failed or is blocked. Yellow is for <b>warnings</b> — something needs attention but isn't broken yet (expiring credentials, deprecation). Don't use red for warnings.</dd>

@@ -27,7 +27,7 @@
   .sl-tooltip {
     position: absolute;
     z-index: 100;
-    background: var(--bk-navy-900);
+    background: var(--bk-grey-900);
     color: var(--bk-white);
     font: 500 12px/16px var(--font-sans);
     padding: 5px 10px;
@@ -66,7 +66,7 @@
   .sl-tooltip--top::after {
     top: 100%; left: 50%;
     transform: translateX(-50%);
-    border-top-color: var(--bk-navy-900);
+    border-top-color: var(--bk-grey-900);
     border-bottom: none;
   }
 
@@ -79,7 +79,7 @@
   .sl-tooltip--bottom::after {
     bottom: 100%; left: 50%;
     transform: translateX(-50%);
-    border-bottom-color: var(--bk-navy-900);
+    border-bottom-color: var(--bk-grey-900);
     border-top: none;
   }
 
@@ -92,7 +92,7 @@
   .sl-tooltip--left::after {
     left: 100%; top: 50%;
     transform: translateY(-50%);
-    border-left-color: var(--bk-navy-900);
+    border-left-color: var(--bk-grey-900);
     border-right: none;
   }
 
@@ -105,7 +105,7 @@
   .sl-tooltip--right::after {
     right: 100%; top: 50%;
     transform: translateY(-50%);
-    border-right-color: var(--bk-navy-900);
+    border-right-color: var(--bk-grey-900);
     border-left: none;
   }
 
@@ -276,7 +276,7 @@
   "section": "Building blocks",
   "url": "https://jackiecurry.github.io/baklava/preview/components-tooltip.html",
   "tagline": "Short label or description surfaced on hover or focus.",
-  "anatomy": "Dark navy pill (Navy-900 fill, white 12/16 text, 4px radius, 5×10px padding) · 5px triangle arrow pointing at the trigger · max-width 240px.",
+  "anatomy": "Dark navy pill (Grey-900 fill, white 12/16 text, 4px radius, 5×10px padding) · 5px triangle arrow pointing at the trigger · max-width 240px.",
   "options": "Placement: top (default), bottom, left, right. Variants: default (sizes to content on a single line, wraps past 240px) · rich (bold title + muted body, wraps within 320px — keep to ~2 lines). Works on any focusable trigger.",
   "usage": "Use to label icon-only controls, surface truncated text, or add a short explanation to a disabled element. Keep copy to one short sentence — for more detail, use a Popover. Never put interactive content (links, buttons) inside a tooltip.",
   "behaviors": "Appears after a 300ms hover delay; disappears immediately on mouse-out. Also shows on keyboard focus so it is accessible without a pointer. For disabled triggers, wrap the trigger in a container that handles the hover — the button itself cannot receive hover events when disabled."

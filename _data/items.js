@@ -69,7 +69,7 @@ window.BAKLAVA_DATA = {
           name: "Surfaces",
           tagline: "Navbar · Canvas · Sunken · Raised · Overlay — five elevation planes.",
           meta: {
-            usage: "Compose interfaces from five surfaces. Navbar (Navy-1000) carries the dark global chrome only. Canvas (white) is the default page. Sunken (Grey-100) nests inside Canvas for inline panels. Raised (white + shadow) lifts cards and drawers. Overlay sits on top for modals and popovers. Use elevation to organize complexity, not for decoration."
+            usage: "Compose interfaces from five surfaces. Navbar (Blue-1000) carries the dark global chrome only. Canvas (white) is the default page. Sunken (Grey-100) nests inside Canvas for inline panels. Raised (white + shadow) lifts cards and drawers. Overlay sits on top for modals and popovers. Use elevation to organize complexity, not for decoration."
           }
         },
         {
@@ -149,7 +149,7 @@ window.BAKLAVA_DATA = {
           name: "Semantic text",
           tagline: "Body, subtle, link, status, information, discovery, accents.",
           meta: {
-            usage: "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Navy-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Navy-700; Discovery uses Violet-700. AI uses the dedicated AI ramp — never substitute violet for AI."
+            usage: "Use semantic text tokens rather than raw ramp values: `--color-text-body` (Grey-900) for primary copy, `--color-text-subtle` (Grey-700) for secondary, `--color-text-link` (Blue-600) for links. Status colors map to Green-800 (success), Orange-700 (warning), Red-700 (alert/error). Information uses Indigo-700; Discovery uses Violet-700. AI uses the dedicated AI ramp — never substitute violet for AI."
           }
         },
         {
@@ -354,7 +354,7 @@ window.BAKLAVA_DATA = {
           tagline: "Input with a leading search icon and a clear-on-typed affordance.",
           meta: {
             anatomy: "Leading Lucide `search-sm` icon · field · trailing clear `×` button that appears once there is text. Placeholder describes the shape (`Search snaps`). The clear `×` owns the trailing slot. Passive elements may share it freely: the `⌘K` badge, a validation check, a loading spinner. Controls that act on the *results* rather than on the text (group by, sort, density, saved view) sit outside as sibling buttons in the same toolbar row, per Filter, sort, faceted search — except in a narrow rail, where there is no toolbar row to move into and one icon-only view control may share the slot (see Field anatomy's rail exception). Either way the order holds: clear innermost, the persistent control pinned to the edge, so the transient `×` can come and go without shifting it.",
-            options: "Sizes: default 40px or compact 32px — use compact on dense surfaces such as table and filter toolbars. Surfaces: default bordered white field, or `sl-search--inverse` on dark surfaces (Designer rail, AI Assistant panel, Navy 1000 nav), which swaps to a near-transparent fill with a Blue-300 25% border and keeps the cyan focus ring. Inverse is a surface modifier only — compose it with the compact size for the rail. There is no filled variant: an opaque grey fill would collide with the state fills (Grey-100 read-only, Blue-100 disabled, Red-100 error, AI-100 review). On light surfaces the field keeps its border even when compact, so the input target stays discoverable in a toolbar.",
+            options: "Sizes: default 40px or compact 32px — use compact on dense surfaces such as table and filter toolbars. Surfaces: default bordered white field, or `sl-search--inverse` on dark surfaces (Designer rail, AI Assistant panel, Blue 1000 nav), which swaps to a near-transparent fill with a Blue-300 25% border and keeps the cyan focus ring. Inverse is a surface modifier only — compose it with the compact size for the rail. There is no filled variant: an opaque grey fill would collide with the state fills (Grey-100 read-only, Blue-100 disabled, Red-100 error, AI-100 review). On light surfaces the field keeps its border even when compact, so the input target stays discoverable in a toolbar.",
             usage: "Use for filtering visible content on the current screen. For navigating to results on another screen, use the global Search overlay instead. Debounce input by 150ms before triggering a request.",
             behaviors: "Esc clears when focused. Clear button removes text and refocuses the field. On submit (Enter), the request fires immediately, bypassing the debounce."
           }
@@ -437,7 +437,7 @@ window.BAKLAVA_DATA = {
           name: "Tooltip",
           tagline: "Short label or description surfaced on hover or focus.",
           meta: {
-            anatomy: "Dark navy pill (Navy-900 fill, white 12/16 text, 4px radius, 5×10px padding) · 5px triangle arrow pointing at the trigger · max-width 240px.",
+            anatomy: "Dark navy pill (Grey-900 fill, white 12/16 text, 4px radius, 5×10px padding) · 5px triangle arrow pointing at the trigger · max-width 240px.",
             options: "Placement: top (default), bottom, left, right. Variants: default (sizes to content on a single line, wraps past 240px) · rich (bold title + muted body, wraps within 320px — keep to ~2 lines). Works on any focusable trigger.",
             usage: "Use to label icon-only controls, surface truncated text, or add a short explanation to a disabled element. Keep copy to one short sentence — for more detail, use a Popover. Never put interactive content (links, buttons) inside a tooltip.",
             behaviors: "Appears after a 300ms hover delay; disappears immediately on mouse-out. Also shows on keyboard focus so it is accessible without a pointer. For disabled triggers, wrap the trigger in a container that handles the hover — the button itself cannot receive hover events when disabled."
@@ -580,9 +580,9 @@ window.BAKLAVA_DATA = {
         {
           file: "preview/components-global-header.html",
           name: "Global header",
-          tagline: "The dark Navy-1000 chrome that spans every product.",
+          tagline: "The dark Blue-1000 chrome that spans every product.",
           meta: {
-            anatomy: "56px tall · Navy-1000 fill · left: waffle launcher + product wordmark · center: contextual search + breadcrumb · right: env picker + notifications + user menu. A 5px cyan → blue → cyan gradient loader bar sits on the bottom edge for global loading states.",
+            anatomy: "56px tall · Blue-1000 fill · left: waffle launcher + product wordmark · center: contextual search + breadcrumb · right: env picker + notifications + user menu. A 5px cyan → blue → cyan gradient loader bar sits on the bottom edge for global loading states.",
             usage: "Use across every product as the only chrome that crosses product boundaries. Never inject product-specific controls into the global header — those belong on the Left nav or the page itself.",
             behaviors: "Sticky to the top of the viewport. Hover states on icons use a 12% white overlay; selected states use a 24% white overlay. The waffle launcher opens the Product launcher popover. The combo loader bar fills left → right over 4s while an inner band walks on a 1s loop — shown while a page or product-level action loads, hidden when idle. It uses the brand cyan → blue gradient (matching `--color-background-primary-hover`)."
           }
@@ -657,7 +657,7 @@ window.BAKLAVA_DATA = {
           name: "Search overlay",
           tagline: "Full-page search modal triggered from anywhere by `⌘ K`.",
           meta: {
-            anatomy: "Centered modal (no scrim — backdrop blur is not used; instead a flat Navy-1000 60% fill) · search input · grouped results by type (Pipelines / Snaps / Accounts / Docs) · keyboard hint footer.",
+            anatomy: "Centered modal (no scrim — backdrop blur is not used; instead a flat Blue-1000 60% fill) · search input · grouped results by type (Pipelines / Snaps / Accounts / Docs) · keyboard hint footer.",
             usage: "Use as the global navigate-to-result entry point. For filtering content visible on the current screen, use a local Search field instead.",
             behaviors: "Opens on `⌘ K` / `Ctrl K` from any page; Esc closes. Up/Down arrows cycle results; Enter activates. Recent searches show on empty input; typing replaces them with live results."
           }

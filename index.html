@@ -15,12 +15,12 @@
   :root {
     --topbar-h: 72px;
     --sidebar-w: 300px;
-    --cat-foundations:    var(--bk-navy-600);
+    --cat-foundations:    var(--bk-indigo-600);
     --cat-color:          var(--bk-magenta-600);
     --cat-brand:          var(--bk-violet-600);
     --cat-primitives:     var(--bk-blue-600);
     --cat-components:     var(--bk-cyan-600);
-    --cat-editors:        var(--bk-navy-700, #1237C0);
+    --cat-editors:        var(--bk-indigo-700, #1237C0);
     --cat-patterns:       var(--bk-orange-600);
     --cat-templates:      var(--bk-yellow-700, #C99603);
     --cat-data-viz:       var(--bk-green-600);
@@ -36,7 +36,7 @@
 
   /* ── Top bar ─────────────────────────────────────────────── */
   .topbar {
-    background: var(--bk-navy-1000, #0B246E);
+    background: var(--bk-indigo-1000, #0B246E);
     color: var(--bk-white);
     padding: 12px 32px;
     display: flex;
@@ -430,7 +430,7 @@
   /* ── Hero ────────────────────────────────────────────────── */
   .hero {
     position: relative;
-    background: linear-gradient(135deg, var(--bk-navy-1000, #0B246E) 0%, var(--bk-navy-900, #081A4D) 60%, #1F2A52 100%);
+    background: linear-gradient(135deg, var(--bk-indigo-1000, #0B246E) 0%, var(--bk-indigo-900, #081A4D) 60%, #1F2A52 100%);
     color: var(--bk-white);
     border-radius: var(--radius-lg, 8px);
     margin: 0 0 40px;
@@ -531,7 +531,7 @@
   .hero-btn svg { width: 16px; height: 16px; stroke-width: 2; }
   .hero-btn.primary {
     background: var(--bk-white);
-    color: var(--bk-navy-1000, #0B246E);
+    color: var(--bk-indigo-1000, #0B246E);
   }
   .hero-btn.primary:hover { background: var(--bk-cyan-100, #D5F8FF); color: var(--bk-cyan-1000, #00212B); }
   .hero-btn.secondary {
@@ -990,11 +990,11 @@
     flex: none;
   }
   .diag-clarity .step.focus {
-    background: var(--p-color, var(--bk-navy-700));
-    border-color: var(--p-color, var(--bk-navy-700));
+    background: var(--p-color, var(--bk-indigo-700));
+    border-color: var(--p-color, var(--bk-indigo-700));
     width: 40px;
     height: 40px;
-    box-shadow: 0 0 0 4px var(--p-tint, var(--bk-navy-100));
+    box-shadow: 0 0 0 4px var(--p-tint, var(--bk-indigo-100));
     position: relative;
   }
   .diag-clarity .step.focus::after {
@@ -1010,7 +1010,7 @@
     position: absolute;
     inset: 11px;
     border-radius: 999px;
-    background: var(--p-color, var(--bk-navy-700));
+    background: var(--p-color, var(--bk-indigo-700));
     z-index: 1;
   }
   .diag-clarity .connector {
@@ -1018,7 +1018,7 @@
     width: 36px;
     background: var(--bk-grey-300, #CBD5E1);
   }
-  .diag-clarity .connector.active { background: var(--p-color, var(--bk-navy-700)); }
+  .diag-clarity .connector.active { background: var(--p-color, var(--bk-indigo-700)); }
 
   /* 05 Real icons — outlined good row vs mixed bad row */
   .diag-icons { gap: 12px; align-items: stretch; }
@@ -1095,8 +1095,8 @@
     gap: 16px;
   }
   .gs-role {
-    background: linear-gradient(180deg, var(--bk-navy-1000, #0B246E) 0%, var(--bk-navy-900, #081A4D) 100%);
-    border: 1px solid var(--bk-navy-800, #0B246E);
+    background: linear-gradient(180deg, var(--bk-indigo-1000, #0B246E) 0%, var(--bk-indigo-900, #081A4D) 100%);
+    border: 1px solid var(--bk-indigo-800, #0B246E);
     border-radius: var(--radius-md, 6px);
     padding: 22px 20px 20px;
     display: flex;
@@ -1998,7 +1998,7 @@ Implement: <span class="tk-var">&lt;describe what you want built&gt;</span></pre
         <div class="principles">
 
           <!-- 01 Clarity — focus flow -->
-          <div class="principle" style="--p-color: var(--bk-navy-700); --p-tint: var(--bk-navy-50);">
+          <div class="principle" style="--p-color: var(--bk-indigo-700); --p-tint: var(--bk-indigo-50);">
             <div class="visual">
               <div class="diag diag-clarity">
                 <span class="step"></span>
@@ -2535,19 +2535,19 @@ Implement: <span class="tk-var">&lt;describe what you want built&gt;</span></pre
 
   // Category background tint + accent color CSS variables consumed by .tile + .tile-visual.
   const CATEGORY_VARS = {
-    "foundations":      { color: "var(--cat-foundations)",   tint: "var(--bk-navy-50, #EEF4FF)" },
+    "foundations":      { color: "var(--cat-foundations)",   tint: "var(--bk-indigo-50, #EEF4FF)" },
     "color":            { color: "var(--cat-color)",         tint: "var(--bk-magenta-50,   #FFF6FB)" },
     "brand":            { color: "var(--cat-brand)",         tint: "var(--bk-violet-50, #FBF8FF)" },
     "primitives":       { color: "var(--cat-primitives)",    tint: "var(--bk-blue-50,   #F5F8FF)" },
     "components":       { color: "var(--cat-components)",    tint: "var(--bk-cyan-50,   #ECFCFF)" },
-    "advanced-editors": { color: "var(--cat-editors)",       tint: "var(--bk-navy-50, #EEF4FF)" },
+    "advanced-editors": { color: "var(--cat-editors)",       tint: "var(--bk-indigo-50, #EEF4FF)" },
     "patterns":         { color: "var(--cat-patterns)",      tint: "var(--bk-orange-50, #FEF7F3)" },
     "templates":        { color: "var(--cat-templates)",     tint: "var(--bk-yellow-50, #FFFBF2)" },
     "data-viz":         { color: "var(--cat-data-viz)",      tint: "var(--bk-green-50,  #F2F8F3)" },
   };
 
   // Hex ramp values for custom visuals (keep in sync with colors_and_type.css).
-  const RAMP_600 = ["#2563FF","#0094B8","#1749E8","#F9660B","#FBBC04","#8B5CF6","#017D1B","#E31C3D","#FF2D8F","#475569"];
+  const RAMP_600 = ["#2563FF","#0094B8","#474DE8","#F9660B","#FBBC04","#8B5CF6","#017D1B","#E31C3D","#FF2D8F","#475569"];
 
   function tileVisualHtml(item, sec) {
     const key = ICON_MAP[item.file] || CATEGORY_DEFAULT_ICON[sec.id] || "square";
@@ -2989,12 +2989,12 @@ Implement: <span class="tk-var">&lt;describe what you want built&gt;</span></pre
     const sec = item.section;
     const cssVar = `--cat-${sec.id}`;
     const tintMap = {
-      "foundations": "var(--bk-navy-50, #EEF4FF)",
+      "foundations": "var(--bk-indigo-50, #EEF4FF)",
       "color": "var(--bk-magenta-50, #FFF6FB)",
       "brand": "var(--bk-violet-50, #FBF8FF)",
       "primitives": "var(--bk-blue-50, #F5F8FF)",
       "components": "var(--bk-cyan-50, #ECFCFF)",
-      "advanced-editors": "var(--bk-navy-50, #EEF4FF)",
+      "advanced-editors": "var(--bk-indigo-50, #EEF4FF)",
       "patterns": "var(--bk-orange-50, #FEF7F3)",
       "templates": "var(--bk-yellow-50, #FFFBF2)",
       "data-viz": "var(--bk-green-50, #F2F8F3)",
