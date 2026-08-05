@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Primitives · Combobox</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  .card { gap: 18px; }
+  .sl-field { display: flex; flex-direction: column; gap: 4px; }
+  .sl-field__label { font: 800 14px/22px var(--font-sans); color: var(--bk-indigo-900); }
+
+  .sl-combobox {
+    height: var(--field-height-md);
+    padding: var(--field-padding-y-md) var(--field-padding-x);
+    border-radius: var(--field-radius);
+    border: 1px solid var(--field-border-default);
+    background: var(--field-bg-default);
+    display: flex; align-items: center; gap: 8px;
+    transition: border-color 150ms, box-shadow 150ms;
+  }
+  .sl-combobox:hover { border-color: var(--field-border-hover); }
+  .sl-combobox.focus, .sl-combobox.open { border-color: var(--field-border-focus); box-shadow: var(--ring-focus); }
+  /* Field states — border/bg/message only; the trailing chevron is untouched.
+     (Loading is the one state that swaps the chevron for a spinner — see below.) */
+  .sl-combobox.disabled { background: var(--field-bg-disabled); border-color: var(--field-border-disabled); cursor: not-allowed; }
+  .sl-combobox.disabled input { color: var(--field-text-disabled); cursor: not-allowed; }
+  .sl-combobox.readonly { background: var(--field-bg-readonly); border-color: var(--field-border-readonly); }
+  .sl-combobox.readonly input { color: var(--field-text-readonly); }
+  .sl-combobox.error { border-color: var(--field-border-error); background: var(--field-bg-error); }
+  .sl-combobox input {
+    border: 0; outline: 0; background: transparent;
+    flex: 1; min-width: 0; padding: 0;
+    font: var(--field-font); color: var(--field-text-default);
+  }
+  .sl-combobox input::placeholder { color: var(--field-text-placeholder); font-style: italic; font-weight: 300; }
+  .sl-combobox .caret { color: var(--color-text-subtle); display: inline-flex; flex: none; }
+  .sl-combobox .caret svg { width: 16px; height: 16px; }
+
+  .sl-field__meta { font: 400 12px/18px var(--font-sans); color: var(--color-text-subtle); }
+  .sl-field__error { color: var(--bk-red-700); display: inline-flex; align-items: center; gap: 4px; }
+  .sl-field__error svg { width: 12px; height: 12px; }
+  .sl-spinner {
+    --bk-spin-thick: 1.25px;
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: var(--bk-blue-600);
+    background: conic-gradient(from 0deg, transparent 0deg, currentColor 360deg);
+    -webkit-mask: radial-gradient(circle, transparent calc(50% - var(--bk-spin-thick)), #000 calc(50% - var(--bk-spin-thick) + 0.5px));
+            mask: radial-gradient(circle, transparent calc(50% - var(--bk-spin-thick)), #000 calc(50% - var(--bk-spin-thick) + 0.5px));
+    animation: sl-spin 1.1s linear infinite;
+    flex: none;
+  }
+  .sl-spinner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: var(--bk-spin-thick);
+    height: var(--bk-spin-thick);
+    border-radius: 50%;
+    background: currentColor;
+    transform: translateX(-50%);
+  }
+  .sl-spinner svg { display: none; }
+  @keyframes sl-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .sl-spinner { animation-duration: 2.8s; } }
+  .sl-spinner--sm   { width: 16px; height: 16px; --bk-spin-thick: 1px; }
+
+  .sl-combobox-wrap { position: relative; }
+  .sl-menu {
+    position: absolute;
+    top: calc(100% + 4px); left: 0; right: 0;
+    background: var(--bk-white);
+    border: 1px solid var(--bk-grey-300);
+    border-radius: var(--field-radius);
+    box-shadow: var(--shadow-overlay);
+    z-index: 10;
+    max-height: 280px;
+    overflow-y: auto;
+    padding: 4px 0;
+  }
+  .sl-menu__item {
+    padding: 8px 12px;
+    font: 400 14px/22px var(--font-sans);
+    color: var(--bk-indigo-900);
+    cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .sl-menu__item:hover, .sl-menu__item.active { background: var(--bk-blue-100); color: var(--bk-blue-700); }
+  .sl-menu__item .match { font-weight: 800; }
+  .sl-menu__item .sub { color: var(--color-text-subtle); font-size: 12px; margin-left: auto; }
+  .sl-menu__item .icon { color: var(--color-text-subtle); flex: none; }
+  .sl-menu__item .icon svg { width: 14px; height: 14px; }
+  .sl-menu__group-label {
+    padding: 8px 12px 4px;
+    font: 800 10px/14px var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-subtle);
+  }
+  .sl-menu__empty {
+    padding: 16px 12px;
+    text-align: center;
+    font: 400 13px/20px var(--font-sans);
+    color: var(--color-text-subtle);
+  }
+  .sl-menu__empty b { display: block; color: var(--color-text-body); margin-bottom: 4px; }
+  .sl-menu__loading {
+    padding: 12px;
+    display: flex; align-items: center; gap: 8px;
+    font: 400 13px/20px var(--font-sans);
+    color: var(--color-text-subtle);
+  }
+  .sl-menu__loading .sl-spinner { align-self: center; }
+  .sl-menu__create {
+    padding: 8px 12px;
+    border-top: 1px solid var(--bk-grey-200);
+    background: var(--bk-grey-100);
+    font: 800 13px/20px var(--font-sans);
+    color: var(--bk-blue-600);
+    cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .sl-menu__create svg { width: 14px; height: 14px; }
+
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+  .row > .sl-field { position: relative; }
+  .row > .sl-field:nth-child(1) { z-index: 4; }
+  .row > .sl-field:nth-child(2) { z-index: 3; }
+  .row > .sl-field:nth-child(3) { z-index: 2; }
+  .row > .sl-field:nth-child(4) { z-index: 1; }
+  .section-h { font: 800 13px/16px var(--font-sans); color: var(--color-text-heading); margin-bottom: 10px; }
+  .section-h .meta { font-weight: 400; color: var(--color-text-subtle); font-size: 11px; font-family: var(--font-mono); margin-left: 6px; }
+  .divider { height: 1px; background: var(--bk-grey-200); }
+  .stage { min-height: 560px; padding-top: 8px; grid-template-rows: 320px auto; align-items: start; }
+
+  .spec { display: grid; grid-template-columns: 110px 1fr; gap: 4px 16px; font: 400 11px/16px var(--font-sans); padding: 12px 14px; background: var(--bk-grey-100); border-radius: var(--radius-xs); }
+  .spec dt { font-weight: 800; color: var(--color-text-body); font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .spec dd { margin: 0; color: var(--color-text-subtle); }
+  .spec dd b { color: var(--color-text-body); }
+  .spec code { background: rgba(0,0,0,0.06); padding: 1px 4px; border-radius: 2px; font-family: var(--font-mono); font-size: 10px; }
+</style>
+<script type="application/json" id="baklava-meta">
+{
+  "name": "Combobox",
+  "section": "Composed components",
+  "url": "https://jackiecurry.github.io/baklava/preview/components-combobox.html",
+  "tagline": "Input combined with a filtered dropdown for very long or open-ended lists.",
+  "anatomy": "Input · trailing chevron · panel of suggestions that updates as the user types. Highlighted match shown bold.",
+  "options": "Async-loaded suggestions, creatable (typed values become new options), grouped options, icons.",
+  "usage": "Use for 50+ options, async-loaded sets, or open-ended pickers where the user may want to type a value that does not exist yet (tags, custom names). Below 50 options, use a Select.",
+  "behaviors": "Typing filters in 150ms debounce. Arrow keys cycle filtered results; Enter accepts the highlighted suggestion; Tab moves focus. For creatable comboboxes, typing a new value and pressing Enter creates it. Field states: default/hover/focus/disabled/read-only/error (border/background/message — chevron unchanged); loading is the one state that swaps the trailing chevron for a spinner during async fetch — the shared `.sl-spinner` at its default Blue-600, never tinted teal. No success state."
+}
+</script>
+</head>
+<body>
+  <div class="card">
+    <div class="row-label"><span class="name">Combobox</span><span class="meta">type-ahead autocomplete · async · grouped · create-new</span></div>
+
+    <div>
+      <div class="section-h">States</div>
+      <div class="row stage">
+
+        <div class="sl-field">
+          <label class="sl-field__label">Typing · live filter</label>
+          <div class="sl-combobox-wrap">
+            <div class="sl-combobox open"><input value="snow" /><span class="caret"><i data-lucide="chevron-up"></i></span></div>
+            <div class="sl-menu">
+              <div class="sl-menu__group-label">Recently used</div>
+              <div class="sl-menu__item active"><i data-lucide="database" class="icon"></i><span><span class="match">Snow</span>flake</span><span class="sub">Database</span></div>
+              <div class="sl-menu__group-label">All</div>
+              <div class="sl-menu__item"><i data-lucide="database" class="icon"></i><span><span class="match">Snow</span>flake bulk loader</span></div>
+              <div class="sl-menu__item"><i data-lucide="database" class="icon"></i><span><span class="match">Snow</span>flake SCD2</span></div>
+              <div class="sl-menu__item"><i data-lucide="globe" class="icon"></i><span><span class="match">Snow</span>plow tracker</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sl-field">
+          <label class="sl-field__label">Loading (async)</label>
+          <div class="sl-combobox-wrap">
+            <div class="sl-combobox open"><input value="acme corp" /><span class="sl-spinner sl-spinner--sm"></span></div>
+            <div class="sl-menu">
+              <div class="sl-menu__loading"><span class="sl-spinner sl-spinner--sm"></span>Searching accounts…</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sl-field">
+          <label class="sl-field__label">No results · with create</label>
+          <div class="sl-combobox-wrap">
+            <div class="sl-combobox open"><input value="MyNewAccount" /><span class="caret"><i data-lucide="chevron-up"></i></span></div>
+            <div class="sl-menu">
+              <div class="sl-menu__empty">
+                <b>No matching accounts</b>
+                Search returned nothing for "MyNewAccount"
+              </div>
+              <div class="sl-menu__create"><i data-lucide="plus"></i>Create account "MyNewAccount"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sl-field">
+          <label class="sl-field__label">Selected · resolved</label>
+          <div class="sl-combobox"><input value="Snowflake bulk loader" /><span class="caret"><i data-lucide="chevron-down"></i></span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="section-h">Field states <span class="meta">disabled · read-only · error — chevron unchanged</span></div>
+      <div class="row">
+        <div class="sl-field"><label class="sl-field__label">Disabled</label><div class="sl-combobox disabled"><input value="Snowflake" disabled /><span class="caret"><i data-lucide="chevron-down"></i></span></div></div>
+        <div class="sl-field"><label class="sl-field__label">Read-only</label><div class="sl-combobox readonly"><input value="Snowflake bulk loader" readonly /><span class="caret"><i data-lucide="chevron-down"></i></span></div></div>
+        <div class="sl-field"><label class="sl-field__label">Error</label><div class="sl-combobox error"><input placeholder="Search accounts" /><span class="caret"><i data-lucide="chevron-down"></i></span></div><div class="sl-field__meta"><span class="sl-field__error"><i data-lucide="alert-circle"></i>Pick an account to continue.</span></div></div>
+      </div>
+    </div>
+
+    <dl class="spec">
+      <dt>vs. select</dt><dd>Use a <b>Combobox</b> when there are many options (&gt;50) and users will type to find. Use a <b>Select</b> for 5–50 option lists.</dd>
+      <dt>filtering</dt><dd>Local for &lt;500 items (filter in JS). Async for remote/large datasets, with <code>--validate-debounce</code> (350ms) before firing. Show <b>loading state</b> via spinner replacing chevron + loading row in menu — both the shared <code>.sl-spinner</code> at its default Blue-600, never tinted teal (teal is the focus color, and this spinner already sits inside a teal focus ring).</dd>
+      <dt>matching</dt><dd>Substring match by default, bolded in the option. Consider fuzzy match (Fuse.js or similar) for long names with abbreviations.</dd>
+      <dt>create-new</dt><dd>When async search returns empty, surface a "<b>+ Create … </b>" footer that resolves to a new entity. Critical for connection pickers.</dd>
+      <dt>keyboard</dt><dd>Type filters · <code>↑/↓</code> navigates · <code>Enter</code> selects active or creates · <code>Esc</code> closes without selecting · <code>Tab</code> moves focus.</dd>
+      <dt>a11y</dt><dd><code>role="combobox" aria-autocomplete="list" aria-expanded aria-activedescendant="option-id"</code>. Menu: <code>role="listbox"</code>; items: <code>role="option"</code>.</dd>
+    </dl>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

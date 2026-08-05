@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Components · Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<style>
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field label { font-size: 14px; font-weight: 800; color: var(--bk-indigo-900); }
+  .field .err { font-size: 12px; color: var(--color-text-alert); font-weight: 400; }
+  .sl-input { font: var(--field-font); height: var(--field-height-md); padding: var(--field-padding-y-md) var(--field-padding-x); border-radius: var(--field-radius); border: 1px solid var(--field-border-default); background: var(--field-bg-default); color: var(--field-text-default); outline: none; }
+  .sl-input::placeholder { font-style: italic; font-weight: 300; color: var(--field-text-placeholder); }
+  .sl-input.hover { border-color: var(--field-border-hover); }
+  .sl-input.focus { border-color: var(--field-border-focus); box-shadow: var(--ring-focus); }
+  .sl-input.error { border-color: var(--field-border-error); background: var(--field-bg-error); }
+  .sl-input.disabled { background: var(--field-bg-disabled); color: var(--field-text-disabled); border-color: var(--field-border-disabled); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+</style>
+<script type="application/json" id="baklava-meta">
+{
+  "name": "Inputs",
+  "section": "Building blocks",
+  "url": "https://jackiecurry.github.io/baklava/preview/components-inputs.html",
+  "tagline": "Standard 40px-tall single-line text input.",
+  "anatomy": "Label above (14/22 ExtraBold) · field (40px tall, 8px top/bottom × 12px left/right padding, 1px Grey-400 border, 4px radius) · optional help text below (12/18 Grey-700) · optional inline error.",
+  "options": "Sizes: default 40px, compact 32px. States: rest, hover, focus, filled, disabled, read-only, error. Optional leading or trailing icon slot.",
+  "usage": "Use for short single-line input — names, emails, IDs. Placeholder is Light Italic and describes the shape (`dd/mm/yyyy`, `Search snaps`), not an exhortation. Help text clarifies expectations rather than restating the label.",
+  "behaviors": "Border shifts Grey-400 → Blue-600 on hover and → Teal-600 on focus, where it pairs with the `--ring-focus` halo. Error replaces the border with Red-600, fills Red-100, and shows an inline message. Disabled swaps to the disabled tokens (Blue-100 fill, Blue-200 border) with `cursor: not-allowed` — it does not change opacity. Read-only keeps a de-emphasized Grey-300 border on a Grey-100 fill, and the value stays selectable.",
+  "tokens": [
+    "--field-bg-default",
+    "--field-bg-error",
+    "--field-bg-disabled",
+    "--field-border-default",
+    "--field-border-hover",
+    "--field-border-focus",
+    "--field-border-error",
+    "--field-border-disabled",
+    "--field-text-default",
+    "--field-text-placeholder",
+    "--field-text-disabled",
+    "--field-radius",
+    "--field-height-md"
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="card">
+    <div class="row-label"><span class="name">Inputs &amp; states</span><span class="meta">40px height · 12/8 padding</span></div>
+    <div class="grid">
+      <div class="field"><label>Default</label><input class="sl-input" value="Content goes here" /></div>
+      <div class="field"><label>Hover</label><input class="sl-input hover" value="Content goes here" /></div>
+      <div class="field"><label>Focus</label><input class="sl-input focus" value="Content goes here" /></div>
+      <div class="field"><label>Placeholder</label><input class="sl-input" placeholder="dd/mm/yyyy" /></div>
+      <div class="field"><label style="color: var(--color-text-alert)">Error</label><input class="sl-input error" value="Content goes here" /><span class="err">Error explanation goes here.</span></div>
+      <div class="field"><label>Disabled</label><input class="sl-input disabled" value="Content goes here" disabled /></div>
+    </div>
+  </div>
+</body>
+</html>

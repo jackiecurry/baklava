@@ -1,0 +1,168 @@
+# Baklava Design System
+
+> Baklava's code-first design system. The live repo is the source of truth: token CSS, one self-contained preview HTML per asset, webfonts, and brand assets. Fetch the token CSS and the relevant preview files before implementing a component.
+
+The structured catalog (every component with anatomy, usage, and tokens as JSON) 
+is at [baklava.json](https://jackiecurry.github.io/baklava/baklava.json). The complete token system 
+(color ramps, semantic tokens, spacing, radii, shadows, type) is at 
+[colors_and_type.css](https://jackiecurry.github.io/baklava/colors_and_type.css). Each preview HTML is 
+self-contained — inline component CSS, token usage, and markup. Prefer semantic 
+tokens over raw ramp variables. Sentence case; no emoji; Lucide icons only.
+
+## Foundations
+
+The rules every component inherits — design tokens, spacing, motion, elevation, and accessibility.
+
+- [Accessibility](https://jackiecurry.github.io/baklava/preview/foundations-accessibility.html): WCAG 2.1 AA guidelines — color contrast, keyboard nav, screen readers, focus management.
+- [Iconography](https://jackiecurry.github.io/baklava/preview/brand-iconography.html): 202 outlined line icons — 24×24 viewbox, currentColor stroke.
+- [Radius](https://jackiecurry.github.io/baklava/preview/spacing-radius.html): Restrained corners: 2 / 4 / 6–8 / 999px.
+- [Shadows](https://jackiecurry.github.io/baklava/preview/spacing-shadows.html): Light, blueish, low-spread — borders carry more weight than shadows in this system.
+- [Spacing](https://jackiecurry.github.io/baklava/preview/spacing-scale.html): Strict 4-pt grid: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80.
+- [Tokens](https://jackiecurry.github.io/baklava/preview/foundations-tokens.html): All CSS custom properties — color ramps, semantic tokens, typography, spacing, radius, shadows, field, and AI.
+- [Surfaces](https://jackiecurry.github.io/baklava/preview/colors-surfaces.html): Navbar · Canvas · Sunken · Raised · Overlay — five elevation planes.
+- [Type scale](https://jackiecurry.github.io/baklava/preview/type-scale.html): Display through Micro — eight steps with set line heights and weight conventions.
+- [Type specimen](https://jackiecurry.github.io/baklava/preview/type-faces.html): Acherus Grotesque, weights 200–900, plus the SF Mono code font.
+- [Motion](https://jackiecurry.github.io/baklava/preview/foundations-motion.html): Durations and easings for transitions and animations.
+- [Z-index](https://jackiecurry.github.io/baklava/preview/foundations-zindex.html): 8-step stacking scale — base through toast.
+- [Breakpoints](https://jackiecurry.github.io/baklava/preview/foundations-breakpoints.html): Viewport widths — sm 640, md 768, lg 1024, xl 1280.
+- [Selection & skeleton](https://jackiecurry.github.io/baklava/preview/foundations-selection-skeleton.html): Text highlight and loading placeholder colors.
+
+## Color
+
+The complete color system — the brand gradient, ten ramps, and the semantic tokens built on them.
+
+- [Color ramps](https://jackiecurry.github.io/baklava/preview/colors-all-ramps.html): Ten named ramps × eleven steps each. Step 600 is the canonical default for each hue.
+- [Brand gradient](https://jackiecurry.github.io/baklava/preview/colors-gradient-brand.html): linear-gradient(90deg, #008380 29%, #0841B4 100%) — horizontal teal → blue.
+- [Semantic text](https://jackiecurry.github.io/baklava/preview/colors-semantic-text.html): Body, subtle, link, status, information, discovery, accents.
+- [Palette · Categorical](https://jackiecurry.github.io/baklava/preview/dataviz-categorical.html): Five-color chart palette for unordered categories — designed for light and dark backgrounds.
+- [Palette · Diverging](https://jackiecurry.github.io/baklava/preview/dataviz-diverging.html): Two-hue chart ramps for values around a meaningful midpoint.
+- [Palette · Sequential](https://jackiecurry.github.io/baklava/preview/dataviz-sequential.html): Single-hue chart ramps for ordered values — counts, magnitudes, percentages.
+- [Status colors](https://jackiecurry.github.io/baklava/preview/dataviz-status.html): Green / Yellow / Red / Blue mapping for pipeline run states.
+
+## Building blocks
+
+Single-purpose controls — each does one job. The atoms you compose with.
+
+- [Avatar](https://jackiecurry.github.io/baklava/preview/components-avatar.html): User identity glyph — initials, photo, or fallback icon.
+- [Badge](https://jackiecurry.github.io/baklava/preview/components-badges.html): Compact status or metadata pill, 10px ExtraBold uppercase.
+- [Buttons](https://jackiecurry.github.io/baklava/preview/components-buttons.html): Verb-led actions in primary, secondary, tertiary, and destructive variants.
+- [Calendar](https://jackiecurry.github.io/baklava/preview/components-calendar.html): Month grid with prev/next navigation, today marker, and date or range selection.
+- [Card](https://jackiecurry.github.io/baklava/preview/components-card.html): White surface with a 1px Grey-300 border. Borders — not shadow — indicate selection.
+- [Checkbox](https://jackiecurry.github.io/baklava/preview/components-checkbox.html): Binary selection with optional indeterminate state.
+- [Chip](https://jackiecurry.github.io/baklava/preview/components-chip.html): Selectable or removable label for filters, tags, and multi-select values.
+- [Field anatomy](https://jackiecurry.github.io/baklava/preview/components-field-anatomy.html): Label, optional indicator, control, help text, error — in that order.
+- [Field states](https://jackiecurry.github.io/baklava/preview/components-field-states.html): Rest, hover, focus, filled, disabled, read-only, error, AI-generating, AI-review.
+- [Inputs](https://jackiecurry.github.io/baklava/preview/components-inputs.html): Standard 40px-tall single-line text input.
+- [Menu](https://jackiecurry.github.io/baklava/preview/components-menu.html): Light, button-anchored action menu for commands and single-select.
+- [Notification dot](https://jackiecurry.github.io/baklava/preview/components-notification-dot.html): 8px red dot anchored to the top-right of an icon or avatar.
+- [Number input](https://jackiecurry.github.io/baklava/preview/components-number.html): Numeric input with optional stepper and unit suffix.
+- [Password field](https://jackiecurry.github.io/baklava/preview/components-password.html): Masked input with a show/hide toggle.
+- [Radio](https://jackiecurry.github.io/baklava/preview/components-radio.html): Single-choice from a small visible set.
+- [Search field](https://jackiecurry.github.io/baklava/preview/components-search-field.html): Input with a leading search icon and a clear-on-typed affordance.
+- [Segmented control](https://jackiecurry.github.io/baklava/preview/components-segmented-control.html): Compact horizontal switch for 2–5 mutually exclusive options.
+- [Skeleton loader](https://jackiecurry.github.io/baklava/preview/components-skeleton.html): Pulsing grey shape standing in for loading content.
+- [Slider](https://jackiecurry.github.io/baklava/preview/components-slider.html): Drag to pick a value from a continuous track.
+- [Spinner](https://jackiecurry.github.io/baklava/preview/components-spinner.html): Comet-tail loader — a tapered ring on a 1.1s rotation.
+- [Status atom](https://jackiecurry.github.io/baklava/preview/components-status.html): 6px colored dot + label — the minimal status indicator.
+- [Text area](https://jackiecurry.github.io/baklava/preview/components-textarea.html): Multi-line text input. Auto-grows by default; resize handle on demand.
+- [Toggle](https://jackiecurry.github.io/baklava/preview/components-toggle.html): On/off switch for a setting that takes effect immediately.
+- [Tooltip](https://jackiecurry.github.io/baklava/preview/components-tooltip.html): Short label or description surfaced on hover or focus.
+- [Tree](https://jackiecurry.github.io/baklava/preview/components-tree.html): Hierarchical list of nodes with expand/collapse, indentation, and selection.
+
+## Composed components
+
+Several building blocks assembled into a complete piece of the interface.
+
+- [AI Assistant panel](https://jackiecurry.github.io/baklava/preview/components-assistant-panel.html): AI assistant side panel — woven through the suite as the AI accent.
+- [Avatar group](https://jackiecurry.github.io/baklava/preview/components-avatar-group.html): Stack of overlapping avatars with overflow count.
+- [Broadcast banner](https://jackiecurry.github.io/baklava/preview/components-broadcast-banner.html): Full-width system message across the top of the app.
+- [Combobox](https://jackiecurry.github.io/baklava/preview/components-combobox.html): Input combined with a filtered dropdown for very long or open-ended lists.
+- [Composed cards](https://jackiecurry.github.io/baklava/preview/components-card-composed.html): The Card surface assembled from building blocks — pipeline, stat, and resource cards.
+- [Date picker](https://jackiecurry.github.io/baklava/preview/components-date-picker.html): Calendar dropdown attached to an input for picking a date or range.
+- [Drawer](https://jackiecurry.github.io/baklava/preview/components-drawer.html): Side panel that slides in from the right for details or secondary tasks.
+- [Environment picker](https://jackiecurry.github.io/baklava/preview/components-env-picker.html): Switcher for the active environment (Dev / Stage / Prod).
+- [File upload](https://jackiecurry.github.io/baklava/preview/components-file-upload.html): Drop zone, browse button, and progress.
+- [Form row](https://jackiecurry.github.io/baklava/preview/components-form-row.html): Layout primitive that arranges fields in 1–3 columns with a consistent gutter.
+- [Form section](https://jackiecurry.github.io/baklava/preview/components-form-section.html): Grouped fields under a heading + optional description.
+- [Global header](https://jackiecurry.github.io/baklava/preview/components-global-header.html): The dark Indigo-1000 chrome that spans every product.
+- [Left nav](https://jackiecurry.github.io/baklava/preview/components-left-nav.html): Contextual product navigation — collapsible to icons-only.
+- [Left nav skeleton](https://jackiecurry.github.io/baklava/preview/components-left-nav-skeleton.html): Loading placeholder for the dark navigation rail.
+- [Modal](https://jackiecurry.github.io/baklava/preview/components-modal.html): Overlay surface for confirms, focused tasks, and destructive actions.
+- [Multi-select](https://jackiecurry.github.io/baklava/preview/components-multi-select.html): Select-style trigger that accepts multiple values rendered as chips.
+- [Notifications](https://jackiecurry.github.io/baklava/preview/components-notifications.html): Notification center surfaced from the global bell icon.
+- [Product launcher (waffle)](https://jackiecurry.github.io/baklava/preview/components-product-launcher.html): Grid of product tiles surfaced from the waffle icon in the global header.
+- [Search overlay](https://jackiecurry.github.io/baklava/preview/components-search-overlay.html): Full-page search modal triggered from anywhere by `⌘ K`.
+- [Select](https://jackiecurry.github.io/baklava/preview/components-select.html): Single-choice dropdown with grouped and quiet (in-cell) variants.
+- [Table](https://jackiecurry.github.io/baklava/preview/components-table.html): Dense data table — the dominant shape for Manager and Monitor.
+- [Tabs](https://jackiecurry.github.io/baklava/preview/components-tabs.html): Horizontal tab bar that swaps views inside a single surface.
+- [Time range selector](https://jackiecurry.github.io/baklava/preview/components-time-range-selector.html): Segmented control of quick time presets with a More menu and custom-range calendar.
+- [Toast](https://jackiecurry.github.io/baklava/preview/components-toast.html): Transient message anchored bottom-right.
+- [Tree select](https://jackiecurry.github.io/baklava/preview/components-tree-select.html): Hierarchical picker — folders, snaplexes, org units.
+- [User menu](https://jackiecurry.github.io/baklava/preview/components-user-menu.html): Avatar in the global header opens an account + preferences popover.
+
+## Patterns
+
+Reusable flows that combine components to solve a recurring product problem.
+
+- [Agent activity panel](https://jackiecurry.github.io/baklava/preview/patterns-agent-activity-panel.html): Activity stream of agent tool calls — separate from the chat thread.
+- [Agent plan](https://jackiecurry.github.io/baklava/preview/patterns-agent-plan.html): Plan-and-execute flow — review, approve, then watch steps run.
+- [Agent recovery](https://jackiecurry.github.io/baklava/preview/patterns-agent-recovery.html): Three distinct recovery paths — misunderstood, tool failure, partial success.
+- [Agent step override](https://jackiecurry.github.io/baklava/preview/patterns-agent-step-override.html): Mid-execution controls — pause, resume, modify, skip, stop.
+- [Agent tool disclosure](https://jackiecurry.github.io/baklava/preview/patterns-agent-tool-disclosure.html): Inline tool call + response — collapsed or expanded, success or error.
+- [AI confidence](https://jackiecurry.github.io/baklava/preview/patterns-ai-confidence.html): Visual treatment for AI output the user should sanity-check.
+- [AI-assisted input](https://jackiecurry.github.io/baklava/preview/patterns-ai-assisted-input.html): Field with an inline AI generate button.
+- [Bulk selection](https://jackiecurry.github.io/baklava/preview/patterns-bulk-selection.html): Header checkbox + per-row checkbox + sticky action bar.
+- [Destructive confirm](https://jackiecurry.github.io/baklava/preview/patterns-destructive-confirm.html): Modal with positive-phrasing button labels.
+- [Drag and drop](https://jackiecurry.github.io/baklava/preview/patterns-drag-drop.html): Drop affordances on canvas, lists, and tables.
+- [Drawer + AI Assistant](https://jackiecurry.github.io/baklava/preview/patterns-drawer-assistant.html): AI Assistant panel composed inside a Drawer surface.
+- [Editable AI output](https://jackiecurry.github.io/baklava/preview/patterns-editable-ai-output.html): AI-generated content the user can review and edit before accepting.
+- [Empty states](https://jackiecurry.github.io/baklava/preview/patterns-empty-states.html): First-run, no-results, and after-clear states.
+- [Error states](https://jackiecurry.github.io/baklava/preview/patterns-error-states.html): Page-level, surface-level, and inline error layouts.
+- [Filter, sort, faceted search](https://jackiecurry.github.io/baklava/preview/patterns-filter-sort.html): Combined filter bar above a Table — applied filters render as Chips.
+- [Form validation](https://jackiecurry.github.io/baklava/preview/patterns-form-validation.html): Inline error messages — specific, never generic.
+- [Inline editing](https://jackiecurry.github.io/baklava/preview/patterns-inline-editing.html): Click a value to edit in place — no dedicated edit screen.
+- [Keyboard shortcuts](https://jackiecurry.github.io/baklava/preview/patterns-keyboard-shortcuts.html): Shortcut conventions across the suite.
+- [Pagination](https://jackiecurry.github.io/baklava/preview/patterns-pagination.html): Page number controls + page size selector for long tables.
+- [Save / discard](https://jackiecurry.github.io/baklava/preview/patterns-save-discard.html): Sticky action bar that surfaces when the user has unsaved changes.
+- [Undo via toast](https://jackiecurry.github.io/baklava/preview/patterns-undo-toast.html): Reversible destructive actions skip the confirm modal and offer Undo in the toast.
+- [Wizard / multi-step flow](https://jackiecurry.github.io/baklava/preview/patterns-wizard.html): Guided multi-step flow with a numbered step indicator.
+
+## Data visualization
+
+Chart and graph types, with guidance on when to use each.
+
+- [Bar chart](https://jackiecurry.github.io/baklava/preview/dataviz-bar.html): Vertical or horizontal bars — ranking and discrete comparisons.
+- [Calendar heatmap](https://jackiecurry.github.io/baklava/preview/dataviz-calendar.html): GitHub-style daily heatmap over a quarter or year.
+- [Chart empty state](https://jackiecurry.github.io/baklava/preview/dataviz-empty.html): No-data message inside the chart area — never a blank canvas.
+- [Chart loading state](https://jackiecurry.github.io/baklava/preview/dataviz-loading.html): Skeleton bars and lines while a chart fetches.
+- [Combo (bar + line)](https://jackiecurry.github.io/baklava/preview/dataviz-combo.html): Bars and a line on a single chart with dual axes.
+- [Donut chart](https://jackiecurry.github.io/baklava/preview/dataviz-donut.html): Proportion of total across 3–5 categories.
+- [Gauge](https://jackiecurry.github.io/baklava/preview/dataviz-gauge.html): Arc showing a single value against a known range — capacity, utilization.
+- [Heatmap](https://jackiecurry.github.io/baklava/preview/dataviz-heatmap.html): Two-axis matrix of values colored by a sequential ramp.
+- [Histogram](https://jackiecurry.github.io/baklava/preview/dataviz-histogram.html): Distribution of a numeric value — bin width chosen by the chart.
+- [Hive plot](https://jackiecurry.github.io/baklava/preview/dataviz-hive-plot.html): Krzywinski-style 2- or 3-axis hive — categorical layout for many-to-many.
+- [KPI card](https://jackiecurry.github.io/baklava/preview/dataviz-kpi.html): Single big number, label, optional trend chip and sparkline.
+- [Sankey diagram](https://jackiecurry.github.io/baklava/preview/dataviz-sankey.html): Flow from sources to destinations — ribbon width = volume.
+- [Sparkline](https://jackiecurry.github.io/baklava/preview/dataviz-sparkline.html): Small inline trend line — no axes, no labels.
+- [Stacked area](https://jackiecurry.github.io/baklava/preview/dataviz-stacked.html): Time series where the layers stack to show share of total.
+- [Swim-lane Gantt](https://jackiecurry.github.io/baklava/preview/dataviz-gantt.html): Pipeline runs along a timeline — color = final status.
+- [Time series](https://jackiecurry.github.io/baklava/preview/dataviz-timeseries.html): Line chart over time — single or multi-line.
+- [Usage rules](https://jackiecurry.github.io/baklava/preview/dataviz-usage.html): When to reach for each chart type — and when not to.
+
+## Advanced editors
+
+Specialized multi-field editors for Baklava's configuration surfaces.
+
+- [API parameter builder](https://jackiecurry.github.io/baklava/preview/components-api-param-builder.html): Build a REST request — path, query, headers, body.
+- [Code editor](https://jackiecurry.github.io/baklava/preview/components-code-editor.html): Embedded Monaco-style code editor — JSON, JS, SQL, Python.
+- [Connection picker](https://jackiecurry.github.io/baklava/preview/components-connection-picker.html): Multi-step picker for selecting a connection or creating one inline.
+- [Dynamic repeater](https://jackiecurry.github.io/baklava/preview/components-dynamic-repeater.html): Field group the user can duplicate N times.
+- [JSON editor](https://jackiecurry.github.io/baklava/preview/components-json-editor.html): Tree + raw view of a JSON document with inline edit.
+- [Key/value editor](https://jackiecurry.github.io/baklava/preview/components-key-value-editor.html): Inline editor for headers, params, and other flat dicts.
+- [Schema builder](https://jackiecurry.github.io/baklava/preview/components-schema-builder.html): Visual editor for JSON schemas — output specs, payload shapes.
+
+## Templates
+
+Full-page starting points — complete screens assembled from components and patterns.
+
+- [Designer · Empty canvas](https://jackiecurry.github.io/baklava/preview/templates-designer.html): Full Designer template — global header, left rail, toolbar, and pipeline canvas.

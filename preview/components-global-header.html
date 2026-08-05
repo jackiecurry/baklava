@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Components · Global header</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="card.css" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  .card { width: 100%; gap: 8px; padding: 24px; background: var(--bk-grey-100); box-sizing: border-box; }
+
+  .gh {
+    height: 56px;
+    background: var(--bk-blue-1000);
+    display: flex; align-items: center; padding: 0 16px;
+    gap: 12px; color: var(--bk-white);
+    border-radius: var(--radius-sm);
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .gh::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+    background: linear-gradient(90deg, #0B9D9B 0%, #2BE3A0 50%, #0841B4 100%);
+    border-bottom-left-radius: var(--radius-sm);
+    border-bottom-right-radius: var(--radius-sm);
+  }
+
+  .gh .brand { display: flex; align-items: center; gap: 12px; min-width: 0; flex-shrink: 0; }
+  .gh .brand .logo-mark {
+    width: 28px; height: 28px;
+    flex-shrink: 0;
+    background: url("../assets/baklava-mark-white.svg") center / contain no-repeat;
+  }
+  .gh .brand .app-name { font: 800 16px/20px var(--font-sans); color: var(--bk-white); letter-spacing: -0.005em; white-space: nowrap; }
+
+  .gh .env-pick {
+    display: flex; align-items: center; gap: 8px;
+    font: 500 13px/18px var(--font-sans); color: rgba(255,255,255,0.92);
+    padding: 6px 10px; border-radius: var(--radius-sm); cursor: pointer;
+    margin-left: 12px;
+    min-width: 0;
+  }
+  .gh .env-pick span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .gh .env-pick:hover { background: rgba(255,255,255,0.08); }
+  .gh .env-pick .env-cube { color: var(--bk-yellow-500); }
+  .gh .env-pick .chev { color: rgba(255,255,255,0.6); }
+
+  .gh .spacer { flex: 1; min-width: 0; }
+  .gh .assistant { font: 800 14px/18px var(--font-sans); padding: 6px 10px; border-radius: var(--radius-sm); cursor: pointer; letter-spacing: 0.01em; flex-shrink: 0; white-space: nowrap; }
+  .gh .icon-btn, .gh .avatar, .gh .waffle-btn { flex-shrink: 0; }
+  /* Narrow viewports — hide the AI Assistant label and env-name text first */
+  @media (max-width: 720px) {
+    .gh .env-pick span:not(.env-cube) { display: none; }
+  }
+  @media (max-width: 560px) {
+    .gh .assistant { display: none; }
+  }
+  .gh .assistant .gpt {
+    background: linear-gradient(112.63deg, #0B9D9B 12.38%, #0841B4 137.46%);
+    background-clip: text; -webkit-background-clip: text; color: transparent;
+  }
+  .gh .icon-btn {
+    width: 32px; height: 32px; border-radius: 999px;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.92); cursor: pointer; position: relative;
+  }
+  .gh .icon-btn:hover { background: rgba(255,255,255,0.10); }
+  .gh .icon-btn svg { width: 18px; height: 18px; }
+  .gh .icon-btn .dot {
+    position: absolute; top: 5px; right: 6px;
+    width: 7px; height: 7px; border-radius: 999px;
+    background: var(--bk-red-600); border: 1.5px solid var(--bk-blue-1000);
+  }
+  .gh .avatar {
+    width: 28px; height: 28px; border-radius: 999px;
+    background: transparent; color: var(--bk-white);
+    border: 1.5px solid var(--bk-white);
+    display: flex; align-items: center; justify-content: center;
+    font: 800 11px/16px var(--font-sans); cursor: pointer;
+    box-sizing: border-box;
+  }
+  .gh .avatar:hover { background: rgba(255,255,255,0.10); }
+  .gh .waffle-btn {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px;
+    padding: 8px; cursor: pointer; border-radius: var(--radius-sm);
+  }
+  .gh .waffle-btn:hover { background: rgba(255,255,255,0.10); }
+  .gh .waffle-btn span { width: 4px; height: 4px; background: rgba(255,255,255,0.85); border-radius: 999px; }
+
+  /* Combo loader bar — sits on the bottom edge of the global header */
+  .gh-combo-outer {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 5px;
+    overflow: hidden;
+    animation: gh-combo-fill 4s linear forwards;
+  }
+  .gh-combo-inner {
+    position: absolute;
+    width: 200%; height: 5px;
+    background: linear-gradient(to right, #0B9D9B 0% 45%, #0841B4 54% 60%, #0B9D9B 65%);
+    animation: gh-combo-walk 1s infinite linear;
+  }
+  @keyframes gh-combo-fill {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0); }
+  }
+  @keyframes gh-combo-walk {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
+
+  .anatomy { font: 400 11px/14px var(--font-mono); color: var(--color-text-subtle); padding: 14px 0 0; display: flex; flex-direction: column; gap: 4px; }
+  .anatomy strong { color: var(--bk-indigo-900); font-weight: 800; }
+</style>
+<script type="application/json" id="baklava-meta">
+{
+  "name": "Global header",
+  "section": "Composed components",
+  "url": "https://jackiecurry.github.io/baklava/preview/components-global-header.html",
+  "tagline": "The dark Indigo-1000 chrome that spans every product.",
+  "anatomy": "56px tall · Indigo-1000 fill · left: waffle launcher + product wordmark · center: contextual search + breadcrumb · right: env picker + notifications + user menu. A 5px teal → blue → teal gradient loader bar sits on the bottom edge for global loading states.",
+  "usage": "Use across every product as the only chrome that crosses product boundaries. Never inject product-specific controls into the global header — those belong on the Left nav or the page itself.",
+  "behaviors": "Sticky to the top of the viewport. Hover states on icons use a 12% white overlay; selected states use a 24% white overlay. The waffle launcher opens the Product launcher popover. The combo loader bar fills left → right over 4s while an inner band walks on a 1s loop — shown while a page or product-level action loads, hidden when idle. It uses the brand teal → blue gradient (matching `--color-background-primary-hover`).",
+  "tokens": [
+    "--color-surface-navbar",
+    "--color-text-inverse"
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="card">
+    <div class="row-label"><span class="name">Global header</span><span class="meta">56px · blue-1000 · teal→blue hairline on bottom</span></div>
+    <header class="gh">
+      <div class="brand">
+        <span class="logo-mark"></span>
+        <span class="app-name">App Name</span>
+      </div>
+      <div class="env-pick">
+        <i data-lucide="box" class="env-cube" style="width:14px;height:14px"></i>
+        <span>environment_name</span>
+        <i data-lucide="chevron-down" class="chev" style="width:14px;height:14px"></i>
+      </div>
+      <div class="spacer"></div>
+      <div class="assistant">AI <span class="gpt">Assistant</span></div>
+      <div class="icon-btn"><i data-lucide="search"></i></div>
+      <div class="icon-btn"><i data-lucide="bell"></i><span class="dot"></span></div>
+      <div class="avatar">M</div>
+      <div class="waffle-btn">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+      <div class="gh-combo-outer"><div class="gh-combo-inner"></div></div>
+    </header>
+    <div class="anatomy">
+      <span><strong>Anchors</strong> — each affordance opens a separate component:</span>
+      <span>environment_name → <strong>Environment picker</strong></span>
+      <span>search icon → <strong>Search overlay</strong></span>
+      <span>bell icon → <strong>Notifications panel</strong></span>
+      <span>avatar → <strong>User menu</strong></span>
+      <span>waffle (3×3 dots) → <strong>Product launcher</strong></span>
+    </div>
+  </div>
+  <script>
+    lucide.createIcons();
+    const outer = document.querySelector('.gh-combo-outer');
+    const inner = document.querySelector('.gh-combo-inner');
+    if (outer && inner) {
+      outer.addEventListener('animationend', () => { inner.style.animation = 'none'; });
+    }
+  </script>
+</body>
+</html>
