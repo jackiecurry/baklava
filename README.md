@@ -1,4 +1,5 @@
 # Baklava Design System 2.0
+THIS IS A WORK IN PROGRESS
 
 The design system for **Baklava** — an enterprise iPaaS for connecting applications, data, and AI agents. Baklava is the source of truth for the app, Admin Manager, Monitor, AutoSync, APIM, and the Pattern Catalog.
 
